@@ -1,0 +1,3205 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hearthdelve — Wiki</title><style>
+:root{--bg:#14110e;--panel:#1d1915;--panel2:#252019;--line:#3a3127;--text:#ece4d3;--muted:#a89c86;--gold:#e8bf55;--accent:#c96a3a;--link:#f0c66a}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:12px}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.55 Georgia,'Iowan Old Style','Palatino Linotype',serif;display:flex;min-height:100vh}
+nav#toc{position:sticky;top:0;align-self:flex-start;height:100vh;overflow:auto;width:250px;flex:none;background:var(--panel);border-right:1px solid var(--line);padding:18px 14px}
+.brand{font:700 22px/1.1 Georgia,serif;color:var(--gold);letter-spacing:.5px;margin-bottom:14px}.brand span{display:block;font:400 12px/1.6 system-ui,sans-serif;color:var(--muted);letter-spacing:0}
+nav#toc a{display:block;color:var(--text);text-decoration:none;padding:5px 8px;border-radius:6px;font:14px/1.3 system-ui,sans-serif}
+nav#toc a:hover{background:var(--panel2);color:var(--gold)}nav#toc a.cl{margin-top:12px;color:var(--link);border:1px solid var(--line)}nav#toc a.lng{display:inline-block;margin:0 0 10px;font-size:12px;color:var(--muted);border:1px solid var(--line);padding:2px 8px}
+#q{width:100%;margin:0 0 12px;padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:#0f0d0b;color:var(--text);font:14px system-ui,sans-serif}
+main{flex:1;min-width:0;padding:24px 34px 60px;max-width:1200px}
+section{margin-bottom:34px}h2{font:700 26px/1.2 Georgia,serif;color:var(--gold);border-bottom:1px solid var(--line);padding-bottom:6px;margin:0 0 12px}
+h3{font:700 18px/1.3 Georgia,serif;color:#e9d7a9;margin:22px 0 8px}p{margin:8px 0}.intro{color:var(--muted)}
+a{color:var(--link)}code{background:#0f0d0b;border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
+.tw{overflow-x:auto;margin:8px 0 14px;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;font:14px/1.45 system-ui,sans-serif}table.small{width:auto;min-width:340px}
+th{position:sticky;top:0;background:var(--panel2);color:var(--gold);text-align:left;font-weight:600;padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:7px 10px;border-bottom:1px solid #2a241d;vertical-align:top}tr:nth-child(even) td{background:#191510}tr:hover td{background:#211c16}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:7px;vertical-align:middle;border:1px solid #0006}
+.leg{font-size:11px;color:#ff9a3c;border:1px solid #ff9a3c66;border-radius:4px;padding:0 4px;margin-left:4px}
+.ver{display:inline-block;background:var(--accent);color:#fff;border-radius:6px;padding:0 8px;margin-right:6px;font:600 16px/1.5 system-ui,sans-serif;vertical-align:middle}
+ul{padding-left:22px}.nw{white-space:nowrap}.muted{color:var(--muted);font-size:12px}li{margin:5px 0}footer{color:var(--muted);font:12px system-ui,sans-serif;margin-top:40px;border-top:1px solid var(--line);padding-top:10px}
+.hide{display:none!important}mark{background:#e8bf5555;color:inherit;border-radius:3px}
+@media (max-width:820px){body{display:block}nav#toc{position:static;width:auto;height:auto;border-right:0;border-bottom:1px solid var(--line)}nav#toc a{display:inline-block}main{padding:16px}}
+</style></head><body><nav id="toc"><div class="brand">Hearthdelve<span>Wiki · version 1.6.4</span></div><a class="lng" href="index_da.html">Dansk</a><input id="q" type="search" placeholder="Search the wiki ..." autocomplete="off"><a href="#start">Welcome to Hearthdelve</a><a href="#klasser">Classes and skills</a><a href="#monstre">Monsters</a><a href="#etager">Floors, themes and realms</a><a href="#bytte">Loot and drop chances</a><a href="#udstyr">Gear</a><a href="#saet">Set items</a><a href="#navngivne">Named items</a><a href="#relikvier">Relics</a><a href="#opskrifter">Recipes</a><a href="#materialer">Materials</a><a href="#forbrug">Drinks, mushrooms and collectibles</a><a href="#byen">The town</a><a href="#regler">Good to know</a><a class="cl" href="changelog.html">Changelog &rarr;</a></nav><main><section id="start"><h2>Welcome to Hearthdelve</h2>
+<p>Build your town above the Deep, dive for gold, materials and gear, and come home alive. Die down there and you lose everything you carry — only the chest in town is safe. Look everything up here: monsters, drop chances, where items are found, recipes and the town's buildings.</p>
+<p>The game is at version <b>1.6.4</b>. See what is new in the <a href="changelog.html">changelog</a>.</p>
+</section>
+<section id="klasser"><h2>Classes and skills</h2>
+<p class="intro">Every hero has a class with three branches in the skill tree. The class's favourite weapons give +20% damage and +10% attack speed.</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Class</th>
+<th>Description</th>
+<th>Favourite weapons</th>
+<th>Starts with</th>
+</tr></thead><tbody>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#d94d38"></span><b>Barbarian</b></span></td>
+<td>Melee fighter with axe and brute strength. Lots of life, little mana. Cleaves, roars and leaps into the pack.</td>
+<td>Axe, Sword</td>
+<td>Axe</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#598cff"></span><b>Mage</b></span></td>
+<td>Hurls fire, frost and lightning from afar with a staff. Little life, plenty of mana.</td>
+<td>Staff</td>
+<td>Staff</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#59bf4d"></span><b>Hunter</b></span></td>
+<td>Archer with a bow (or spear). Volleys of arrows, traps and a giant rat at their side.</td>
+<td>Bow, Spear</td>
+<td>Bow</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#9e73d9"></span><b>Thief</b></span></td>
+<td>Fast and deadly with daggers. Shadow leaps, poison and smoke bombs.</td>
+<td>Daggers</td>
+<td>Daggers</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#8cd98c"></span><b>Necromancer</b></span></td>
+<td>Ruler of the dead with a scythe. Raises skeletons, hurls bone spears and curses foes.</td>
+<td>Scythe</td>
+<td>Scythe</td>
+</tr>
+</tbody></table></div>
+<h3>Barbarian — skills</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Key</th>
+<th>Skill</th>
+<th>What it does</th>
+<th>Mana</th>
+<th>Cooldown</th>
+<th>Rank 1</th>
+</tr></thead><tbody>
+<tr>
+<td><span class="nw">Key 1</span></td>
+<td><b>Cleaving blow</b></td>
+<td>A mighty blow in a wide arc in front of you.</td>
+<td>8</td>
+<td>—</td>
+<td>130% damage · Mana: 8</td>
+</tr>
+<tr>
+<td><span class="nw">Key 2</span></td>
+<td><b>War cry</b></td>
+<td>More damage and armor for a while. Nearby foes stagger (slowed).</td>
+<td>14</td>
+<td>12 s</td>
+<td>+25% damage, +20 armor for 8 s · Mana: 14   Cooldown: 12 s</td>
+</tr>
+<tr>
+<td><span class="nw">Key 3</span></td>
+<td><b>Leap</b></td>
+<td>Leap towards the mouse and crush everything where you land.</td>
+<td>10</td>
+<td>4 s</td>
+<td>140% damage · Mana: 10   Cooldown: 4 s</td>
+</tr>
+<tr>
+<td><span class="nw">Key 4</span></td>
+<td><b>Whirlwind</b></td>
+<td>Whirl around for a few seconds, hitting everything around you again and again.</td>
+<td>28</td>
+<td>10 s</td>
+<td>40% damage · Mana: 28   Cooldown: 10 s</td>
+</tr>
+</tbody></table></div>
+<div class="tw"><table class=""><thead><tr>
+<th>Branch</th>
+<th>About the branch</th>
+<th>Skills</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Warfare</b></td>
+<td>The weapon. Raw damage and wide swings.</td>
+<td>Cleaving blow, Sharp edges, Quick blows, Wide swing, Whirlwind, Execution, Weapon master</td>
+</tr>
+<tr>
+<td><b>Fury</b></td>
+<td>Live off the battle.</td>
+<td>War cry, Life drain, Tough sinews, Fury, Bloodthirst, Fighting spirit, Berserker</td>
+</tr>
+<tr>
+<td><b>Primal might</b></td>
+<td>Life, armor and endurance.</td>
+<td>Leap, Robust, Hardened skin, Extra field flask, Unbreakable, Thorn skin, The Mountain</td>
+</tr>
+</tbody></table></div>
+<h3>Mage — skills</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Key</th>
+<th>Skill</th>
+<th>What it does</th>
+<th>Mana</th>
+<th>Cooldown</th>
+<th>Rank 1</th>
+</tr></thead><tbody>
+<tr>
+<td><span class="nw">Key 1</span></td>
+<td><b>Fireball</b></td>
+<td>A ball of fire that explodes on the first thing it hits.</td>
+<td>9</td>
+<td>—</td>
+<td>150% damage · Mana: 9</td>
+</tr>
+<tr>
+<td><span class="nw">Key 2</span></td>
+<td><b>Frost nova</b></td>
+<td>A ring of ice around you: damage, and foes are slowed hard.</td>
+<td>14</td>
+<td>3 s</td>
+<td>100% damage, slows for 3.0 s · Mana: 14   Cooldown: 3 s</td>
+</tr>
+<tr>
+<td><span class="nw">Key 3</span></td>
+<td><b>Chain lightning</b></td>
+<td>Lightning jumps from foe to foe.</td>
+<td>12</td>
+<td>—</td>
+<td>120% damage, 3 jumps · Mana: 12</td>
+</tr>
+<tr>
+<td><span class="nw">Key 4</span></td>
+<td><b>Meteor</b></td>
+<td>Call down a meteor at the mouse. It strikes after a moment.</td>
+<td>30</td>
+<td>10 s</td>
+<td>400% damage · Mana: 30   Cooldown: 10 s</td>
+</tr>
+</tbody></table></div>
+<div class="tw"><table class=""><thead><tr>
+<th>Branch</th>
+<th>About the branch</th>
+<th>Skills</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Fire</b></td>
+<td>Explosions and destruction.</td>
+<td>Fireball, Burning will, Spark rain, Inner glow, Meteor, Archmage</td>
+</tr>
+<tr>
+<td><b>Frost</b></td>
+<td>Protection and control.</td>
+<td>Frost nova, Ice armor, Cold pulse, Deep well, Ice block, Ice shield</td>
+</tr>
+<tr>
+<td><b>Storm</b></td>
+<td>Speed, mana and light.</td>
+<td>Chain lightning, The current, Quick hands, Light bearer, Blink, Tailwind, Night eye</td>
+</tr>
+</tbody></table></div>
+<h3>Hunter — skills</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Key</th>
+<th>Skill</th>
+<th>What it does</th>
+<th>Mana</th>
+<th>Cooldown</th>
+<th>Rank 1</th>
+</tr></thead><tbody>
+<tr>
+<td><span class="nw">Key 1</span></td>
+<td><b>Arrow volley</b></td>
+<td>Shoot a fan of arrows at once.</td>
+<td>9</td>
+<td>—</td>
+<td>80% damage, 5 projectiles · Mana: 9</td>
+</tr>
+<tr>
+<td><span class="nw">Key 2</span></td>
+<td><b>Blast trap</b></td>
+<td>Set a trap at the mouse. It blows up when a foe comes near (at most 3 at a time).</td>
+<td>12</td>
+<td>1 s</td>
+<td>240% damage · Mana: 12   Cooldown: 1 s</td>
+</tr>
+<tr>
+<td><span class="nw">Key 3</span></td>
+<td><b>Piercing arrow</b></td>
+<td>An arrow that flies through every foe in its path.</td>
+<td>7</td>
+<td>—</td>
+<td>170% damage · Mana: 7</td>
+</tr>
+<tr>
+<td><span class="nw">Key 4</span></td>
+<td><b>Rat call</b></td>
+<td>Call a giant rat that fights at your side for a while.</td>
+<td>25</td>
+<td>14 s</td>
+<td>80% damage, 120 life · Mana: 25   Cooldown: 14 s</td>
+</tr>
+</tbody></table></div>
+<div class="tw"><table class=""><thead><tr>
+<th>Branch</th>
+<th>About the branch</th>
+<th>Skills</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Marksman</b></td>
+<td>Precision and critical shots.</td>
+<td>Arrow volley, Taut string, Falcon's gaze, Piercing arrow, Deep wounds, Death mark</td>
+</tr>
+<tr>
+<td><b>Traps</b></td>
+<td>Traps and loot.</td>
+<td>Blast trap, Tracker, Treasure hunter, Quick hand, Liberator</td>
+</tr>
+<tr>
+<td><b>Wilderness</b></td>
+<td>The survivor and his giant rat.</td>
+<td>Bigger lantern, Rat call, Frugal flame, Extra field flask, Light-footed, Survivor, Carrion vulture</td>
+</tr>
+</tbody></table></div>
+<h3>Thief — skills</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Key</th>
+<th>Skill</th>
+<th>What it does</th>
+<th>Mana</th>
+<th>Cooldown</th>
+<th>Rank 1</th>
+</tr></thead><tbody>
+<tr>
+<td><span class="nw">Key 1</span></td>
+<td><b>Shadow leap</b></td>
+<td>Leap up behind the foe nearest the mouse and stab — always a critical hit.</td>
+<td>9</td>
+<td>2 s</td>
+<td>160% damage · Mana: 9   Cooldown: 2 s</td>
+</tr>
+<tr>
+<td><span class="nw">Key 2</span></td>
+<td><b>Poison blade</b></td>
+<td>Your hits poison foes for a while (damage over 4 seconds).</td>
+<td>12</td>
+<td>10 s</td>
+<td>poison: 50% damage per hit for 10 s · Mana: 12   Cooldown: 10 s</td>
+</tr>
+<tr>
+<td><span class="nw">Key 3</span></td>
+<td><b>Smoke bomb</b></td>
+<td>Throw smoke at the mouse. Foes in the smoke cannot attack for a few seconds.</td>
+<td>14</td>
+<td>10 s</td>
+<td>blinds for 3.0 s · Mana: 14   Cooldown: 10 s</td>
+</tr>
+<tr>
+<td><span class="nw">Key 4</span></td>
+<td><b>Dagger rain</b></td>
+<td>Throw daggers in every direction.</td>
+<td>20</td>
+<td>6 s</td>
+<td>90% damage, 12 projectiles · Mana: 20   Cooldown: 6 s</td>
+</tr>
+</tbody></table></div>
+<div class="tw"><table class=""><thead><tr>
+<th>Branch</th>
+<th>About the branch</th>
+<th>Skills</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Shadow</b></td>
+<td>Critical hits and ambushes.</td>
+<td>Shadow leap, Keen eye, Deep wounds, Ambush, Shadow step, Death mark</td>
+</tr>
+<tr>
+<td><b>Poison</b></td>
+<td>Slow death and quick blades.</td>
+<td>Poison blade, Quick hands, Leeches, Assassin, Dagger rain, Bloodthirst</td>
+</tr>
+<tr>
+<td><b>Tricks</b></td>
+<td>Smoke, guile and gold.</td>
+<td>Smoke bomb, Light-footed, Long fingers, Merchant's blood, Blessing of the chest, Treasure hunter, Gold fever</td>
+</tr>
+</tbody></table></div>
+<h3>Necromancer — skills</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Key</th>
+<th>Skill</th>
+<th>What it does</th>
+<th>Mana</th>
+<th>Cooldown</th>
+<th>Rank 1</th>
+</tr></thead><tbody>
+<tr>
+<td><span class="nw">Key 1</span></td>
+<td><b>Bone spear</b></td>
+<td>A spear of bone that drills through foes.</td>
+<td>8</td>
+<td>—</td>
+<td>160% damage · Mana: 8</td>
+</tr>
+<tr>
+<td><span class="nw">Key 2</span></td>
+<td><b>Raise skeleton</b></td>
+<td>Raise a skeleton warrior. You can have more at a time at higher ranks. They stay on the floor.</td>
+<td>15</td>
+<td>1 s</td>
+<td>60% damage, 80 life, at most 2 at a time · Mana: 15   Cooldown: 1 s</td>
+</tr>
+<tr>
+<td><span class="nw">Key 3</span></td>
+<td><b>Weaken</b></td>
+<td>Curse foes at the mouse: they take more damage and deal 20% less.</td>
+<td>12</td>
+<td>4 s</td>
+<td>+25% damage taken for 8 s · Mana: 12   Cooldown: 4 s</td>
+</tr>
+<tr>
+<td><span class="nw">Key 4</span></td>
+<td><b>Corpse explosion</b></td>
+<td>Blows up the freshly dead corpse nearest the mouse. The damage follows the corpse's max life.</td>
+<td>18</td>
+<td>2 s</td>
+<td>35% damage · Mana: 18   Cooldown: 2 s</td>
+</tr>
+</tbody></table></div>
+<div class="tw"><table class=""><thead><tr>
+<th>Branch</th>
+<th>About the branch</th>
+<th>Skills</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Bones</b></td>
+<td>Bone spears and exploding corpses.</td>
+<td>Bone spear, Power of the marrow, Splinters, Bone armor, Corpse explosion, Lord of the harvest</td>
+</tr>
+<tr>
+<td><b>The Army</b></td>
+<td>The dead fight for you.</td>
+<td>Raise skeleton, Strength of the grave, Unburied, Soul drain, Death's denial, Servants of darkness</td>
+</tr>
+<tr>
+<td><b>Curses</b></td>
+<td>Weakness, blood and darkness.</td>
+<td>Weaken, Life drain, Dark well, Grave light, Bloodthirst, Frugal flame, Night eye</td>
+</tr>
+</tbody></table></div>
+<h3>Subclasses (rebirth / prestige)</h3>
+<p>When you have beaten Hell (holy subclass) or the Heavenly Stairway (unholy), the hero can be reborn: level 1, everything in the Legacy chest, no gold, the blood pact is broken — but with a subclass, a new branch, a skill on key 5 and +5% damage and +5% life for every rebirth. From then on the hero can only use gear of its own prestige level (&quot;Prestige N&quot; items).</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Subclass</th>
+<th>Class</th>
+<th>Side</th>
+<th>Description</th>
+<th>Skill (key 5)</th>
+</tr></thead><tbody>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#ffd966"></span><b>Paladin</b></span></td>
+<td>Barbarian</td>
+<td>Holy</td>
+<td>Warrior of the light. Holy Wrath heals you while it crushes everything around you.</td>
+<td>Holy Wrath</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#73a6ff"></span><b>Death Knight</b></span></td>
+<td>Barbarian</td>
+<td>Unholy</td>
+<td>A warrior who has bowed to the darkness. Death Grip tears life out of the enemies.</td>
+<td>Death Grip</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#fff299"></span><b>Lightweaver</b></span></td>
+<td>Mage</td>
+<td>Holy</td>
+<td>The mage who weaves light itself. Calls down a pillar of heavenly light.</td>
+<td>Pillar of Light</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#b359ff"></span><b>Void Mage</b></span></td>
+<td>Mage</td>
+<td>Unholy</td>
+<td>The mage who has looked into the void. Lightning of nothing leaps from enemy to enemy.</td>
+<td>Void Lightning</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#d9f2ff"></span><b>Sky Archer</b></span></td>
+<td>Hunter</td>
+<td>Holy</td>
+<td>An archer blessed by Heaven. Shoots a rain of shining arrows.</td>
+<td>Heaven's Volley</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#ff6626"></span><b>Shadow Stalker</b></span></td>
+<td>Hunter</td>
+<td>Unholy</td>
+<td>The hunter who hunts with the rats of Hell. Calls two hell rats.</td>
+<td>Hell rats</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#ffbf4d"></span><b>Inquisitor</b></span></td>
+<td>Thief</td>
+<td>Holy</td>
+<td>The thief who became a judge. Judgement strikes like lightning behind the enemy — always critical.</td>
+<td>Judgement</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#8c4dbf"></span><b>Nightshade</b></span></td>
+<td>Thief</td>
+<td>Unholy</td>
+<td>An assassin of the night. A veil of darkness blinds and poisons everything in it.</td>
+<td>Night Veil</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#e6ffcc"></span><b>Grave Priest</b></span></td>
+<td>Necromancer</td>
+<td>Holy</td>
+<td>The necromancer who gives the dead peace. Sacred Light wounds enemies and heals you.</td>
+<td>Sacred Light</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#66ff99"></span><b>Lich</b></span></td>
+<td>Necromancer</td>
+<td>Unholy</td>
+<td>The necromancer who became undead himself. A storm of souls flies out from you.</td>
+<td>Soul Storm</td>
+</tr>
+</tbody></table></div>
+<h3>Prestige badges</h3>
+<div class="tw"><table class="small"><thead><tr>
+<th>Prestige</th>
+<th>Badge</th>
+</tr></thead><tbody>
+<tr>
+<td>1</td>
+<td><span class="dot" style="background:#cc8042"></span>Bronze</td>
+</tr>
+<tr>
+<td>2</td>
+<td><span class="dot" style="background:#ccd4e0"></span>Silver</td>
+</tr>
+<tr>
+<td>3</td>
+<td><span class="dot" style="background:#ffcc40"></span>Gold</td>
+</tr>
+<tr>
+<td>4</td>
+<td><span class="dot" style="background:#8cf2e0"></span>Platinum</td>
+</tr>
+<tr>
+<td>5</td>
+<td><span class="dot" style="background:#73b8ff"></span>Diamond</td>
+</tr>
+<tr>
+<td>6</td>
+<td><span class="dot" style="background:#f23852"></span>Master</td>
+</tr>
+<tr>
+<td>7+</td>
+<td><span class="dot" style="background:#c76bff"></span>Legend</td>
+</tr>
+</tbody></table></div>
+</section>
+<section id="monstre"><h2>Monsters</h2>
+<p class="intro">Monsters are as strong as your hero + 10% (life, damage per hit and armour) — half of that on floor 1, full strength from floor 10. Every kind has its own strength compared with the others (the &quot;Strength&quot; column: 1 = an average monster). Elite monsters have 2.6x life and 1.4x damage. They attack 20% faster for every floor (at most 4 times as fast).</p>
+<h3>The Crypt</h3>
+<p>Guardians (every 5th floor, taking turns): The Bone King, The Lantern Thief.</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Share of the monsters</th>
+<th>Appears</th>
+<th>Strength (life / damage)</th>
+<th>Kind</th>
+<th>Materials (chance per kill)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Bone archer</b></td>
+<td>25%</td>
+<td>all</td>
+<td>0.45 / 0.54</td>
+<td>archer</td>
+<td>Bones 45%, Scrap iron 50%</td>
+</tr>
+<tr>
+<td><b>Carrion eater</b></td>
+<td>16%</td>
+<td>all</td>
+<td>0.62 / 0.62</td>
+<td>melee</td>
+<td>Hide 35%, Bones 20%, Scrap iron 20%</td>
+</tr>
+<tr>
+<td><b>Grave guard</b></td>
+<td>25%</td>
+<td>all</td>
+<td>0.82 / 0.71</td>
+<td>melee</td>
+<td>Bones 45%, Scrap iron 35%</td>
+</tr>
+<tr>
+<td><b>Bone hound</b></td>
+<td>15%</td>
+<td><span class="nw">from floor 2</span></td>
+<td>0.49 / 0.71</td>
+<td>charger</td>
+<td>Bones 50%</td>
+</tr>
+<tr>
+<td><b>Grave cultist</b></td>
+<td>11%</td>
+<td><span class="nw">from floor 3</span></td>
+<td>0.54 / 0.98</td>
+<td>zones</td>
+<td>Bones 30%, Hide 30%</td>
+</tr>
+<tr>
+<td><b>Dark spirit</b></td>
+<td>8.2%</td>
+<td><span class="nw">from floor 4</span></td>
+<td>0.93 / 0.8</td>
+<td>melee</td>
+<td>Bones 45%</td>
+</tr>
+</tbody></table></div>
+<h3>The Troll Cave</h3>
+<p>Guardians (every 5th floor, taking turns): The Troll Mother, The Spider Queen.</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Share of the monsters</th>
+<th>Appears</th>
+<th>Strength (life / damage)</th>
+<th>Kind</th>
+<th>Materials (chance per kill)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Cave raider</b></td>
+<td>25%</td>
+<td>all</td>
+<td>0.37 / 0.45</td>
+<td>melee</td>
+<td>Hide 35%, Scrap iron 15%</td>
+</tr>
+<tr>
+<td><b>Rat</b></td>
+<td>21%</td>
+<td>all</td>
+<td>0.25 / 0.36</td>
+<td>melee</td>
+<td>Hide 30%</td>
+</tr>
+<tr>
+<td><b>Cave spinner</b></td>
+<td>21%</td>
+<td><span class="nw">from floor 2</span></td>
+<td>0.54 / 0.71</td>
+<td>charger</td>
+<td>Troll sinew 35%, Hide 20%</td>
+</tr>
+<tr>
+<td><b>Spore shroom</b></td>
+<td>13%</td>
+<td><span class="nw">from floor 2</span></td>
+<td>0.7 / 0.62</td>
+<td>zones</td>
+<td>Hide 25%, Troll sinew 15%</td>
+</tr>
+<tr>
+<td><b>Troll</b></td>
+<td>13%</td>
+<td><span class="nw">from floor 3</span></td>
+<td>2.47 / 1.78</td>
+<td>smasher</td>
+<td>Troll sinew 70%, Scrap iron 60%, Hide 30%</td>
+</tr>
+<tr>
+<td><b>Shaman</b></td>
+<td>5.9%</td>
+<td><span class="nw">from floor 4</span></td>
+<td>0.78 / 0</td>
+<td>healer</td>
+<td>Bones 35%, Hide 35%</td>
+</tr>
+</tbody></table></div>
+<h3>The Sunken Fortress</h3>
+<p>Guardians (every 5th floor, taking turns): The Drowned Admiral, The Iron Crab.</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Share of the monsters</th>
+<th>Appears</th>
+<th>Strength (life / damage)</th>
+<th>Kind</th>
+<th>Materials (chance per kill)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Drowned soldier</b></td>
+<td>38%</td>
+<td>all</td>
+<td>0.66 / 0.71</td>
+<td>melee</td>
+<td>Scrap iron 35%, Bones 25%</td>
+</tr>
+<tr>
+<td><b>Crossbowman</b></td>
+<td>22%</td>
+<td>all</td>
+<td>0.62 / 0.71</td>
+<td>archer</td>
+<td>Scrap iron 45%, Bones 30%</td>
+</tr>
+<tr>
+<td><b>Rock crab</b></td>
+<td>15%</td>
+<td><span class="nw">from floor 3</span></td>
+<td>1.44 / 1.43</td>
+<td>smasher</td>
+<td>Scrap iron 50%, Troll sinew 40%</td>
+</tr>
+<tr>
+<td><b>Bomb brute</b></td>
+<td>13%</td>
+<td><span class="nw">from floor 3</span></td>
+<td>0.54 / 2.68</td>
+<td>explodes</td>
+<td>Scrap iron 45%, Hide 20%</td>
+</tr>
+<tr>
+<td><b>Carrion eater</b></td>
+<td>11%</td>
+<td>all</td>
+<td>0.62 / 0.62</td>
+<td>melee</td>
+<td>Hide 35%, Bones 20%, Scrap iron 20%</td>
+</tr>
+</tbody></table></div>
+<h3>The Ash Forge</h3>
+<p>Guardians (every 5th floor, taking turns): The Ash Smith, The Magma Mother.</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Share of the monsters</th>
+<th>Appears</th>
+<th>Strength (life / damage)</th>
+<th>Kind</th>
+<th>Materials (chance per kill)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Ember imp</b></td>
+<td>26%</td>
+<td>all</td>
+<td>0.37 / 0.45</td>
+<td>archer</td>
+<td>Hide 30%, Bones 15%</td>
+</tr>
+<tr>
+<td><b>Magma blob</b></td>
+<td>29%</td>
+<td>all</td>
+<td>0.62 / 0.8</td>
+<td>melee</td>
+<td>Scrap iron 30%</td>
+</tr>
+<tr>
+<td><b>Bomb brute</b></td>
+<td>19%</td>
+<td><span class="nw">from floor 2</span></td>
+<td>0.54 / 2.68</td>
+<td>explodes</td>
+<td>Scrap iron 45%, Hide 20%</td>
+</tr>
+<tr>
+<td><b>Forge golem</b></td>
+<td>14%</td>
+<td><span class="nw">from floor 4</span></td>
+<td>2.47 / 1.96</td>
+<td>smasher</td>
+<td>Scrap iron 80%, Troll sinew 30%</td>
+</tr>
+<tr>
+<td><b>Carrion eater</b></td>
+<td>12%</td>
+<td>all</td>
+<td>0.62 / 0.62</td>
+<td>melee</td>
+<td>Hide 35%, Bones 20%, Scrap iron 20%</td>
+</tr>
+</tbody></table></div>
+<h3>The Gold Chamber</h3>
+<p>Treasure guardian: The Greedy Chest.</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Share of the monsters</th>
+<th>Appears</th>
+<th>Strength (life / damage)</th>
+<th>Kind</th>
+<th>Materials (chance per kill)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Gilded guard</b></td>
+<td>33%</td>
+<td>all</td>
+<td>0.86 / 0.89</td>
+<td>melee</td>
+<td>Scrap iron 40%, Bones 35%</td>
+</tr>
+<tr>
+<td><b>Cave raider</b></td>
+<td>33%</td>
+<td>all</td>
+<td>0.37 / 0.45</td>
+<td>melee</td>
+<td>Hide 35%, Scrap iron 15%</td>
+</tr>
+<tr>
+<td><b>Chest mimic</b></td>
+<td>17%</td>
+<td>all</td>
+<td>1.03 / 1.25</td>
+<td>charger</td>
+<td>Scrap iron 50%, Hide 30%</td>
+</tr>
+<tr>
+<td><b>Rat</b></td>
+<td>17%</td>
+<td>all</td>
+<td>0.25 / 0.36</td>
+<td>melee</td>
+<td>Hide 30%</td>
+</tr>
+</tbody></table></div>
+<h3>The Rainbow Cave</h3>
+<p>Treasure guardian: The Prism Warden.</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Share of the monsters</th>
+<th>Appears</th>
+<th>Strength (life / damage)</th>
+<th>Kind</th>
+<th>Materials (chance per kill)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Crystal sprite</b></td>
+<td>33%</td>
+<td>all</td>
+<td>0.58 / 0.54</td>
+<td>archer</td>
+<td>Bones 35%</td>
+</tr>
+<tr>
+<td><b>Prism beetle</b></td>
+<td>42%</td>
+<td>all</td>
+<td>0.74 / 0.8</td>
+<td>charger</td>
+<td>Troll sinew 35%, Hide 25%</td>
+</tr>
+<tr>
+<td><b>Dark spirit</b></td>
+<td>14%</td>
+<td>all</td>
+<td>0.93 / 0.8</td>
+<td>melee</td>
+<td>Bones 45%</td>
+</tr>
+<tr>
+<td><b>Shaman</b></td>
+<td>11%</td>
+<td>all</td>
+<td>0.78 / 0</td>
+<td>healer</td>
+<td>Bones 35%, Hide 35%</td>
+</tr>
+</tbody></table></div>
+<h3>The Well — Under the water</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Share of the monsters</th>
+<th>Appears</th>
+<th>Strength (life / damage)</th>
+<th>Kind</th>
+<th>Materials (chance per kill)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Drowned soldier</b></td>
+<td>50%</td>
+<td>all</td>
+<td>0.66 / 0.71</td>
+<td>melee</td>
+<td>Scrap iron 35%, Bones 25%</td>
+</tr>
+<tr>
+<td><b>Rock crab</b></td>
+<td>33%</td>
+<td>all</td>
+<td>1.44 / 1.43</td>
+<td>smasher</td>
+<td>Scrap iron 50%, Troll sinew 40%</td>
+</tr>
+<tr>
+<td><b>Shade of the sacrificed</b></td>
+<td>17%</td>
+<td>all</td>
+<td>1.03 / 0.98</td>
+<td>melee</td>
+<td>Bones 50%, Troll sinew 15%</td>
+</tr>
+</tbody></table></div>
+<h3>The Well — The forgotten crypt</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Share of the monsters</th>
+<th>Appears</th>
+<th>Strength (life / damage)</th>
+<th>Kind</th>
+<th>Materials (chance per kill)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Grave guard</b></td>
+<td>32%</td>
+<td>all</td>
+<td>0.82 / 0.71</td>
+<td>melee</td>
+<td>Bones 45%, Scrap iron 35%</td>
+</tr>
+<tr>
+<td><b>Bone hound</b></td>
+<td>26%</td>
+<td>all</td>
+<td>0.49 / 0.71</td>
+<td>charger</td>
+<td>Bones 50%</td>
+</tr>
+<tr>
+<td><b>Shade of the sacrificed</b></td>
+<td>26%</td>
+<td>all</td>
+<td>1.03 / 0.98</td>
+<td>melee</td>
+<td>Bones 50%, Troll sinew 15%</td>
+</tr>
+<tr>
+<td><b>Blood cultist</b></td>
+<td>16%</td>
+<td>all</td>
+<td>0.7 / 1.16</td>
+<td>zones</td>
+<td>Bones 35%, Hide 35%, Troll sinew 20%</td>
+</tr>
+</tbody></table></div>
+<h3>The Well — The cave without a way</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Share of the monsters</th>
+<th>Appears</th>
+<th>Strength (life / damage)</th>
+<th>Kind</th>
+<th>Materials (chance per kill)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Cave spinner</b></td>
+<td>35%</td>
+<td>all</td>
+<td>0.54 / 0.71</td>
+<td>charger</td>
+<td>Troll sinew 35%, Hide 20%</td>
+</tr>
+<tr>
+<td><b>Troll</b></td>
+<td>23%</td>
+<td>all</td>
+<td>2.47 / 1.78</td>
+<td>smasher</td>
+<td>Troll sinew 70%, Scrap iron 60%, Hide 30%</td>
+</tr>
+<tr>
+<td><b>Spore shroom</b></td>
+<td>23%</td>
+<td>all</td>
+<td>0.7 / 0.62</td>
+<td>zones</td>
+<td>Hide 25%, Troll sinew 15%</td>
+</tr>
+<tr>
+<td><b>Shade of the sacrificed</b></td>
+<td>20%</td>
+<td>all</td>
+<td>1.03 / 0.98</td>
+<td>melee</td>
+<td>Bones 50%, Troll sinew 15%</td>
+</tr>
+</tbody></table></div>
+<h3>The Well — The cult's sanctum</h3>
+<p>Guardians (every 5th floor, taking turns): The Cult's High Priest.</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Share of the monsters</th>
+<th>Appears</th>
+<th>Strength (life / damage)</th>
+<th>Kind</th>
+<th>Materials (chance per kill)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Blood cultist</b></td>
+<td>50%</td>
+<td>all</td>
+<td>0.7 / 1.16</td>
+<td>zones</td>
+<td>Bones 35%, Hide 35%, Troll sinew 20%</td>
+</tr>
+<tr>
+<td><b>Shade of the sacrificed</b></td>
+<td>33%</td>
+<td>all</td>
+<td>1.03 / 0.98</td>
+<td>melee</td>
+<td>Bones 50%, Troll sinew 15%</td>
+</tr>
+<tr>
+<td><b>Grave cultist</b></td>
+<td>17%</td>
+<td>all</td>
+<td>0.54 / 0.98</td>
+<td>zones</td>
+<td>Bones 30%, Hide 30%</td>
+</tr>
+</tbody></table></div>
+<h3>Hell — the Circle of Fire</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Share of the monsters</th>
+<th>Appears</th>
+<th>Strength (life / damage)</th>
+<th>Kind</th>
+<th>Materials (chance per kill)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Hell Imp</b></td>
+<td>37%</td>
+<td>all</td>
+<td>0.54 / 0.62</td>
+<td>archer</td>
+<td>Hide 35%, Bones 20%</td>
+</tr>
+<tr>
+<td><b>Hellhound</b></td>
+<td>30%</td>
+<td>all</td>
+<td>0.82 / 0.89</td>
+<td>charger</td>
+<td>Hide 50%, Bones 30%</td>
+</tr>
+<tr>
+<td><b>Magma blob</b></td>
+<td>18%</td>
+<td>all</td>
+<td>0.62 / 0.8</td>
+<td>melee</td>
+<td>Scrap iron 30%</td>
+</tr>
+<tr>
+<td><b>Fire Lord</b></td>
+<td>15%</td>
+<td>all</td>
+<td>2.68 / 2.14</td>
+<td>smasher</td>
+<td>Scrap iron 80%, Troll sinew 30%</td>
+</tr>
+</tbody></table></div>
+<h3>Hell — the Bone Fields</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Share of the monsters</th>
+<th>Appears</th>
+<th>Strength (life / damage)</th>
+<th>Kind</th>
+<th>Materials (chance per kill)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Damned Soul</b></td>
+<td>36%</td>
+<td>all</td>
+<td>0.95 / 0.89</td>
+<td>melee</td>
+<td>Bones 50%, Troll sinew 15%</td>
+</tr>
+<tr>
+<td><b>Bone Legionnaire</b></td>
+<td>30%</td>
+<td>all</td>
+<td>1.07 / 0.98</td>
+<td>melee</td>
+<td>Bones 55%, Scrap iron 30%</td>
+</tr>
+<tr>
+<td><b>Bone hound</b></td>
+<td>22%</td>
+<td>all</td>
+<td>0.49 / 0.71</td>
+<td>charger</td>
+<td>Bones 50%</td>
+</tr>
+<tr>
+<td><b>Hell Imp</b></td>
+<td>12%</td>
+<td>all</td>
+<td>0.54 / 0.62</td>
+<td>archer</td>
+<td>Hide 35%, Bones 20%</td>
+</tr>
+</tbody></table></div>
+<h3>Hell — the Frozen Circle</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Share of the monsters</th>
+<th>Appears</th>
+<th>Strength (life / damage)</th>
+<th>Kind</th>
+<th>Materials (chance per kill)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Frozen Traitor</b></td>
+<td>39%</td>
+<td>all</td>
+<td>0.99 / 0.89</td>
+<td>melee</td>
+<td>Hide 35%, Scrap iron 30%</td>
+</tr>
+<tr>
+<td><b>Ice Wraith</b></td>
+<td>29%</td>
+<td>all</td>
+<td>0.7 / 0.71</td>
+<td>archer</td>
+<td>Bones 40%</td>
+</tr>
+<tr>
+<td><b>Frost Fiend</b></td>
+<td>18%</td>
+<td>all</td>
+<td>2.88 / 1.96</td>
+<td>smasher</td>
+<td>Scrap iron 80%, Troll sinew 35%</td>
+</tr>
+<tr>
+<td><b>Damned Soul</b></td>
+<td>13%</td>
+<td>all</td>
+<td>0.95 / 0.89</td>
+<td>melee</td>
+<td>Bones 50%, Troll sinew 15%</td>
+</tr>
+</tbody></table></div>
+<h3>Hell — Pandemonium</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Share of the monsters</th>
+<th>Appears</th>
+<th>Strength (life / damage)</th>
+<th>Kind</th>
+<th>Materials (chance per kill)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Pit Fiend</b></td>
+<td>27%</td>
+<td>all</td>
+<td>2.47 / 1.78</td>
+<td>melee</td>
+<td>Hide 60%, Troll sinew 45%, Bones 30%</td>
+</tr>
+<tr>
+<td><b>Hell Knight</b></td>
+<td>32%</td>
+<td>all</td>
+<td>1.65 / 1.25</td>
+<td>melee</td>
+<td>Scrap iron 60%, Hide 30%</td>
+</tr>
+<tr>
+<td><b>Demon Sorcerer</b></td>
+<td>22%</td>
+<td>all</td>
+<td>1.03 / 1.25</td>
+<td>zones</td>
+<td>Bones 40%, Hide 35%</td>
+</tr>
+<tr>
+<td><b>Hell Imp</b></td>
+<td>19%</td>
+<td>all</td>
+<td>0.54 / 0.62</td>
+<td>archer</td>
+<td>Hide 35%, Bones 20%</td>
+</tr>
+</tbody></table></div>
+<h3>Hell — the Throne of Darkness</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Share of the monsters</th>
+<th>Appears</th>
+<th>Strength (life / damage)</th>
+<th>Kind</th>
+<th>Materials (chance per kill)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Pit Fiend</b></td>
+<td>36%</td>
+<td>all</td>
+<td>2.47 / 1.78</td>
+<td>melee</td>
+<td>Hide 60%, Troll sinew 45%, Bones 30%</td>
+</tr>
+<tr>
+<td><b>Hell Knight</b></td>
+<td>36%</td>
+<td>all</td>
+<td>1.65 / 1.25</td>
+<td>melee</td>
+<td>Scrap iron 60%, Hide 30%</td>
+</tr>
+<tr>
+<td><b>Demon Sorcerer</b></td>
+<td>29%</td>
+<td>all</td>
+<td>1.03 / 1.25</td>
+<td>zones</td>
+<td>Bones 40%, Hide 35%</td>
+</tr>
+</tbody></table></div>
+<h3>Stairway to Heaven — the Clouds</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Share of the monsters</th>
+<th>Appears</th>
+<th>Strength (life / damage)</th>
+<th>Kind</th>
+<th>Materials (chance per kill)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>The Flaming Cross</b></td>
+<td>38%</td>
+<td>all</td>
+<td>0.82 / 0.8</td>
+<td>archer</td>
+<td>Scrap iron 55%</td>
+</tr>
+<tr>
+<td><b>Holy Dove</b></td>
+<td>31%</td>
+<td>all</td>
+<td>0.45 / 0.62</td>
+<td>melee</td>
+<td>Troll sinew 30%, Hide 20%</td>
+</tr>
+<tr>
+<td><b>The Ichthys Fish</b></td>
+<td>31%</td>
+<td>all</td>
+<td>0.74 / 0.89</td>
+<td>charger</td>
+<td>Troll sinew 40%, Bones 20%</td>
+</tr>
+</tbody></table></div>
+<h3>Stairway to Heaven — the Garden of Eden</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Share of the monsters</th>
+<th>Appears</th>
+<th>Strength (life / damage)</th>
+<th>Kind</th>
+<th>Materials (chance per kill)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>The Holy Chalice</b></td>
+<td>29%</td>
+<td>all</td>
+<td>0.91 / 1.07</td>
+<td>zones</td>
+<td>Scrap iron 60%</td>
+</tr>
+<tr>
+<td><b>Holy Dove</b></td>
+<td>29%</td>
+<td>all</td>
+<td>0.45 / 0.62</td>
+<td>melee</td>
+<td>Troll sinew 30%, Hide 20%</td>
+</tr>
+<tr>
+<td><b>Cherub</b></td>
+<td>29%</td>
+<td>all</td>
+<td>0.58 / 0.62</td>
+<td>archer</td>
+<td>Hide 30%, Bones 20%</td>
+</tr>
+<tr>
+<td><b>The Ichthys Fish</b></td>
+<td>14%</td>
+<td>all</td>
+<td>0.74 / 0.89</td>
+<td>charger</td>
+<td>Troll sinew 40%, Bones 20%</td>
+</tr>
+</tbody></table></div>
+<h3>Stairway to Heaven — the Hall of Choirs</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Share of the monsters</th>
+<th>Appears</th>
+<th>Strength (life / damage)</th>
+<th>Kind</th>
+<th>Materials (chance per kill)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Ophan — the Wheel of Eyes</b></td>
+<td>31%</td>
+<td>all</td>
+<td>1.23 / 0.8</td>
+<td>archer</td>
+<td>Scrap iron 60%, Troll sinew 30%</td>
+</tr>
+<tr>
+<td><b>Candle Warden</b></td>
+<td>28%</td>
+<td>all</td>
+<td>0.95 / 1.16</td>
+<td>zones</td>
+<td>Scrap iron 45%, Hide 20%</td>
+</tr>
+<tr>
+<td><b>Seraph</b></td>
+<td>26%</td>
+<td>all</td>
+<td>1.44 / 1.34</td>
+<td>melee</td>
+<td>Troll sinew 45%, Scrap iron 35%</td>
+</tr>
+<tr>
+<td><b>The Flaming Cross</b></td>
+<td>15%</td>
+<td>all</td>
+<td>0.82 / 0.8</td>
+<td>archer</td>
+<td>Scrap iron 55%</td>
+</tr>
+</tbody></table></div>
+<h3>Stairway to Heaven — the Pearly Gates</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Share of the monsters</th>
+<th>Appears</th>
+<th>Strength (life / damage)</th>
+<th>Kind</th>
+<th>Materials (chance per kill)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Guardian Angel</b></td>
+<td>38%</td>
+<td>all</td>
+<td>1.85 / 1.25</td>
+<td>melee</td>
+<td>Scrap iron 70%, Hide 30%</td>
+</tr>
+<tr>
+<td><b>Seraph</b></td>
+<td>27%</td>
+<td>all</td>
+<td>1.44 / 1.34</td>
+<td>melee</td>
+<td>Troll sinew 45%, Scrap iron 35%</td>
+</tr>
+<tr>
+<td><b>Ophan — the Wheel of Eyes</b></td>
+<td>22%</td>
+<td>all</td>
+<td>1.23 / 0.8</td>
+<td>archer</td>
+<td>Scrap iron 60%, Troll sinew 30%</td>
+</tr>
+<tr>
+<td><b>The Flaming Cross</b></td>
+<td>14%</td>
+<td>all</td>
+<td>0.82 / 0.8</td>
+<td>archer</td>
+<td>Scrap iron 55%</td>
+</tr>
+</tbody></table></div>
+<h3>Stairway to Heaven — the Summit of Light</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Share of the monsters</th>
+<th>Appears</th>
+<th>Strength (life / damage)</th>
+<th>Kind</th>
+<th>Materials (chance per kill)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Seraph</b></td>
+<td>36%</td>
+<td>all</td>
+<td>1.44 / 1.34</td>
+<td>melee</td>
+<td>Troll sinew 45%, Scrap iron 35%</td>
+</tr>
+<tr>
+<td><b>Guardian Angel</b></td>
+<td>36%</td>
+<td>all</td>
+<td>1.85 / 1.25</td>
+<td>melee</td>
+<td>Scrap iron 70%, Hide 30%</td>
+</tr>
+<tr>
+<td><b>Ophan — the Wheel of Eyes</b></td>
+<td>27%</td>
+<td>all</td>
+<td>1.23 / 0.8</td>
+<td>archer</td>
+<td>Scrap iron 60%, Troll sinew 30%</td>
+</tr>
+</tbody></table></div>
+<h3>The Dragon's Lair — the Ash Halls</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Share of the monsters</th>
+<th>Appears</th>
+<th>Strength (life / damage)</th>
+<th>Kind</th>
+<th>Materials (chance per kill)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Dragon Kobold</b></td>
+<td>37%</td>
+<td>all</td>
+<td>0.62 / 0.71</td>
+<td>melee</td>
+<td>Hide 40%, Scrap iron 20%</td>
+</tr>
+<tr>
+<td><b>Drakeling</b></td>
+<td>31%</td>
+<td>all</td>
+<td>1.03 / 1.07</td>
+<td>charger</td>
+<td>Hide 55%, Bones 30%, Troll sinew 20%</td>
+</tr>
+<tr>
+<td><b>Dragon Cultist</b></td>
+<td>20%</td>
+<td>all</td>
+<td>0.82 / 1.16</td>
+<td>zones</td>
+<td>Bones 35%, Hide 35%</td>
+</tr>
+<tr>
+<td><b>Wyrmling</b></td>
+<td>12%</td>
+<td>all</td>
+<td>1.23 / 1.07</td>
+<td>archer</td>
+<td>Hide 60%, Troll sinew 35%, Bones 30%</td>
+</tr>
+</tbody></table></div>
+<h3>The Dragon's Lair — the Cult's Temple</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Share of the monsters</th>
+<th>Appears</th>
+<th>Strength (life / damage)</th>
+<th>Kind</th>
+<th>Materials (chance per kill)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Dragon Cultist</b></td>
+<td>46%</td>
+<td>all</td>
+<td>0.82 / 1.16</td>
+<td>zones</td>
+<td>Bones 35%, Hide 35%</td>
+</tr>
+<tr>
+<td><b>Dragon Kobold</b></td>
+<td>31%</td>
+<td>all</td>
+<td>0.62 / 0.71</td>
+<td>melee</td>
+<td>Hide 40%, Scrap iron 20%</td>
+</tr>
+<tr>
+<td><b>Wyrmling</b></td>
+<td>23%</td>
+<td>all</td>
+<td>1.23 / 1.07</td>
+<td>archer</td>
+<td>Hide 60%, Troll sinew 35%, Bones 30%</td>
+</tr>
+</tbody></table></div>
+<h3>The Dragon's Lair — the Graveyard</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Share of the monsters</th>
+<th>Appears</th>
+<th>Strength (life / damage)</th>
+<th>Kind</th>
+<th>Materials (chance per kill)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Bone Legionnaire</b></td>
+<td>40%</td>
+<td>all</td>
+<td>1.07 / 0.98</td>
+<td>melee</td>
+<td>Bones 55%, Scrap iron 30%</td>
+</tr>
+<tr>
+<td><b>Bone hound</b></td>
+<td>27%</td>
+<td>all</td>
+<td>0.49 / 0.71</td>
+<td>charger</td>
+<td>Bones 50%</td>
+</tr>
+<tr>
+<td><b>Wyrmling</b></td>
+<td>13%</td>
+<td>all</td>
+<td>1.23 / 1.07</td>
+<td>archer</td>
+<td>Hide 60%, Troll sinew 35%, Bones 30%</td>
+</tr>
+<tr>
+<td><b>Damned Soul</b></td>
+<td>20%</td>
+<td>all</td>
+<td>0.95 / 0.89</td>
+<td>melee</td>
+<td>Bones 50%, Troll sinew 15%</td>
+</tr>
+</tbody></table></div>
+<h3>The Dragon's Lair — the Treasury</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Share of the monsters</th>
+<th>Appears</th>
+<th>Strength (life / damage)</th>
+<th>Kind</th>
+<th>Materials (chance per kill)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Dragon Kobold</b></td>
+<td>30%</td>
+<td>all</td>
+<td>0.62 / 0.71</td>
+<td>melee</td>
+<td>Hide 40%, Scrap iron 20%</td>
+</tr>
+<tr>
+<td><b>Drakeling</b></td>
+<td>30%</td>
+<td>all</td>
+<td>1.03 / 1.07</td>
+<td>charger</td>
+<td>Hide 55%, Bones 30%, Troll sinew 20%</td>
+</tr>
+<tr>
+<td><b>Wyrmling</b></td>
+<td>24%</td>
+<td>all</td>
+<td>1.23 / 1.07</td>
+<td>archer</td>
+<td>Hide 60%, Troll sinew 35%, Bones 30%</td>
+</tr>
+<tr>
+<td><b>Dragon Cultist</b></td>
+<td>15%</td>
+<td>all</td>
+<td>0.82 / 1.16</td>
+<td>zones</td>
+<td>Bones 35%, Hide 35%</td>
+</tr>
+</tbody></table></div>
+<h3>Lepreconland</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Share of the monsters</th>
+<th>Appears</th>
+<th>Strength (life / damage)</th>
+<th>Kind</th>
+<th>Materials (chance per kill)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Clurichaun</b></td>
+<td>47%</td>
+<td>all</td>
+<td>0.58 / 0.62</td>
+<td>melee</td>
+<td>Hide 45%, Bones 15%</td>
+</tr>
+<tr>
+<td><b>Pixie</b></td>
+<td>34%</td>
+<td>all</td>
+<td>0.45 / 0.54</td>
+<td>archer</td>
+<td>Troll sinew 35%, Embers 15%</td>
+</tr>
+<tr>
+<td><b>Gold Golem</b></td>
+<td>19%</td>
+<td>all</td>
+<td>2.47 / 1.78</td>
+<td>smasher</td>
+<td>Scrap iron 80%, Embers 35%</td>
+</tr>
+</tbody></table></div>
+<h3>Bosses and guardians</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Boss</th>
+<th>Big attacks</th>
+<th>Special</th>
+<th>Strength</th>
+</tr></thead><tbody>
+<tr>
+<td><b>The Bone King</b></td>
+<td>ring of damage</td>
+<td></td>
+<td>0.55</td>
+</tr>
+<tr>
+<td><b>The Troll Mother</b></td>
+<td>cross</td>
+<td></td>
+<td>0.81</td>
+</tr>
+<tr>
+<td><b>The Lantern Thief</b></td>
+<td>everything but the middle</td>
+<td></td>
+<td>0.68</td>
+</tr>
+<tr>
+<td><b>The Spider Queen</b></td>
+<td>beam</td>
+<td></td>
+<td>0.73</td>
+</tr>
+<tr>
+<td><b>The Drowned Admiral</b></td>
+<td>beam</td>
+<td></td>
+<td>0.78</td>
+</tr>
+<tr>
+<td><b>The Iron Crab</b></td>
+<td>ring of damage</td>
+<td></td>
+<td>0.85</td>
+</tr>
+<tr>
+<td><b>The Ash Smith</b></td>
+<td>cross</td>
+<td></td>
+<td>0.83</td>
+</tr>
+<tr>
+<td><b>The Magma Mother</b></td>
+<td>everything but the middle</td>
+<td></td>
+<td>0.78</td>
+</tr>
+<tr>
+<td><b>The Cult's High Priest</b></td>
+<td>pentagram</td>
+<td></td>
+<td>1.07</td>
+</tr>
+<tr>
+<td><b>The Greedy Chest</b></td>
+<td>ring of damage</td>
+<td></td>
+<td>0.63</td>
+</tr>
+<tr>
+<td><b>The Prism Warden</b></td>
+<td>cross</td>
+<td></td>
+<td>0.68</td>
+</tr>
+<tr>
+<td><b>Belphegor</b><br><span class="muted">Prince of Sloth</span></td>
+<td>everything but the middle</td>
+<td>arch</td>
+<td>0.91</td>
+</tr>
+<tr>
+<td><b>Mammon</b><br><span class="muted">Prince of Greed</span></td>
+<td>ring of damage</td>
+<td>arch</td>
+<td>0.94</td>
+</tr>
+<tr>
+<td><b>Leviathan</b><br><span class="muted">Serpent of Envy</span></td>
+<td>beam</td>
+<td>arch</td>
+<td>0.99</td>
+</tr>
+<tr>
+<td><b>Asmodeus</b><br><span class="muted">King of Lust</span></td>
+<td>pentagram</td>
+<td>arch</td>
+<td>0.91</td>
+</tr>
+<tr>
+<td><b>Beelzebub</b><br><span class="muted">Lord of the Flies</span></td>
+<td>rain of attacks, ring of damage</td>
+<td>arch</td>
+<td>0.94</td>
+</tr>
+<tr>
+<td><b>Belial</b><br><span class="muted">Prince of Lies</span></td>
+<td>cross</td>
+<td>arch</td>
+<td>0.99</td>
+</tr>
+<tr>
+<td><b>Moloch</b><br><span class="muted">Devourer by Fire</span></td>
+<td>ring of damage</td>
+<td>arch</td>
+<td>1.07</td>
+</tr>
+<tr>
+<td><b>Astaroth</b><br><span class="muted">Grand Duke of Hell</span></td>
+<td>spiral</td>
+<td>arch</td>
+<td>0.99</td>
+</tr>
+<tr>
+<td><b>Baal</b><br><span class="muted">King of the East</span></td>
+<td>cross</td>
+<td>arch</td>
+<td>1.1</td>
+</tr>
+<tr>
+<td><b>Paimon</b><br><span class="muted">King of the West</span></td>
+<td>rain of attacks</td>
+<td>arch</td>
+<td>1.02</td>
+</tr>
+<tr>
+<td><b>Abaddon</b><br><span class="muted">Angel of the Abyss</span></td>
+<td>beam</td>
+<td>arch</td>
+<td>1.12</td>
+</tr>
+<tr>
+<td><b>Azazel</b><br><span class="muted">Outcast of the Desert</span></td>
+<td>pentagram</td>
+<td>arch</td>
+<td>1.1</td>
+</tr>
+<tr>
+<td><b>Lilith</b><br><span class="muted">Mother of the Night</span></td>
+<td>everything but the middle</td>
+<td>arch</td>
+<td>1.07</td>
+</tr>
+<tr>
+<td><b>Samael</b><br><span class="muted">Venom of Death</span></td>
+<td>spiral, beam</td>
+<td>arch</td>
+<td>1.12</td>
+</tr>
+<tr>
+<td><b>Mephistopheles</b><br><span class="muted">Master of the Pact</span></td>
+<td>pentagram, rain of attacks</td>
+<td>arch</td>
+<td>1.15</td>
+</tr>
+<tr>
+<td><b>Lucifer</b><br><span class="muted">the Fallen Morning Star</span></td>
+<td>cross, ring of damage, beam</td>
+<td>arch</td>
+<td>1.25</td>
+</tr>
+<tr>
+<td><b>Satan</b><br><span class="muted">the Devil</span></td>
+<td>pentagram, cage with one gap, rain of attacks, breath (cone), everything but the middle, cross</td>
+<td>final boss, arch, rises again</td>
+<td>1.5</td>
+</tr>
+<tr>
+<td><b>Sariel</b><br><span class="muted">Angel of the Moon</span></td>
+<td>ring of damage</td>
+<td>arch</td>
+<td>0.91</td>
+</tr>
+<tr>
+<td><b>Remiel</b><br><span class="muted">Angel of Hope</span></td>
+<td>everything but the middle</td>
+<td>arch</td>
+<td>0.94</td>
+</tr>
+<tr>
+<td><b>Raguel</b><br><span class="muted">Angel of Justice</span></td>
+<td>cross</td>
+<td>arch</td>
+<td>0.99</td>
+</tr>
+<tr>
+<td><b>Barachiel</b><br><span class="muted">Angel of Lightning</span></td>
+<td>rain of attacks</td>
+<td>arch</td>
+<td>0.97</td>
+</tr>
+<tr>
+<td><b>Jehudiel</b><br><span class="muted">Angel of Praise</span></td>
+<td>beam</td>
+<td>arch</td>
+<td>1.02</td>
+</tr>
+<tr>
+<td><b>Zadkiel</b><br><span class="muted">Angel of Mercy</span></td>
+<td>spiral</td>
+<td>arch</td>
+<td>0.99</td>
+</tr>
+<tr>
+<td><b>Jophiel</b><br><span class="muted">Angel of Beauty</span></td>
+<td>ring of damage</td>
+<td>arch</td>
+<td>1.02</td>
+</tr>
+<tr>
+<td><b>Chamuel</b><br><span class="muted">Angel of Love</span></td>
+<td>everything but the middle</td>
+<td>arch</td>
+<td>1.04</td>
+</tr>
+<tr>
+<td><b>Haniel</b><br><span class="muted">Angel of Joy</span></td>
+<td>rain of attacks</td>
+<td>arch</td>
+<td>1.04</td>
+</tr>
+<tr>
+<td><b>Azrael</b><br><span class="muted">Angel of Death</span></td>
+<td>cross</td>
+<td>arch</td>
+<td>1.12</td>
+</tr>
+<tr>
+<td><b>Sandalphon</b><br><span class="muted">the Tall One</span></td>
+<td>ring of damage</td>
+<td>arch</td>
+<td>1.17</td>
+</tr>
+<tr>
+<td><b>Metatron</b><br><span class="muted">Scribe of Heaven</span></td>
+<td>spiral, rain of attacks</td>
+<td>arch</td>
+<td>1.15</td>
+</tr>
+<tr>
+<td><b>Raphael</b><br><span class="muted">Angel of Healing</span></td>
+<td>beam</td>
+<td>arch</td>
+<td>1.17</td>
+</tr>
+<tr>
+<td><b>Uriel</b><br><span class="muted">Fire of God</span></td>
+<td>cross, ring of damage</td>
+<td>arch</td>
+<td>1.2</td>
+</tr>
+<tr>
+<td><b>Gabriel</b><br><span class="muted">Messenger of God</span></td>
+<td>ring of damage, beam</td>
+<td>arch</td>
+<td>1.23</td>
+</tr>
+<tr>
+<td><b>Michael</b><br><span class="muted">Commander of Heaven</span></td>
+<td>cross, beam, everything but the middle</td>
+<td>arch</td>
+<td>1.3</td>
+</tr>
+<tr>
+<td><b>Jesus of Nazareth</b></td>
+<td>cross, rain of attacks, everything but the middle, spiral, beam, ring of damage</td>
+<td>final boss, arch, rises again</td>
+<td>1.5</td>
+</tr>
+<tr>
+<td><b>The Quartz Wyrm</b></td>
+<td>breath (cone), rain of attacks, ring of damage</td>
+<td>raid</td>
+<td>0.78</td>
+</tr>
+<tr>
+<td><b>Ignar</b><br><span class="muted">Dragon of Fire</span></td>
+<td>breath (cone), rain of attacks</td>
+<td>raid</td>
+<td>0.78</td>
+</tr>
+<tr>
+<td><b>Hrim</b><br><span class="muted">Dragon of Frost</span></td>
+<td>breath (cone), everything but the middle</td>
+<td>raid</td>
+<td>0.78</td>
+</tr>
+<tr>
+<td><b>High Priest of the Dragon Cult</b></td>
+<td>pentagram, spiral, rain of attacks</td>
+<td>raid</td>
+<td>0.78</td>
+</tr>
+<tr>
+<td><b>The Bone Dragon</b></td>
+<td>breath (cone), cross, rain of attacks</td>
+<td>raid</td>
+<td>0.78</td>
+</tr>
+<tr>
+<td><b>Vyrmorath the Elder Dragon</b></td>
+<td>breath (cone), rain of attacks, spiral, everything but the middle, ring of damage, cross</td>
+<td>raid, final boss</td>
+<td>0.78</td>
+</tr>
+<tr>
+<td><b>The Leprechaun King</b></td>
+<td>rain of attacks, ring of damage</td>
+<td></td>
+<td>0.68</td>
+</tr>
+</tbody></table></div>
+</section>
+<section id="etager"><h2>Floors, themes and realms</h2>
+<p>Every floor has a theme (The Crypt, The Troll Cave, The Sunken Fortress, The Ash Forge). Rooms are 20 x 20 cells. You can only move on when 80% of the monsters are dead and the guardian (every 5th floor) has fallen.</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Special floor</th>
+<th>Chance per floor</th>
+<th>What is there</th>
+</tr></thead><tbody>
+<tr>
+<td><b>The Gold Chamber</b></td>
+<td>1.2%</td>
+<td>Extra chests and piles of gold, a treasure guardian, 6x chance of named items.</td>
+</tr>
+<tr>
+<td><b>The Rainbow Cave</b></td>
+<td>0.7%</td>
+<td>Crystal creatures, more elixirs and collectibles, the rainbow elixir, 6x chance of named items.</td>
+</tr>
+</tbody></table></div>
+<h3>Random events</h3>
+<p>About 30% of the ordinary floors (from floor 2) have an event:</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Event</th>
+<th>Share (when there is one)</th>
+<th>Appears</th>
+<th>What happens</th>
+</tr></thead><tbody>
+<tr>
+<td><b>The Leprechaun</b></td>
+<td>16%</td>
+<td><span class="nw">from floor 3</span></td>
+<td>Catch him before he vanishes through the walls — then he leaves gold and a portal to Lepreconland (the Leprechaun King and his pot of gold: 60 gold x the floor).</td>
+</tr>
+<tr>
+<td><b>The old shrine</b></td>
+<td>26%</td>
+<td><span class="nw">from floor 2</span></td>
+<td>A blessing (damage, full life/lantern or luck) or a curse.</td>
+</tr>
+<tr>
+<td><b>The fairy ring</b></td>
+<td>23%</td>
+<td><span class="nw">from floor 2</span></td>
+<td>Step in: giant, tiny, fast, mirrored, rainbow-coloured — or moved.</td>
+</tr>
+<tr>
+<td><b>The goblin party</b></td>
+<td>19%</td>
+<td><span class="nw">from floor 3</span></td>
+<td>Five goblins; the ale barrel makes you drunk and four times as strong.</td>
+</tr>
+<tr>
+<td><b>The wishing well</b></td>
+<td>16%</td>
+<td><span class="nw">from floor 2</span></td>
+<td>Throw in 10 x the floor in gold: 4x the gold, a gift, healing — or nothing.</td>
+</tr>
+</tbody></table></div>
+<h3>The floor's challenge</h3>
+<p>About 40% of the floors from floor 2 have either a pack of elite monsters (3-5) or a champion: one giant monster with 8x life, 2x damage and 6x experience, which leaves two good items and gold.</p>
+<h3>Realms</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Realm</th>
+<th>Floors</th>
+<th>How to get there</th>
+<th>Bosses</th>
+</tr></thead><tbody>
+<tr>
+<td><b>The Well</b></td>
+<td>8</td>
+<td>The well in town, at the highest blood pact. The pact breaks afterwards.</td>
+<td>The Cult's High Priest</td>
+</tr>
+<tr>
+<td><b>Hell</b></td>
+<td>17</td>
+<td>If the hero owns a holy relic, Natas comes to town and opens the rift.</td>
+<td>Belphegor, Mammon, Leviathan, Asmodeus, Beelzebub, Belial ...</td>
+</tr>
+<tr>
+<td><b>Stairway to Heaven</b></td>
+<td>17</td>
+<td>If the hero owns an unholy relic, the nuns come and call the stairway down.</td>
+<td>Sariel, Remiel, Raguel, Barachiel, Jehudiel, Zadkiel ...</td>
+</tr>
+<tr>
+<td><b>The Dragon's Lair</b></td>
+<td>5</td>
+<td>When both Hell and the Heavenly Stairway are beaten (1-4 players).</td>
+<td>The Quartz Wyrm, Ignar, Hrim, High Priest of the Dragon Cult, The Bone Dragon, Vyrmorath the Elder Dragon</td>
+</tr>
+<tr>
+<td><b>Lepreconland</b></td>
+<td>1</td>
+<td>The portal from a caught leprechaun</td>
+<td>The Leprechaun King</td>
+</tr>
+</tbody></table></div>
+</section>
+<section id="bytte"><h2>Loot and drop chances</h2>
+<p class="intro">Chances per kill or chest, without magic find. All loot is personal: in co-op every player gets their own.</p>
+<div class="tw"><table class=""><thead><tr>
+<th>From</th>
+<th>Gear</th>
+<th>Gold</th>
+<th>Drink/mushroom</th>
+<th>Collectible</th>
+<th>Set item</th>
+<th>Named item</th>
+<th>Relic</th>
+</tr></thead><tbody>
+<tr>
+<td>Ordinary monster</td>
+<td>3%</td>
+<td>22%</td>
+<td>2%</td>
+<td>0.4%</td>
+<td>0.05%</td>
+<td>0.12%</td>
+<td>0.01%</td>
+</tr>
+<tr>
+<td>Troll</td>
+<td>7%</td>
+<td>22%</td>
+<td>2%</td>
+<td>0.4%</td>
+<td>0.05%</td>
+<td>0.12%</td>
+<td>0.01%</td>
+</tr>
+<tr>
+<td>Elite monster</td>
+<td>18%</td>
+<td>always</td>
+<td>15%</td>
+<td>5%</td>
+<td>0.5%</td>
+<td>1.2%</td>
+<td>0.1%</td>
+</tr>
+<tr>
+<td>Boss / guardian</td>
+<td>hoard</td>
+<td>always</td>
+<td>2%</td>
+<td>25%</td>
+<td>8%</td>
+<td>20%</td>
+<td>1.5%</td>
+</tr>
+<tr>
+<td>Treasure chest</td>
+<td>22%</td>
+<td>always</td>
+<td>35%</td>
+<td>5%</td>
+<td>—</td>
+<td>3%</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<p>Set items and named items drop from floor 3 (or on special floors), relics from floor 6. A room has a treasure chest with 70% chance. Spore mushrooms and magma slimes drop a drink/mushroom in 30% of the kills. Champions always leave two good items.</p>
+<h3>The guardian's hoard</h3>
+<p>A guardian always leaves a new recipe (if there are more to learn at that depth — see Recipes), 4-7 of every common material, 2-4 embers, gold and gear.</p>
+<h3>Rarity by floor</h3>
+<p>How rare the gear is depends on the floor (+5% to everything above common per floor) and your magic find. The item's level is your hero's level (or up to 2 below).</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Floor</th>
+<th>Common</th>
+<th>Magic</th>
+<th>Rare</th>
+<th>Legendary</th>
+</tr></thead><tbody>
+<tr>
+<td>Floor 1</td>
+<td>82%</td>
+<td>16%</td>
+<td>1.6%</td>
+<td>0.12%</td>
+</tr>
+<tr>
+<td>Floor 3</td>
+<td>81%</td>
+<td>17%</td>
+<td>1.7%</td>
+<td>0.13%</td>
+</tr>
+<tr>
+<td>Floor 5</td>
+<td>79%</td>
+<td>19%</td>
+<td>1.9%</td>
+<td>0.14%</td>
+</tr>
+<tr>
+<td>Floor 10</td>
+<td>76%</td>
+<td>22%</td>
+<td>2.2%</td>
+<td>0.16%</td>
+</tr>
+<tr>
+<td>Floor 15</td>
+<td>73%</td>
+<td>24%</td>
+<td>2.4%</td>
+<td>0.18%</td>
+</tr>
+<tr>
+<td>Floor 20</td>
+<td>70%</td>
+<td>27%</td>
+<td>2.7%</td>
+<td>0.2%</td>
+</tr>
+<tr>
+<td>Floor 30</td>
+<td>65%</td>
+<td>31%</td>
+<td>3.1%</td>
+<td>0.23%</td>
+</tr>
+<tr>
+<td>Floor 40</td>
+<td>61%</td>
+<td>35%</td>
+<td>3.5%</td>
+<td>0.26%</td>
+</tr>
+</tbody></table></div>
+<h3>What kind of item</h3>
+<div class="tw"><table class="small"><thead><tr>
+<th>Slot</th>
+<th>Share</th>
+</tr></thead><tbody>
+<tr>
+<td>Weapon</td>
+<td>23%</td>
+</tr>
+<tr>
+<td>Armor</td>
+<td>14%</td>
+</tr>
+<tr>
+<td>Helm</td>
+<td>12%</td>
+</tr>
+<tr>
+<td>Gloves</td>
+<td>11%</td>
+</tr>
+<tr>
+<td>Boots</td>
+<td>11%</td>
+</tr>
+<tr>
+<td>Amulet</td>
+<td>7.3%</td>
+</tr>
+<tr>
+<td>Ring</td>
+<td>14%</td>
+</tr>
+<tr>
+<td>Belt</td>
+<td>8.3%</td>
+</tr>
+</tbody></table></div>
+</section>
+<section id="udstyr"><h2>Gear</h2>
+<p class="intro">Magic items have 1-2 properties, rare 3-4, legendary 4 and a legendary power. Items above your hero's level only work with hero level / item level of their power.</p>
+<h3>Weapons</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Weapons</th>
+<th>Damage (level 1)</th>
+<th>Time per hit</th>
+<th>Damage per second</th>
+<th>Arc</th>
+<th>Reach</th>
+<th>Critical</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Sword</b></td>
+<td>10</td>
+<td>0.48 s</td>
+<td>20.83</td>
+<td>100°</td>
+<td>2.5 m</td>
+<td>0%</td>
+</tr>
+<tr>
+<td><b>Axe</b></td>
+<td>17</td>
+<td>0.78 s</td>
+<td>21.79</td>
+<td>140°</td>
+<td>2.7 m</td>
+<td>0%</td>
+</tr>
+<tr>
+<td><b>Daggers</b></td>
+<td>6</td>
+<td>0.3 s</td>
+<td>20</td>
+<td>70°</td>
+<td>2 m</td>
+<td>8%</td>
+</tr>
+<tr>
+<td><b>Spear</b></td>
+<td>12</td>
+<td>0.58 s</td>
+<td>20.69</td>
+<td>40°</td>
+<td>3.8 m</td>
+<td>0%</td>
+</tr>
+<tr>
+<td><b>Bow</b></td>
+<td>8</td>
+<td>0.55 s</td>
+<td>14.55</td>
+<td>20°</td>
+<td>13 m (shoots)</td>
+<td>3%</td>
+</tr>
+<tr>
+<td><b>Staff</b></td>
+<td>8.5</td>
+<td>0.62 s</td>
+<td>13.71</td>
+<td>20°</td>
+<td>11 m (shoots)</td>
+<td>0%</td>
+</tr>
+<tr>
+<td><b>Scythe</b></td>
+<td>13</td>
+<td>0.72 s</td>
+<td>18.06</td>
+<td>170°</td>
+<td>2.9 m</td>
+<td>2%</td>
+</tr>
+</tbody></table></div>
+<h3>Armour</h3>
+<div class="tw"><table class="small"><thead><tr>
+<th>Base type</th>
+<th>Base values (level 1)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Leather armor</b></td>
+<td>+8 armor, +10 life, +3% movement speed</td>
+</tr>
+<tr>
+<td><b>Chain mail</b></td>
+<td>+18 armor, +20 life, +0% movement speed</td>
+</tr>
+<tr>
+<td><b>Plate armor</b></td>
+<td>+32 armor, +30 life, -6% movement speed</td>
+</tr>
+</tbody></table></div>
+<h3>Helmets</h3>
+<div class="tw"><table class="small"><thead><tr>
+<th>Base type</th>
+<th>Base values (level 1)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Leather cap</b></td>
+<td>+3 armor, +5 life</td>
+</tr>
+<tr>
+<td><b>Iron helm</b></td>
+<td>+6 armor, +8 life</td>
+</tr>
+<tr>
+<td><b>Storm helm</b></td>
+<td>+10 armor, +12 life, -2% movement speed</td>
+</tr>
+</tbody></table></div>
+<h3>Gloves</h3>
+<div class="tw"><table class="small"><thead><tr>
+<th>Base type</th>
+<th>Base values (level 1)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Leather gloves</b></td>
+<td>+2 armor, +3% attack speed</td>
+</tr>
+<tr>
+<td><b>Iron gloves</b></td>
+<td>+5 armor, +4 life</td>
+</tr>
+</tbody></table></div>
+<h3>Boots</h3>
+<div class="tw"><table class="small"><thead><tr>
+<th>Base type</th>
+<th>Base values (level 1)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Leather boots</b></td>
+<td>+2 armor, +4% movement speed</td>
+</tr>
+<tr>
+<td><b>Iron boots</b></td>
+<td>+5 armor, +4 life</td>
+</tr>
+</tbody></table></div>
+<h3>Belts</h3>
+<div class="tw"><table class="small"><thead><tr>
+<th>Base type</th>
+<th>Base values (level 1)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Rope belt</b></td>
+<td>+1 armor, +2 pockets for drinks (Shift+1-5)</td>
+</tr>
+<tr>
+<td><b>Leather belt</b></td>
+<td>+2 armor, +3 pockets for drinks (Shift+1-5)</td>
+</tr>
+<tr>
+<td><b>Studded belt</b></td>
+<td>+4 armor, +4 pockets for drinks (Shift+1-5)</td>
+</tr>
+</tbody></table></div>
+<h3>Amulets</h3>
+<div class="tw"><table class="small"><thead><tr>
+<th>Base type</th>
+<th>Base values (level 1)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Amulet</b></td>
+<td>—</td>
+</tr>
+<tr>
+<td><b>Talisman</b></td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<h3>Rings</h3>
+<div class="tw"><table class="small"><thead><tr>
+<th>Base type</th>
+<th>Base values (level 1)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Ring</b></td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<h3>Properties</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Property</th>
+<th>Value (level 1)</th>
+<th>+ per item level</th>
+<th>Can be on</th>
+</tr></thead><tbody>
+<tr>
+<td><b>damage</b></td>
+<td>1 - 3</td>
+<td>0.28</td>
+<td>Weapon, Amulet, Ring, Gloves</td>
+</tr>
+<tr>
+<td><b>damage (%)</b></td>
+<td>4% - 10%</td>
+<td>0.4%</td>
+<td>Weapon, Amulet, Ring</td>
+</tr>
+<tr>
+<td><b>attack speed (%)</b></td>
+<td>3% - 8%</td>
+<td>0.3%</td>
+<td>Weapon, Amulet, Ring, Gloves</td>
+</tr>
+<tr>
+<td><b>critical chance</b></td>
+<td>1% - 3%</td>
+<td>0.1%</td>
+<td>Weapon, Amulet, Ring, Gloves</td>
+</tr>
+<tr>
+<td><b>critical damage</b></td>
+<td>8% - 20%</td>
+<td>0.6%</td>
+<td>Weapon, Amulet, Ring</td>
+</tr>
+<tr>
+<td><b>life drain</b></td>
+<td>0.5% - 1.5%</td>
+<td>0.04%</td>
+<td>Weapon, Amulet, Ring</td>
+</tr>
+<tr>
+<td><b>life</b></td>
+<td>6 - 14</td>
+<td>1</td>
+<td>Armor, Helm, Boots, Amulet, Ring, Belt</td>
+</tr>
+<tr>
+<td><b>life (%)</b></td>
+<td>3% - 6%</td>
+<td>0.2%</td>
+<td>Armor, Helm</td>
+</tr>
+<tr>
+<td><b>armor</b></td>
+<td>3 - 8</td>
+<td>1.2</td>
+<td>Armor, Helm, Gloves, Boots, Belt</td>
+</tr>
+<tr>
+<td><b>life per second</b></td>
+<td>0.3 - 0.8</td>
+<td>0.05</td>
+<td>Armor, Helm, Amulet, Ring, Belt</td>
+</tr>
+<tr>
+<td><b>movement speed (%)</b></td>
+<td>2% - 5%</td>
+<td>—</td>
+<td>Boots, Armor, Amulet</td>
+</tr>
+<tr>
+<td><b>gold find</b></td>
+<td>5% - 15%</td>
+<td>0.4%</td>
+<td>Armor, Helm, Gloves, Amulet, Ring, Belt</td>
+</tr>
+<tr>
+<td><b>chance of better loot</b></td>
+<td>4% - 10%</td>
+<td>0.3%</td>
+<td>Amulet, Ring, Helm</td>
+</tr>
+<tr>
+<td><b>slower oil use (%)</b></td>
+<td>4% - 8%</td>
+<td>0.2%</td>
+<td>Armor, Helm, Amulet, Belt</td>
+</tr>
+<tr>
+<td><b>mana</b></td>
+<td>5 - 12</td>
+<td>1.2</td>
+<td>Helm, Amulet, Ring, Weapon</td>
+</tr>
+<tr>
+<td><b>mana per second</b></td>
+<td>0.3 - 0.8</td>
+<td>0.04</td>
+<td>Amulet, Ring, Helm</td>
+</tr>
+</tbody></table></div>
+<h3>Legendary powers</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Skill</th>
+</tr></thead><tbody>
+<tr>
+<td>Bloodthirst: kills heal 4% of your max life</td>
+</tr>
+<tr>
+<td>Stormstride: 40% shorter dodge cooldown</td>
+</tr>
+<tr>
+<td>Third Strike: every third hit deals double damage</td>
+</tr>
+<tr>
+<td>Gold fever: +1% damage per 100 gold you carry (max 30%)</td>
+</tr>
+</tbody></table></div>
+</section>
+<section id="saet"><h2>Set items</h2>
+<p class="intro">Every class has its own set. Set items mostly drop from your own class's set. The bonuses count when you wear several pieces at once, and the whole set gives an aura.</p>
+<h3>The Bear King's Legacy (Barbarian)</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Piece</th>
+<th>Slot</th>
+<th>Base type</th>
+<th>Properties (strong)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>The Bear King's Helm</b></td>
+<td>Helm</td>
+<td>Storm helm</td>
+<td>life, armor</td>
+</tr>
+<tr>
+<td><b>The Bear King's Pelt</b></td>
+<td>Armor</td>
+<td>Plate armor</td>
+<td>life (%), life per second</td>
+</tr>
+<tr>
+<td><b>The Bear King's Fists</b></td>
+<td>Gloves</td>
+<td>Iron gloves</td>
+<td>damage, attack speed (%)</td>
+</tr>
+<tr>
+<td><b>The Bear King's Axe</b></td>
+<td>Weapon</td>
+<td>Axe</td>
+<td>damage (%), life drain</td>
+</tr>
+</tbody></table></div>
+<p>2 pieces: +15% life · 3 pieces: +20% damage · 4 pieces: +40 armor · The whole set: <b>Aura of fire</b> — Foes close to you burn (damage every second).</p>
+<h3>The Archmage's Raiment (Mage)</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Piece</th>
+<th>Slot</th>
+<th>Base type</th>
+<th>Properties (strong)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>The Star Staff</b></td>
+<td>Weapon</td>
+<td>Staff</td>
+<td>damage (%), mana</td>
+</tr>
+<tr>
+<td><b>The Archmage's Hood</b></td>
+<td>Helm</td>
+<td>Leather cap</td>
+<td>mana, mana per second</td>
+</tr>
+<tr>
+<td><b>The Star Cloak</b></td>
+<td>Armor</td>
+<td>Leather armor</td>
+<td>life, life per second</td>
+</tr>
+<tr>
+<td><b>The Archmage's Eye</b></td>
+<td>Amulet</td>
+<td>Amulet</td>
+<td>damage (%), mana per second</td>
+</tr>
+</tbody></table></div>
+<p>2 pieces: +40 mana · 3 pieces: +20% damage · 4 pieces: +3.0 mana per second · The whole set: <b>Aura of frost</b> — Foes close to you are slowed.</p>
+<h3>The Wolf Hunter's Gear (Hunter)</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Piece</th>
+<th>Slot</th>
+<th>Base type</th>
+<th>Properties (strong)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>The Wolf Bow</b></td>
+<td>Weapon</td>
+<td>Bow</td>
+<td>damage (%), critical chance</td>
+</tr>
+<tr>
+<td><b>The Wolf Pelt</b></td>
+<td>Armor</td>
+<td>Leather armor</td>
+<td>life, movement speed (%)</td>
+</tr>
+<tr>
+<td><b>The Wolf Hunter's Boots</b></td>
+<td>Boots</td>
+<td>Leather boots</td>
+<td>movement speed (%), armor</td>
+</tr>
+<tr>
+<td><b>The Wolf Hunter's Gloves</b></td>
+<td>Gloves</td>
+<td>Leather gloves</td>
+<td>attack speed (%), critical chance</td>
+</tr>
+</tbody></table></div>
+<p>2 pieces: +10% movement speed · 3 pieces: +8% critical chance · 4 pieces: +20% damage · The whole set: <b>Aura of wind</b> — +15% movement and attack speed.</p>
+<h3>The Night Raven's Shadows (Thief)</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Piece</th>
+<th>Slot</th>
+<th>Base type</th>
+<th>Properties (strong)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>The Night Raven's Claws</b></td>
+<td>Weapon</td>
+<td>Daggers</td>
+<td>critical damage, damage (%)</td>
+</tr>
+<tr>
+<td><b>The Night Raven's Hood</b></td>
+<td>Helm</td>
+<td>Leather cap</td>
+<td>chance of better loot, life</td>
+</tr>
+<tr>
+<td><b>The Night Raven's Cloak</b></td>
+<td>Armor</td>
+<td>Leather armor</td>
+<td>movement speed (%), life</td>
+</tr>
+<tr>
+<td><b>The Night Raven's Steps</b></td>
+<td>Boots</td>
+<td>Leather boots</td>
+<td>movement speed (%), gold find</td>
+</tr>
+</tbody></table></div>
+<p>2 pieces: +8% critical chance · 3 pieces: +30% critical damage · 4 pieces: +3% life drain · The whole set: <b>Aura of shadow</b> — Foes close to you are cursed: they take 15% more damage and deal less.</p>
+<h3>The Grave Lord's Regalia (Necromancer)</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Piece</th>
+<th>Slot</th>
+<th>Base type</th>
+<th>Properties (strong)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>The Grave Lord's Scythe</b></td>
+<td>Weapon</td>
+<td>Scythe</td>
+<td>damage (%), life drain</td>
+</tr>
+<tr>
+<td><b>The Grave Lord's Crown</b></td>
+<td>Helm</td>
+<td>Iron helm</td>
+<td>mana, life</td>
+</tr>
+<tr>
+<td><b>The Grave Lord's Mail</b></td>
+<td>Armor</td>
+<td>Chain mail</td>
+<td>armor, life per second</td>
+</tr>
+<tr>
+<td><b>The Grave Lord's Seal</b></td>
+<td>Amulet</td>
+<td>Amulet</td>
+<td>mana per second, damage (%)</td>
+</tr>
+</tbody></table></div>
+<p>2 pieces: +25% strength for your servants · 3 pieces: +20% damage · 4 pieces: +15% life · The whole set: <b>Aura of death</b> — Foes close to you are weakened (deal less damage) and slowly wither.</p>
+</section>
+<section id="navngivne"><h2>Named items</h2>
+<p class="intro">Every named item belongs to a theme and only drops there (from floor 3; 6x more often on special floors).</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Item</th>
+<th>Found in</th>
+<th>Slot</th>
+<th>Properties</th>
+<th>Special</th>
+</tr></thead><tbody>
+<tr>
+<td><b>The Bone King's Blade</b></td>
+<td>The Crypt</td>
+<td>Weapon</td>
+<td>damage (%), life drain</td>
+<td>Bloodthirst: kills heal 4% of your max life</td>
+</tr>
+<tr>
+<td><b>The Grave Bell</b></td>
+<td>The Crypt</td>
+<td>Amulet</td>
+<td>mana, life</td>
+<td><b>Aura of death</b>: Foes close to you are weakened (deal less damage) and slowly wither.</td>
+</tr>
+<tr>
+<td><b>The Troll Crusher</b></td>
+<td>The Troll Cave</td>
+<td>Weapon</td>
+<td>damage (%), damage</td>
+<td>Third Strike: every third hit deals double damage</td>
+</tr>
+<tr>
+<td><b>The Mossy Boots</b></td>
+<td>The Troll Cave</td>
+<td>Boots</td>
+<td>movement speed (%), life</td>
+<td><b>Aura of light</b>: You heal 1.5% of your life every second.</td>
+</tr>
+<tr>
+<td><b>The Drowned Admiral's Ring</b></td>
+<td>The Sunken Fortress</td>
+<td>Ring</td>
+<td>gold find, life</td>
+<td>Unbreakable: once per floor you survive a deadly blow with 1 life</td>
+</tr>
+<tr>
+<td><b>The Spear of the Tide</b></td>
+<td>The Sunken Fortress</td>
+<td>Weapon</td>
+<td>damage (%), attack speed (%)</td>
+<td>Stormstride: 40% shorter dodge cooldown<br><b>Aura of frost</b>: Foes close to you are slowed.</td>
+</tr>
+<tr>
+<td><b>The Ash Smith's Gloves</b></td>
+<td>The Ash Forge</td>
+<td>Gloves</td>
+<td>attack speed (%), damage</td>
+<td><b>Aura of fire</b>: Foes close to you burn (damage every second).</td>
+</tr>
+<tr>
+<td><b>The Ember Heart</b></td>
+<td>The Ash Forge</td>
+<td>Amulet</td>
+<td>damage (%), critical chance</td>
+<td><b>Aura of fire</b>: Foes close to you burn (damage every second).</td>
+</tr>
+<tr>
+<td><b>Midas' Ring</b></td>
+<td>The Gold Chamber</td>
+<td>Ring</td>
+<td>gold find, chance of better loot</td>
+<td>Gold fever: +1% damage per 100 gold you carry (max 30%)<br><b>Aura of Midas</b>: Gold and items nearby fly to you, and you find 25% more gold.</td>
+</tr>
+<tr>
+<td><b>King Goldtooth's Crown</b></td>
+<td>The Gold Chamber</td>
+<td>Helm</td>
+<td>chance of better loot, life</td>
+<td><b>Aura of Midas</b>: Gold and items nearby fly to you, and you find 25% more gold.</td>
+</tr>
+<tr>
+<td><b>The Rainbow Bow</b></td>
+<td>The Rainbow Cave</td>
+<td>Weapon</td>
+<td>damage (%), critical chance</td>
+<td><b>Aura of the rainbow</b>: +10% damage, +10% movement and +10% chance of better loot. Changes colour.</td>
+</tr>
+<tr>
+<td><b>The Prism Mail</b></td>
+<td>The Rainbow Cave</td>
+<td>Armor</td>
+<td>life (%), armor</td>
+<td><b>Aura of the rainbow</b>: +10% damage, +10% movement and +10% chance of better loot. Changes colour.</td>
+</tr>
+<tr>
+<td><b>The Colourleap Daggers</b></td>
+<td>The Rainbow Cave</td>
+<td>Weapon</td>
+<td>critical damage, attack speed (%)</td>
+<td><b>Aura of the rainbow</b>: +10% damage, +10% movement and +10% chance of better loot. Changes colour.</td>
+</tr>
+<tr>
+<td><b>The Unicorn's Staff</b></td>
+<td>The Rainbow Cave</td>
+<td>Weapon</td>
+<td>damage (%), mana per second</td>
+<td><b>Aura of the rainbow</b>: +10% damage, +10% movement and +10% chance of better loot. Changes colour.</td>
+</tr>
+<tr>
+<td><b>Rainbow scythe</b></td>
+<td>The Rainbow Cave</td>
+<td>Weapon</td>
+<td>damage (%), life drain</td>
+<td><b>Aura of the rainbow</b>: +10% damage, +10% movement and +10% chance of better loot. Changes colour.</td>
+</tr>
+</tbody></table></div>
+</section>
+<section id="relikvier"><h2>Relics</h2>
+<p class="intro">The game's rarest items (from floor 6): 0.01% per ordinary monster, 0.1% per elite and 1.5% per boss. You can only wear one at a time.</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Relic</th>
+<th>Extra (+1% per item level)</th>
+<th>Looks</th>
+<th>Opens</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Holy</b></td>
+<td>+25% life, +3.0 life per second, +25 armor</td>
+<td>Halo and angel wings</td>
+<td>Natas comes to town: Hell</td>
+</tr>
+<tr>
+<td><b>Unholy</b></td>
+<td>+35% damage, +3% life drain, +30% critical damage</td>
+<td>Horns and demon wings</td>
+<td>The nuns come: the Heavenly Stairway</td>
+</tr>
+</tbody></table></div>
+<p>Satan (Hell), the top of the Heavenly Stairway and the Elder Dragon always leave a relic.</p>
+</section>
+<section id="opskrifter"><h2>Recipes</h2>
+<p class="intro">The workshop smiths from recipes at your hero's level. You know the starting recipes from the beginning; guardians (every 5th floor) drop the rest — one you do not know, among those unlocked at that depth. Legendary blueprints are rarer (25%, while there are common ones left). The material cost grows with the item's level.</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Recipe</th>
+<th>Slot</th>
+<th>Materials (level 1)</th>
+<th>Where</th>
+<th>Legendary power</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Bow</b></td>
+<td>Weapon</td>
+<td>3 Hide, 4 Bones</td>
+<td><span class="nw">Known from the start</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Daggers</b></td>
+<td>Weapon</td>
+<td>4 Scrap iron, 2 Hide</td>
+<td><span class="nw">Known from the start</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Scythe</b></td>
+<td>Weapon</td>
+<td>5 Scrap iron, 3 Bones</td>
+<td><span class="nw">Known from the start</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Leather armor</b></td>
+<td>Armor</td>
+<td>8 Hide, 2 Bones</td>
+<td><span class="nw">Known from the start</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Leather gloves</b></td>
+<td>Gloves</td>
+<td>4 Hide</td>
+<td><span class="nw">Known from the start</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Leather cap</b></td>
+<td>Helm</td>
+<td>4 Hide, 1 Bones</td>
+<td><span class="nw">Known from the start</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Leather boots</b></td>
+<td>Boots</td>
+<td>5 Hide</td>
+<td><span class="nw">Known from the start</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Rope belt</b></td>
+<td>Belt</td>
+<td>3 Hide, 1 Troll sinew</td>
+<td><span class="nw">Known from the start</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Ring</b></td>
+<td>Ring</td>
+<td>2 Scrap iron, 6 Bones</td>
+<td><span class="nw">Known from the start</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Staff</b></td>
+<td>Weapon</td>
+<td>2 Hide, 5 Bones</td>
+<td><span class="nw">Known from the start</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Sword</b></td>
+<td>Weapon</td>
+<td>5 Scrap iron, 2 Hide</td>
+<td><span class="nw">Known from the start</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Axe</b></td>
+<td>Weapon</td>
+<td>7 Scrap iron, 1 Hide</td>
+<td><span class="nw">Known from the start</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Amulet</b></td>
+<td>Amulet</td>
+<td>6 Bones, 1 Embers</td>
+<td><span class="nw">Guardian from floor 5</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Iron gloves</b></td>
+<td>Gloves</td>
+<td>6 Scrap iron, 2 Hide</td>
+<td><span class="nw">Guardian from floor 5</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Iron helm</b></td>
+<td>Helm</td>
+<td>7 Scrap iron, 2 Hide</td>
+<td><span class="nw">Guardian from floor 5</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Iron boots</b></td>
+<td>Boots</td>
+<td>6 Scrap iron, 2 Hide</td>
+<td><span class="nw">Guardian from floor 5</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Leather belt</b></td>
+<td>Belt</td>
+<td>2 Scrap iron, 6 Hide</td>
+<td><span class="nw">Guardian from floor 5</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Chain mail</b></td>
+<td>Armor</td>
+<td>12 Scrap iron, 3 Hide</td>
+<td><span class="nw">Guardian from floor 5</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Spear</b></td>
+<td>Weapon</td>
+<td>6 Scrap iron, 4 Bones</td>
+<td><span class="nw">Guardian from floor 5</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Dawnbreaker</b> <span class="leg">legendary</span></td>
+<td>Weapon</td>
+<td>20 Scrap iron, 6 Troll sinew, 6 Embers</td>
+<td><span class="nw">Guardian from floor 10</span></td>
+<td>Third Strike: every third hit deals double damage</td>
+</tr>
+<tr>
+<td><b>Studded belt</b></td>
+<td>Belt</td>
+<td>5 Scrap iron, 8 Hide, 2 Troll sinew</td>
+<td><span class="nw">Guardian from floor 10</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Plate armor</b></td>
+<td>Armor</td>
+<td>16 Scrap iron, 6 Troll sinew</td>
+<td><span class="nw">Guardian from floor 10</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Raven's Beak</b> <span class="leg">legendary</span></td>
+<td>Weapon</td>
+<td>14 Scrap iron, 10 Hide, 6 Embers</td>
+<td><span class="nw">Guardian from floor 10</span></td>
+<td>Bloodthirst: kills heal 4% of your max life</td>
+</tr>
+<tr>
+<td><b>Storm helm</b></td>
+<td>Helm</td>
+<td>10 Scrap iron, 4 Troll sinew</td>
+<td><span class="nw">Guardian from floor 10</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Talisman</b></td>
+<td>Amulet</td>
+<td>8 Bones, 2 Troll sinew, 1 Embers</td>
+<td><span class="nw">Guardian from floor 10</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Giant's Hide</b> <span class="leg">legendary</span></td>
+<td>Armor</td>
+<td>24 Scrap iron, 10 Troll sinew, 7 Embers</td>
+<td><span class="nw">Guardian from floor 15</span></td>
+<td>Stormstride: 40% shorter dodge cooldown</td>
+</tr>
+<tr>
+<td><b>Wolf Fang</b> <span class="leg">legendary</span></td>
+<td>Amulet</td>
+<td>18 Bones, 6 Troll sinew, 6 Embers</td>
+<td><span class="nw">Guardian from floor 15</span></td>
+<td>Gold fever: +1% damage per 100 gold you carry (max 30%)</td>
+</tr>
+</tbody></table></div>
+<h3>The workshop</h3>
+<p>Upgrade (+quality, up to +3, +5 with a smith in the Forge), enchant (more properties), reforge (to your hero's level) and salvage (materials back).</p>
+</section>
+<section id="materialer"><h2>Materials</h2>
+<p class="intro">Materials are carried home from the Deep (they are lost if you die) and stored in town. Elite monsters drop double, and there is one more for every 6 floors.</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Material</th>
+<th>Where</th>
+</tr></thead><tbody>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#9ea3b3"></span><b>Scrap iron</b></span></td>
+<td>Best from: Bone archer (50%), Troll (60%), Rock crab (50%), Forge golem (80%), Chest mimic (50%), Fire Lord (80%), Frost Fiend (80%), Hell Knight (60%)</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#9e6638"></span><b>Hide</b></span></td>
+<td>Best from: Hellhound (50%), Pit Fiend (60%), Drakeling (55%), Wyrmling (60%), The Leprechaun (100%)</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#ebe0bd"></span><b>Bones</b></span></td>
+<td>Best from: Shade of the sacrificed (50%), Bone hound (50%), Damned Soul (50%), Bone Legionnaire (55%)</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#b373d9"></span><b>Troll sinew</b></span></td>
+<td>Best from: Troll (70%)</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#ff8c26"></span><b>Embers</b></span></td>
+<td>Elite monsters 35%, others 2%, chests 25%, guardians always. Best from: The Leprechaun (50%)</td>
+</tr>
+</tbody></table></div>
+</section>
+<section id="forbrug"><h2>Drinks, mushrooms and collectibles</h2>
+<div class="tw"><table class=""><thead><tr>
+<th>Drink</th>
+<th>Effect</th>
+<th>Found</th>
+</tr></thead><tbody>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#e63333"></span><b>Field flask</b></span></td>
+<td>Gives one more healing drink on this delve.</td>
+<td>All floors</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#4073ff"></span><b>Mana drink</b></span></td>
+<td>Fills your mana completely.</td>
+<td>All floors</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#ffb340"></span><b>Jar of lamp oil</b></span></td>
+<td>Fills the lantern with 60 oil.</td>
+<td>All floors</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#ff5926"></span><b>Elixir of strength</b></span></td>
+<td>+30% damage for 60 seconds.</td>
+<td>All floors</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#9999a6"></span><b>Elixir of stoneskin</b></span></td>
+<td>+60 armor for 60 seconds.</td>
+<td>All floors</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#4dff73"></span><b>Elixir of luck</b></span></td>
+<td>+50% chance of better loot for the rest of this delve.</td>
+<td>All floors</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#e680ff"></span><b>Rainbow elixir</b></span></td>
+<td>Everything at once: full mana, an extra drink, +30% damage and +60 armor for 60 seconds.</td>
+<td>Only in the Rainbow Cave</td>
+</tr>
+</tbody></table></div>
+<h3>Mushrooms</h3>
+<p>25% of the consumables found are mushrooms (60% in the Troll Cave).</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Mushroom</th>
+<th>Effect</th>
+</tr></thead><tbody>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#f266e6"></span><b>Rainbow cap</b></span></td>
+<td>All colours spin around for 25 seconds. +25% chance of better loot meanwhile.</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#80e64d"></span><b>Twistshroom</b></span></td>
+<td>The world twists and ripples for 18 seconds — but you deal 4 times the damage.</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#59ff73"></span><b>Runner's spike</b></span></td>
+<td>You run 5 times as fast for 10 seconds.</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#d95933"></span><b>Giant cap</b></span></td>
+<td>You grow huge for 20 seconds: +50% damage, 30% less damage taken, but a little slower.</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#b3ccff"></span><b>Tiny cap</b></span></td>
+<td>You shrink for 20 seconds: half the blows miss you completely.</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#ccd9f2"></span><b>Mirror cap</b></span></td>
+<td>The whole world is mirrored for 15 seconds — left is right. You deal double damage meanwhile.</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#99b3e6"></span><b>Ghost cap</b></span></td>
+<td>You become a ghost for 8 seconds: monsters cannot see you.</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#ffd966"></span><b>Light morel</b></span></td>
+<td>You glow for 60 seconds: full lantern, and it does not burn down meanwhile.</td>
+</tr>
+</tbody></table></div>
+<h3>Collectible</h3>
+<p>Every collectible is found once (in its theme). Together they give a small permanent bonus to all your heroes: +1% magic find and +2% gold find per collectible.</p>
+<div class="tw"><table class="small"><thead><tr>
+<th>Collectible</th>
+<th>Found in</th>
+</tr></thead><tbody>
+<tr>
+<td><b>The Bone King's seal</b></td>
+<td>The Crypt</td>
+</tr>
+<tr>
+<td><b>Silver bell from the crypt</b></td>
+<td>The Crypt</td>
+</tr>
+<tr>
+<td><b>Troll tooth</b></td>
+<td>The Troll Cave</td>
+</tr>
+<tr>
+<td><b>Glowing mushroom in a jar</b></td>
+<td>The Troll Cave</td>
+</tr>
+<tr>
+<td><b>Rusty fortress key</b></td>
+<td>The Sunken Fortress</td>
+</tr>
+<tr>
+<td><b>The drowned captain's compass</b></td>
+<td>The Sunken Fortress</td>
+</tr>
+<tr>
+<td><b>The Ash Smith's hammer</b></td>
+<td>The Ash Forge</td>
+</tr>
+<tr>
+<td><b>Bar of star iron</b></td>
+<td>The Ash Forge</td>
+</tr>
+<tr>
+<td><b>The Gold Crown</b></td>
+<td>The Gold Chamber</td>
+</tr>
+<tr>
+<td><b>Golden goblet</b></td>
+<td>The Gold Chamber</td>
+</tr>
+<tr>
+<td><b>The Dragon Coin</b></td>
+<td>The Gold Chamber</td>
+</tr>
+<tr>
+<td><b>The goldsmith's scales</b></td>
+<td>The Gold Chamber</td>
+</tr>
+<tr>
+<td><b>Rainbow scale</b></td>
+<td>The Rainbow Cave</td>
+</tr>
+<tr>
+<td><b>Prism crystal</b></td>
+<td>The Rainbow Cave</td>
+</tr>
+<tr>
+<td><b>Lock of unicorn hair</b></td>
+<td>The Rainbow Cave</td>
+</tr>
+<tr>
+<td><b>The bottle of all colours</b></td>
+<td>The Rainbow Cave</td>
+</tr>
+<tr>
+<td><b>The cult's blood chalice</b></td>
+<td>The Well — The cult's sanctum</td>
+</tr>
+</tbody></table></div>
+</section>
+<section id="byen"><h2>The town</h2>
+<p class="intro">The town and the chest are shared by all your heroes. Free settlers in the Deep and build houses for them.</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Building</th>
+<th>Price</th>
+<th>Resident</th>
+<th>Effect</th>
+</tr></thead><tbody>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#bf5933"></span><b>Forge</b></span></td>
+<td><span class="nw">80 gold</span></td>
+<td>Smith</td>
+<td>Master smithing in the workshop: upgrade up to +5, enchant up to 4 properties (rare) and use 20% fewer materials.</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#73bf59"></span><b>Alchemist's hut</b></span></td>
+<td><span class="nw">90 gold</span></td>
+<td>Alchemist</td>
+<td>+1 healing drink per delve, and drinks heal 15% more.</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#f2b333"></span><b>Trading post</b></span></td>
+<td><span class="nw">110 gold</span></td>
+<td>Merchant</td>
+<td>Your loot sells for double the price.</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#8c66b3"></span><b>Warehouse</b></span></td>
+<td><span class="nw">70 gold</span></td>
+<td>Carpenter</td>
+<td>+3 rows (30 cells) in your chest.</td>
+</tr>
+</tbody></table></div>
+<h3>The blood pact</h3>
+<p>At the Sacrificial Stone the town can sacrifice settlers (up to 10): monsters get stronger (+12% life, +7% damage per level), but you find more materials and better items. At the highest pact the Well awakens. The pact breaks after the Well and on rebirth.</p>
+</section>
+<section id="regler"><h2>Good to know</h2>
+<div class="tw"><table class=""><thead><tr>
+<th>Topic</th>
+<th>Rule</th>
+</tr></thead><tbody>
+<tr>
+<td>Death</td>
+<td>You lose everything you carry (backpack, gold and materials). The chest in town is safe.</td>
+</tr>
+<tr>
+<td>Gear level</td>
+<td>Items above your hero's level only work with hero level / item level of their power (e.g. level 5 with a level 20 item: 25%).</td>
+</tr>
+<tr>
+<td>Prestige items</td>
+<td>A reborn hero can only use gear of its own prestige level. Everyone can use drinks and collectibles.</td>
+</tr>
+<tr>
+<td>Pets</td>
+<td>Rats and skeletons get 15% of the hero's life, damage and armour on top of the skill's numbers.</td>
+</tr>
+<tr>
+<td>Co-op</td>
+<td>2-4 players. Monsters measure themselves against the team's average and have more life for every player. Loot is personal.</td>
+</tr>
+</tbody></table></div>
+</section><footer>Made automatically from the game's own numbers (version 1.6.4). The numbers are without magic find, pact and similar bonuses.</footer></main><script>
+const q=document.getElementById('q');
+q&&q.addEventListener('input',()=>{const t=q.value.trim().toLowerCase();
+document.querySelectorAll('main section').forEach(s=>{let any=false;
+s.querySelectorAll('tbody tr, li, p').forEach(r=>{const m=!t||r.textContent.toLowerCase().includes(t);r.classList.toggle('hide',!m);if(m)any=true});
+s.classList.toggle('hide',!!t&&!any&&!s.textContent.toLowerCase().includes(t));});});
+</script></body></html>

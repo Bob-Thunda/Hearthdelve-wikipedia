@@ -1,0 +1,1217 @@
+<!doctype html>
+<html lang="da"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hearthdelve — Ændringslog</title><style>
+:root{--bg:#14110e;--panel:#1d1915;--panel2:#252019;--line:#3a3127;--text:#ece4d3;--muted:#a89c86;--gold:#e8bf55;--accent:#c96a3a;--link:#f0c66a}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:12px}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.55 Georgia,'Iowan Old Style','Palatino Linotype',serif;display:flex;min-height:100vh}
+nav#toc{position:sticky;top:0;align-self:flex-start;height:100vh;overflow:auto;width:250px;flex:none;background:var(--panel);border-right:1px solid var(--line);padding:18px 14px}
+.brand{font:700 22px/1.1 Georgia,serif;color:var(--gold);letter-spacing:.5px;margin-bottom:14px}.brand span{display:block;font:400 12px/1.6 system-ui,sans-serif;color:var(--muted);letter-spacing:0}
+nav#toc a{display:block;color:var(--text);text-decoration:none;padding:5px 8px;border-radius:6px;font:14px/1.3 system-ui,sans-serif}
+nav#toc a:hover{background:var(--panel2);color:var(--gold)}nav#toc a.cl{margin-top:12px;color:var(--link);border:1px solid var(--line)}nav#toc a.lng{display:inline-block;margin:0 0 10px;font-size:12px;color:var(--muted);border:1px solid var(--line);padding:2px 8px}
+#q{width:100%;margin:0 0 12px;padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:#0f0d0b;color:var(--text);font:14px system-ui,sans-serif}
+main{flex:1;min-width:0;padding:24px 34px 60px;max-width:1200px}
+section{margin-bottom:34px}h2{font:700 26px/1.2 Georgia,serif;color:var(--gold);border-bottom:1px solid var(--line);padding-bottom:6px;margin:0 0 12px}
+h3{font:700 18px/1.3 Georgia,serif;color:#e9d7a9;margin:22px 0 8px}p{margin:8px 0}.intro{color:var(--muted)}
+a{color:var(--link)}code{background:#0f0d0b;border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
+.tw{overflow-x:auto;margin:8px 0 14px;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;font:14px/1.45 system-ui,sans-serif}table.small{width:auto;min-width:340px}
+th{position:sticky;top:0;background:var(--panel2);color:var(--gold);text-align:left;font-weight:600;padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:7px 10px;border-bottom:1px solid #2a241d;vertical-align:top}tr:nth-child(even) td{background:#191510}tr:hover td{background:#211c16}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:7px;vertical-align:middle;border:1px solid #0006}
+.leg{font-size:11px;color:#ff9a3c;border:1px solid #ff9a3c66;border-radius:4px;padding:0 4px;margin-left:4px}
+.ver{display:inline-block;background:var(--accent);color:#fff;border-radius:6px;padding:0 8px;margin-right:6px;font:600 16px/1.5 system-ui,sans-serif;vertical-align:middle}
+ul{padding-left:22px}.nw{white-space:nowrap}.muted{color:var(--muted);font-size:12px}li{margin:5px 0}footer{color:var(--muted);font:12px system-ui,sans-serif;margin-top:40px;border-top:1px solid var(--line);padding-top:10px}
+.hide{display:none!important}mark{background:#e8bf5555;color:inherit;border-radius:3px}
+@media (max-width:820px){body{display:block}nav#toc{position:static;width:auto;height:auto;border-right:0;border-bottom:1px solid var(--line)}nav#toc a{display:inline-block}main{padding:16px}}
+</style></head><body><nav id="toc"><div class="brand">Hearthdelve<span>Ændringslog</span></div><a class="lng" href="changelog.html">English</a><input id="q" type="search" placeholder="Søg i ændringerne ..." autocomplete="off"><a class="cl" href="index_da.html">&larr; Til wikien</a><a href="#v1-6-4">1.6.4</a><a href="#v1-6-3">1.6.3</a><a href="#v1-6-2">1.6.2</a><a href="#v1-6-1">1.6.1</a><a href="#v1-6-0">1.6.0</a><a href="#v1-5-2">1.5.2</a><a href="#v1-5-1">1.5.1</a><a href="#v1-5-0">1.5.0</a><a href="#v1-4-0">1.4.0</a><a href="#v1-3-0">1.3.0</a><a href="#v1-2-0">1.2.0</a><a href="#v1-1-0">1.1.0</a><a href="#v1-0-2">1.0.2</a><a href="#v1-0-1">1.0.1</a><a href="#v1-0-0">1.0.0</a><a href="#v0-9-6">0.9.6</a><a href="#v0-9-5">0.9.5</a><a href="#v0-9-4">0.9.4</a><a href="#v0-9-3">0.9.3</a><a href="#v0-9-2">0.9.2</a><a href="#v0-9-1">0.9.1</a><a href="#v0-9-0">0.9.0</a><a href="#v0-8-2">0.8.2</a><a href="#v0-8-1">0.8.1</a><a href="#v0-8-0">0.8.0</a><a href="#v0-7-0">0.7.0</a><a href="#v0-6-1">0.6.1</a><a href="#v0-6-0">0.6.0</a><a href="#v0-5-0">0.5.0</a><a href="#v0-4-0">0.4.0</a><a href="#v0-3-0">0.3.0</a><a href="#v0-2-0">0.2.0</a><a href="#v0-1-1">0.1.1</a><a href="#v0-1-0">0.1.0</a></nav><main><section><h2>Ændringslog</h2><p class="intro">Alle versioner, nyeste først. Spillet opdaterer sig selv, når der kommer en ny version.</p></section><section id="v1-6-4"><h2><span class="ver">1.6.4</span> 2026-10-28 — Wikien og ændringsloggen på engelsk</h2>
+<h3>Ændret</h3>
+<ul>
+<li><b>Wikien og ændringsloggen er nu på engelsk som standard</b> (<code>wiki/index.html</code>, <code>wiki/changelog.html</code>). Den danske
+ udgave ligger ved siden af (<code>index_da.html</code>, <code>changelog_da.html</code>), og hver side har et link til det andet sprog.
+ Esc-menuens knap åbner den danske wiki, når spillet kører på dansk.
+</li>
+<li>Ændringsloggen nævner ikke længere, hvem der har ønsket hvad.
+</li>
+</ul>
+<h3>Test</h3>
+<ul>
+<li>Wiki-testen tjekker begge sprog, at den engelske side er standard, og at den engelske ændringslog har alle versioner.
+</li>
+</ul>
+</section>
+<section id="v1-6-3"><h2><span class="ver">1.6.3</span> 2026-10-28 — Engelsk som standardsprog</h2>
+<h3>Ændret</h3>
+<ul>
+<li><b>Spillet starter på engelsk</b>, når man ikke selv har valgt sprog. Har man valgt dansk (startskærmen eller Esc →
+ Sprog / Language), bliver det ved med at være dansk. Wikien er stadig på dansk.
+</li>
+</ul>
+</section>
+<section id="v1-6-2"><h2><span class="ver">1.6.2</span> 2026-10-28 — Wikien kommer med opdateringerne</h2>
+<h3>Rettet</h3>
+<ul>
+<li>Den automatiske opdatering skiftede kun selve programfilen ud, så wikien (mappen <code>wiki</code>) kom ikke med. Nu lægges
+ wikiens filer også ved spillet, når det opdaterer sig selv (kun filer i <code>wiki</code>-mappen, intet andet sted).
+ Bemærk: fra 1.6.0 eller ældre kommer wikien først med fra næste opdatering — eller hent zip'en igen.
+</li>
+</ul>
+<h3>Test</h3>
+<ul>
+<li>Opdateringstesten tjekker, at wikien kommer med, og at en fil med en snedig sti uden for <code>wiki</code> ikke skrives.
+</li>
+</ul>
+</section>
+<section id="v1-6-1"><h2><span class="ver">1.6.1</span> 2026-10-28 — Tingenes niveau følger heltens niveau</h2>
+<h3>Ændret</h3>
+<ul>
+<li><b>Fundne, købte og smedede ting har heltens niveau</b> (eller op til 2 under) — ikke længere ca. 3 x etagen. Nye fund
+ virker derfor altid fuldt; reglen fra 1.6 (en ting over heltens niveau virker kun delvist) rammer kun ting fra før,
+ fra andre helte eller fra Arvekisten. Etagen bestemmer stadig, hvor sjældne og gode fundene er (magisk, sjælden,
+ legendarisk), og relikvier, sætting og navngivne ting følger også helten.
+</li>
+<li>Værkstedet smeder og omsmeder til heltens niveau (før: den dybeste etage), og købmanden sælger til heltens niveau.
+</li>
+</ul>
+<h3>Tilføjet</h3>
+<ul>
+<li><b>Wiki til spillerne (HTML):</b> <code>wiki/index.html</code> med klasser og evner, monstre pr. tema (andel, styrke, materialer),
+ bosser, etager og verdener, tilfældige hændelser, alle dropchancer, sjældenhed efter etage, udstyr og egenskaber,
+ sætting, navngivne ting (og hvor de findes), relikvier, opskrifter (og hvor de læres), materialer, drikke, svampe,
+ samlerting og byens bygninger — med søgefelt. Den laves automatisk ud fra spillets egne tal, så den altid passer.
+</li>
+<li><b>Ændringslog som HTML:</b> <code>wiki/changelog.html</code> (fra denne fil).
+</li>
+<li>Wikien følger med i spillets mappe (<code>wiki</code>), og Esc-menuen har knappen "Wiki og ændringslog", der åbner den i browseren.
+</li>
+</ul>
+<h3>Test</h3>
+<ul>
+<li>Ny test: fund har heltens niveau eller lidt under (aldrig over), værkstedet og købmanden følger helten.
+</li>
+</ul>
+</section>
+<section id="v1-6-0"><h2><span class="ver">1.6.0</span> 2026-10-28 — Udstyr over heltens niveau virker kun delvist</h2>
+<h3>Ændret</h3>
+<ul>
+<li><b>Udstyr skalerer med heltens niveau:</b> en ting med højere niveau end helten virker kun med en procentdel af sin
+ styrke — heltens niveau delt med tingens niveau. En helt på niveau 5 med en økse på niveau 20 får 25 % af dens
+ skade (og af alle dens egenskaber); på niveau 10 50 %; fra niveau 20 hele styrken. Gælder våbenskade, rustning og
+ alle egenskaber (de navngivne tings særlige evner og sætbonusser virker stadig fuldt).
+</li>
+<li>Tingen viser procenten i øverste højre hjørne (orange), og tooltippen forklarer det: "For højt niveau: virker kun
+ med 25 % af sin styrke ... Fuld styrke på niveau 20."
+</li>
+<li>Bemærk: ting fra en etage har niveau ca. 3 x etagen, så en helt, der er bagud i niveau, mærker det på fund fra dybe etager.
+</li>
+</ul>
+<h3>Test</h3>
+<ul>
+<li>Ny test: niveau 5 med en økse på niveau 20 giver 25 % af skaden, en hjelm på niveau 10 halvdelen af rustningen,
+ og på niveau 20 virker øksen fuldt; tooltippen fortæller det.
+</li>
+</ul>
+</section>
+<section id="v1-5-2"><h2><span class="ver">1.5.2</span> 2026-10-28 — Karaktervalg i stedet for "nyt spil", og angreb der flyttede kroppen</h2>
+<h3>Ændret</h3>
+<ul>
+<li><b>"Start et nyt spil" er fjernet</b> fra Esc-menuen (den slettede alle helte, byen og kisten). I stedet er der
+ <b>"Vælg helt (karaktervalg)"</b>, der fører til startskærmen ved bålet, hvor man vælger eller laver en helt. Midt i et
+ dyk eller online er knappen grå og fortæller hvorfor.
+</li>
+</ul>
+<h3>Rettet</h3>
+<ul>
+<li><b>Kroppen gled væk fra helten efter angreb:</b> spydets stød skubbede hoften frem hvert billede uden at nulstille den,
+ så figuren for hvert stød flyttede sig længere væk fra heltens rigtige plads (glorien, lyset og ringen på jorden
+ blev stående). Efter seks stød var den 7,5 meter væk. Nu vender kroppen tilbage over fødderne efter hvert stød.
+</li>
+</ul>
+<h3>Test</h3>
+<ul>
+<li>Ny test: efter seks angreb med hvert våben står kroppen stadig over heltens plads (testen fejlede før rettelsen:
+ -7,5 m med spyd). Menuen har ikke længere "nyt spil", men "Vælg helt".
+</li>
+</ul>
+</section>
+<section id="v1-5-1"><h2><span class="ver">1.5.1</span> 2026-10-28 — Blodpagten ved genfødsel, og multiplayer-forbindelsen</h2>
+<h3>Ændret</h3>
+<ul>
+<li><b>Genfødsel bryder blodpagten</b> (som Brønden allerede gør): pagten står på 0 igen, og byen må ofre forfra.
+</li>
+</ul>
+<h3>Rettet</h3>
+<ul>
+<li><b>Den rigtige IP-adresse:</b> værtens vindue viste den første adresse, computeren havde — ofte et virtuelt netkort
+ (VirtualBox, Hyper-V/WSL, Docker, VPN), som de andre ikke kan nå. Nu vises hjemmenetværkets adresse først.
+</li>
+<li><b>Kode i samme hus:</b> når en invitationskode peger på et spil, der også står i listen på jeres eget netværk,
+ forbinder spillet til den lokale adresse. Før forsøgte det over internettet, hvilket de fleste routere ikke kan
+ (NAT loopback) — så spillere i samme hus kunne ikke komme ind med koden.
+</li>
+<li><b>Ingen ubrugelige koder:</b> deler internetforbindelsen adresse med andre (CGNAT, to routere efter hinanden),
+ laver spillet ikke længere en kode, der aldrig kan virke, men forklarer, at man skal bruge Tailscale/ZeroTier.
+</li>
+<li><b>Bedre fejlbeskeder:</b> forskellige versioner siger nu hvilke ("værten har 1.5.1, du har 1.4.0"), spillisten viser
+ værtens version, og en mislykket forbindelse forklarer de sandsynlige grunde. Hændelsesloggen skriver adresse og version.
+</li>
+<li>1.5.0 og 1.5.1 kan spille sammen (protokollen er uændret). Ældre versioner skal opdateres.
+</li>
+</ul>
+<h3>Test</h3>
+<ul>
+<li>Ny test af adresserne (hjemmenetværk før virtuelle netkort, internet- vs. hjemme-/CGNAT-adresser, kode i samme hus),
+ og at genfødsel bryder blodpagten.
+</li>
+</ul>
+</section>
+<section id="v1-5-0"><h2><span class="ver">1.5.0</span> 2026-10-28 — Kæledyrene følger helten, og de er rotter</h2>
+<h3>Ændret</h3>
+<ul>
+<li><b>Kæledyrene vokser med helten:</b> jægerens kæmperotte, Skyggejægerens helvedesrotter og nekromantikerens skeletter
+ får 15 % af heltens liv, skade pr. hug og rustning oven i evnens egne tal. De bliver altså aldrig svagere end før.
+</li>
+<li><b>Rotter i stedet for ulve og hunde:</b> "Ulvekald" hedder nu <b>Rottekald</b> (en kæmperotte), og Skyggejægerens
+ "Helvedeshunde" hedder <b>Helvedesrotter</b>. Figurerne er rotter (brun pels, lang hale; helvedesrotterne
+ forkullede med flammer på ryggen). Monstrene i Helvede er ikke ændret.
+</li>
+</ul>
+<h3>Test</h3>
+<ul>
+<li>Ny test: Rottekald giver en rotte med evnens liv + 15 % af heltens, evnens skade + 15 % af heltens hug, og 15 %
+ af heltens rustning.
+</li>
+</ul>
+</section>
+<section id="v1-4-0"><h2><span class="ver">1.4.0</span> 2026-10-28 — Hurtigere monstre, elitegrupper og mestre, større rum</h2>
+<h3>Ændret</h3>
+<ul>
+<li><b>Monstrene angriber 20 % hurtigere pr. etage:</b> 1,2 gange så hurtigt på etage 2, dobbelt så hurtigt på etage 6
+ og op til 4 gange så hurtigt (fra etage 16 og i Helvede/Himlen). Advarslen før et hug er dog aldrig kortere end
+ 0,3 sekunder, så man stadig kan nå at undvige.
+</li>
+<li><b>Blødere start:</b> monstrene vokser fra halvdelen af "helten + 10 %" på etage 1 til fuld styrke
+ fra etage 10 (og i Helvede, Himlen og Dragens Hule). Uden det døde testbotten i alle dyk på etage 1-2.
+</li>
+<li><b>Bosserne er seje igen:</b> i 1.3 fik bosserne kun omkring 50 hug liv (fejl i min skalering). Nu har de igen
+ omtrent den sejhed, de havde før 1.3 (heltens liv x 6 x 4 — ca. 200 hug), og raidbosserne følger med.
+</li>
+<li><b>Rummene er dobbelt så store</b> (dobbelt gulvareal: 20 x 20 felter mod før 14 x 14) med dobbelt så mange monstre
+ og dobbelt så meget pynt, så de er lige så fyldte som før. Forhindringerne står længere ude.
+</li>
+</ul>
+<h3>Tilføjet</h3>
+<ul>
+<li><b>Etagens ekstra udfordring</b> (ca. 40 % af etagerne fra etage 2, ikke på skatte-etager, i Brønden eller
+ Lepreconland): enten <b>en flok elitemonstre</b> (3-5 af samme slags i ét rum) eller <b>en mester</b> — ét kæmpemonster
+ med 8 gange livet, dobbelt skade, 1,7 gange så stort og seks gange erfaringen. En besked fortæller, når etagen
+ begynder. Mesteren efterlader to gode ting og en bunke guld til hver spiller.
+</li>
+</ul>
+<h3>Test</h3>
+<ul>
+<li>Nye tests for angrebstempoet, udfordringerne (ca. 40 %, elitegruppen, mesteren og dens bytte) og rummene.
+</li>
+<li>Balancebotten (8 forsigtige dyk): niveau 9, etage 3, 4 dødsfald (uden den blødere start: død på etage 1-2 hver gang).
+</li>
+</ul>
+<h3>Teknisk</h3>
+<ul>
+<li><code>Enemy.hero_factor</code>, <code>Enemy.attack_speed_for/recover_time/make_champion</code>, <code>DungeonFloor.challenge_for/_spawn_challenge</code>, tal i <code>Balance</code>
+ (<code>ENEMY_ATTACK_SPEED_*</code>, <code>ROOM_SIZE</code>, <code>ROOM_MONSTER_MULT</code>, <code>CHALLENGE_*</code>, <code>CHAMPION_*</code>). Spawn-beskeder har "ch";
+ <code>Net.PROTOCOL</code> = 18.
+</li>
+</ul>
+</section>
+<section id="v1-3-0"><h2><span class="ver">1.3.0</span> 2026-10-28 — Monstrene følger helten</h2>
+<h3>Ændret</h3>
+<ul>
+<li><b>Monstrene er altid lige så stærke som helten + 10 %:</b> et almindeligt monster har heltens liv, skade pr. hug og
+ rustning plus 10 % — på alle etager og i alle verdener, uanset heltens niveau og udstyr. Bliver helten stærkere,
+ bliver monstrene det også. Etagen bestemmer stadig bytte, erfaring og tema.
+</li>
+<li>Hver monstertype beholder sin styrke i forhold til de andre (en rotte er svagere end en trold), og elitemonstre,
+ vogtere, bosser og raid-bosser beholder deres ekstra liv og skade oven i. Raidbosserne: 20 x en typisk boss.
+</li>
+<li>I co-op måler monstrene sig mod gennemsnittet af holdet (spillerne sender deres liv, skade og rustning).
+</li>
+<li>Tallene står i <code>Balance</code> (<code>MONSTER_VS_HERO</code> = 1,1), så de er nemme at justere.
+</li>
+</ul>
+<h3>Test</h3>
+<ul>
+<li>Ny test: et gennemsnitligt monster har ca. heltens liv og skade + 10 %, det samme på etage 1 og 40, rustningen
+ følger med, elitemonstre har stadig mere liv, og en stærkere helt møder stærkere monstre.
+</li>
+<li>Balancebotten (8 dyk, forsigtig) når nu niveau 6 og etage 3-4 med 2 dødsfald (før: niveau 9-10 og etage 4-5).
+</li>
+</ul>
+</section>
+<section id="v1-2-0"><h2><span class="ver">1.2.0</span> 2026-10-28 — Genfødsel forfra, Prestige-ting og prestigemærker</h2>
+<h3>Ændret</h3>
+<ul>
+<li><b>Genfødsel (prestige) starter helten HELT forfra:</b> niveau 1, intet guld, nyt evnetræ, ingen waypoints, Dybet
+ fra etage 1, og Helvede/Himmeltrappen skal åbnes igen (sejrene huskes, så genfødslerne ikke går tabt). Byen, den
+ fælles kiste, materialerne og opskrifterne bliver — de deles af alle dine helte.
+</li>
+<li><b>Arvekisten:</b> alt, hvad helten ejede (udstyr, rygsæk og bælte), flyttes ved genfødslen til heltens egen
+ Arvekiste i byen (knap i kistevinduet). Den kan ikke blive fuld. Helten kan ikke selv bruge tingene, men kan give
+ dem videre til den fælles kiste, så dine andre helte kan bruge dem.
+</li>
+<li><b>Prestige-ting:</b> alt udstyr, en helt med prestige finder, smeder eller køber, hedder "Prestige &lt;tal&gt; ...". En helt
+ kan KUN bruge udstyr fra sit eget prestigeniveau (en helt uden prestige kun almindeligt udstyr). Ting, man ikke
+ kan bruge, har et rødt slør i rygsækken og kisten, og tooltippen siger hvorfor. Drikke, svampe og samlerting
+ kan alle bruge. Kun et relikvie fra heltens eget niveau kalder Natas eller nonnerne.
+</li>
+</ul>
+<h3>Tilføjet</h3>
+<ul>
+<li><b>Prestigemærket (PL):</b> et mærke med prestigeniveauet inden i — Bronze (1), Sølv (2), Guld (3), Platin (4),
+ Diamant (5), Mester (6) og Legende (7+). Det bliver flottere for hvert niveau: en takket ring, laurbærblade, en
+ krone af spidser, vinger, stråler og til sidst en regnbuekant. Det står over heltens hoved (andre spillere ser det
+ også), i hjørnet af hver Prestige-ting og i genfødselsvinduet.
+</li>
+<li>Gamle gemte spil: en helt, der allerede er genfødt, får sit eget udstyr gjort til ting fra sit prestigeniveau.
+</li>
+</ul>
+<h3>Teknisk</h3>
+<ul>
+<li><code>Item.prestige</code>, <code>LootGenerator.finder_prestige()</code>, `GameState.prestige_block/can_use/legacy/_start_over/
+ add_to_legacy/legacy_to_chest<code>, </code>PrestigeBadge<code> (</code>scripts/art/prestige_badge.gd<code>), </code>LegacyPanel`.
+ <code>PlayerSync</code> sender "pl"; <code>Net.PROTOCOL</code> = 16.
+</li>
+</ul>
+</section>
+<section id="v1-1-0"><h2><span class="ver">1.1.0</span> 2026-10-28 — Tilfældige hændelser, Lepreconland og opdateringsbesked</h2>
+<h3>Tilføjet</h3>
+<ul>
+<li><b>Tilfældige hændelser i Dybet:</b> ca. hver tredje almindelige etage (fra etage 2) har en overraskelse.
+ Den vælges ud fra etagens frø, så alle i co-op får den samme.
+</li>
+<li><b>Leprechaunen</b> (fra etage 3): en lille mand i grønt løber fniende og hurtigt væk, lige igennem væggene.
+ Han stopper en gang imellem for at grine ad dig — det er din chance. Når du fanger og dræber ham, inden han
+ forsvinder (ca. 24 sekunder), efterlader han guld og en <b>regnbueportal til Lepreconland</b>. Han tæller ikke
+ med i reglen om at fælde 80 % af etagen.
+</li>
+<li><b>Det gamle alter:</b> rør ved det for en velsignelse (skade, fuldt liv og lanterne eller mere held) — eller en
+ forbandelse (mere skade på dig, mindre olie eller tunge ben).
+</li>
+<li><b>Feringen:</b> en ring af lysende svampe. Træd ind, og feerne spiller dig et puds: du bliver kæmpestor eller
+ lillebitte, løber som vinden, ser verden spejlvendt eller i regnbuens farver — eller bliver flyttet et helt
+ andet sted hen.
+</li>
+<li><b>Goblinfesten:</b> goblins fester under farvede lanterner. Smadr festen og tag en slurk af ølfadet: du bliver
+ fuld (verden slingrer), men slår fire gange så hårdt.
+</li>
+<li><b>Ønskebrønden:</b> kast guld i (10 x etagen) og ønsk: fire gange guldet tilbage, en gave, heling og fyldte
+ flasker — eller et plask og ingenting.
+</li>
+<li><b>Lepreconland:</b> én etage bag leprechaunens portal. Grønne bakker, regnbuer over hvert rum, krukker med guld,
+ firkløvere og fluesvampehuse. Clurichauns (der stjæler guld), alfer og guldgolemmer — og <b>Leprechaunkongen</b>
+ (kappe, krone og en guldkrukke) med regn af guldmønter og sine fyre som hjælp. Monstrene er lige så stærke som
+ etagen, portalen blev fundet på. Fæld kongen for hans guldkrukke (60 guld x etagen) og bytte; vejen ud fører
+ videre ned i Dybet, én etage dybere. I co-op stemmer holdet om at gå gennem portalen.
+</li>
+<li><b>Opdateringsbesked i spillet:</b> en lille boks i venstre side viser det, når en ny version er ude — også midt i
+ et dyk. Spillet kigger efter en ny version hvert 10. minut. "Opdatér nu" virker i byen (spillet genstarter);
+ i et dyk står der, at man kan opdatere, når man er hjemme. "Senere" skjuler den, til en endnu nyere version kommer.
+</li>
+</ul>
+<h3>Teknisk</h3>
+<ul>
+<li><code>RandomEvents</code> (<code>scripts/world/random_events.gd</code>), <code>EventProps</code> (<code>scripts/art/event_props.gd</code>), <code>UpdateNotice</code>
+ (<code>scripts/ui/update_notice.gd</code>). Realm "lepre" (<code>Realms.continues_deep</code>). Monster-typen "flee" og <code>no_count</code>.
+ <code>Net.PROTOCOL</code> = 15 (ny besked "portal", afstemningen har "rm").
+</li>
+</ul>
+<h3>Test</h3>
+<ul>
+<li>Enhedstests for hændelserne (valg ud fra frøet, leprechaunen flygter, fanges eller slipper væk, portalen, alteret,
+ feringen, festen, ønskebrønden), Lepreconland (tema, regnbuer, kongen og guldet, vejen videre til næste etage,
+ hele vejen gennem Main) og opdateringsboksen. Netværkstesten: leprechaunen fanges hos værten, portalen
+ kommer hos begge, holdet går gennem den og videre til etage 5.
+</li>
+</ul>
+</section>
+<section id="v1-0-2"><h2><span class="ver">1.0.2</span> 2026-10-28 — Relikvier låser op, og sjældnere specialetager</h2>
+<h3>Ændret</h3>
+<ul>
+<li><b>Det er nok at have relikviet.</b> Har helten fundet et englerelikvie (helligt), kommer det uhellige til byen
+ (Natas og vejen til Helvede); har helten et dæmonrelikvie (vanhelligt), kommer det hellige (nonnerne og
+ Himmeltrappen). Relikviet behøver ikke at være taget på — det tæller i rygsækken, bæltet og kisten også.
+ Tooltippen fortæller det: "Tag den med hjem til byen — noget (u)helligt vil komme efter den ...".
+</li>
+<li><b>Guldkammeret og Regnbuehulen er endnu sjældnere:</b> 1,2 % og 0,7 % af etagerne (før 4 % og 2,5 %).
+</li>
+</ul>
+<h3>Test</h3>
+<ul>
+<li>1.901 enhedstests (nyt: relikviet tæller i rygsækken og kisten; de to specialetagers nye sjældenhed).
+</li>
+</ul>
+</section>
+<section id="v1-0-1"><h2><span class="ver">1.0.1</span> 2026-10-28 — Satan og ingen checkpoints</h2>
+<h3>Ændret</h3>
+<ul>
+<li><b>Satan, Djævelen</b> er Helvedes sidste boss på etage 666 (i stedet for Natas, der nu er Satans sendebud i byen:
+ "Min herre venter på dig"). Han er lige så svær som Jesus — samme liv, skade, fart, lige så mange store angreb, to
+ faser og et "andet liv" — men kæmper anderledes: <b>ildburet</b> (en ring af helvedesild rundt om dig med ét hul, og
+ midten brænder også), <b>helvedesånde</b> (en kegle af ild) og pentagrammet. Når han falder første gang, rejser han sig
+ i sin <b>sande skikkelse</b>: større og hurtigere. Nyt udseende: sort kappe, brændende revner over brystet, en krone
+ af flammer og gedehorn.
+</li>
+<li><b>Ingen checkpoints:</b> både Helvede og Himmeltrappen starter altid på første etage (650 / trin 1).
+</li>
+</ul>
+<h3>Test</h3>
+<ul>
+<li>1.900+ enhedstests, bl.a. at Satan har præcis samme tal som Jesus, men mindst to egne angreb og den sande skikkelse.
+</li>
+</ul>
+</section>
+<section id="v1-0-0"><h2><span class="ver">1.0.0</span> 2026-10-28 — Sprog og endgame</h2>
+<h3>Tilføjet</h3>
+<ul>
+<li><b>Dansk / English:</b> spillet kan skiftes mellem dansk og engelsk (knap på startskærmen og i Esc-menuen;
+ valget gemmes). Ca. 1.600 tekster er oversat (<code>i18n/en.json</code>).
+</li>
+<li><b>Helvede (etage 650-666):</b> bærer helten et *helligt* relikvie i byen, kommer <b>Natas</b> gående. Tal med ham:
+ et brændende pentagram åbner sig under ham, han synker ned i ilden og efterlader en kæmpe <b>rævne</b> i torvet —
+ nedgangen til Helvede. 17 etager (Ildens kreds, Knoglemarkerne, Den frosne kreds, Pandæmonium, Mørkets trone),
+ helvedes-monstre og en <b>ærkedæmon</b> på hver etage: Belfegor, Mammon, Leviathan, Asmodæus, Belzebub, Belial,
+ Moloch, Astaroth, Baal, Paimon, Abaddon, Azazel, Lilith, Samael, Mefistofeles, Lucifer — og Natas selv på 666.
+</li>
+<li><b>Himmeltrappen (17 etager):</b> bærer helten et *vanhelligt* relikvie, kommer en procession af <b>nonner</b>.
+ Abbedissen beder, nonnerne knæler i en ring af lys, og en <b>trappe af lys</b> kommer ned fra himlen. Op gennem
+ skyerne, Edens have, Korenes sal og Perleportene mod hellige symboler (det flammende kors, duer, ichthys-fisken,
+ kalken, ofanen — hjulet af øjne, lysestager), keruber, serafer og englevagter. En <b>ærkeengel</b> på hver etage
+ (Sariel ... Gabriel, Mikael) — og øverst <b>Jesus</b>, der er meget svær: seks store angreb, to faser — og han
+ rejser sig igen én gang.
+</li>
+<li><b>Prestige (genfødsel):</b> når Helvede eller Himmeltrappen er gennemført, kan helten genfødes på niveau 1 med en
+ <b>underklasse</b> (hellig efter Helvede, vanhellig efter Himlen) og en varig bonus (+5 % skade og liv pr.
+ genfødsel). Kisten, byen, udstyret og materialerne beholdes. 10 underklasser: Paladin/Dødsridder,
+ Lysvæver/Tomrumsmagiker, Himmelskytte/Skyggejæger, Inkvisitor/Natteskygge, Gravpræst/Lich — hver med sin egen gren
+ i evnetræet, en ny evne på <b>tast 5</b> og et nyt udseende.
+</li>
+<li><b>Dragens Hule (raid, 1-4 spillere):</b> åbner, når både Helvede og Himmeltrappen er gennemført (af hvilke som helst
+ af dine helte). Fem etager fulde af gamle bosser i rummene og en <b>raidboss</b> på hver etage med **20 gange så meget
+ liv som en boss på etage 60**: Kvartswyrmen, tvillingedragerne Ignar og Hrim (deler 20x), Dragekultens Overpræst,
+ Knogledragen og Urdragen Vyrmorath. Hjemvendingsrunen virker ikke derinde.
+</li>
+<li>Nye boss-mekanikker: regn af cirkler, spiral (to bølger), drageånde (kegle), faser og genopstandelse.
+</li>
+<li>Nye figurer bygget i kode: dæmoner, engle, nonner, hellige symboler og drager.
+</li>
+</ul>
+<h3>Ændret</h3>
+<ul>
+<li><code>Net.PROTOCOL</code> → <code>hearthdelve-mp-14</code> (beskederne "dive", "floor" og afstemningen har nu feltet <code>rm</code> = realm).
+</li>
+<li>Brønden er nu ét af fire "realms" (<code>Realms</code>), så den deler regler med Helvede, Himlen og Dragens Hule.
+</li>
+</ul>
+<h3>Test</h3>
+<ul>
+<li>1.894 enhedstests (nyt: test_language, test_realms, test_realm_floors, test_endgame_town, test_prestige).
+ Net-testen: værten og klienten går sammen ned i Helvede, ned til etage 651 og hjem igen.
+</li>
+<li><b>Ikke testet af en bot:</b> at kæmpe sig igennem alle 17 etager eller raidet. Endgame-balancen (fx at en raidboss
+ har ca. 1,1 mio. liv) er sat efter de planlagte tal, men ikke målt — spiltest den gerne.
+</li>
+</ul>
+</section>
+<section id="v0-9-6"><h2><span class="ver">0.9.6</span> 2026-10-27 — Værten hoster selv</h2>
+<h3>Ændret</h3>
+<ul>
+<li><b>Ingen separat server-program.</b> Hub-serveren fra v0.9.5 er fjernet. Den, der vælger *Vær vært*, hoster selv
+ banen i sit eget spil.
+</li>
+<li><b>Spillet åbner selv porten</b> i værtens router (UPnP), når man bliver vært, og finder værtens internetadresse.
+</li>
+<li><b>Invitationskode:</b> værten får en kode som <code>HD-2N1GH-3GR15</code> (med en *Kopiér*-knap) i Multiplayer-vinduet.
+ Venner over internettet skriver koden i *Deltag med en invitationskode* (en IP-adresse virker også).
+ Kan routeren ikke åbne porten selv, siger spillet det og forklarer, hvad værten skal gøre.
+</li>
+<li><b>Listen</b> viser de åbne spil på dit eget netværk — værtens spil melder sig selv, ingen server.
+ (En liste over fremmedes spil over internettet kræver et fælles sted, alle spil melder sig til, så den er
+ ikke med.)
+</li>
+<li><code>Net.PROTOCOL</code> → <code>hearthdelve-mp-13</code>.
+</li>
+</ul>
+<h3>Test</h3>
+<ul>
+<li>1282 enhedstests (nyt: invitationskoder frem og tilbage, almindelige IP-adresser, vrøvl afvises, og at
+ værten uden en router får besked i stedet for en fejl). Net-testen: klienten finder værtens spil i listen
+ (meldt af værten selv), afvises med forkert og uden kode og kommer ind med den rigtige.
+</li>
+<li><b>Ikke testet:</b> UPnP mod en rigtig router (containeren har ingen) og invitationskoder over internettet.
+</li>
+</ul>
+</section>
+<section id="v0-9-5"><h2><span class="ver">0.9.5</span> 2026-10-27 — Multiplayer-hub</h2>
+<h3>Tilføjet</h3>
+<ul>
+<li><b>Hubben</b> (Esc → Multiplayer, og i start-menuen): en liste over åbne spil med navn, vært, antal spillere,
+ om holdet er på dyk, om spillet har adgangskode, og om det er en anden version. Tryk *Deltag*.
+ Spil på dit eget netværk dukker selv op (LAN). Spil over internettet vises, når en <b>hub-server</b> er sat op.
+</li>
+<li><b>Som vært</b> giver du dit spil et navn og kan sætte en <b>adgangskode</b>. Uden den rigtige kode kommer man ikke
+ ind ("Forkert adgangskode." / "Spillet er låst med en adgangskode."). Koden sendes som en hash, aldrig som tekst,
+ og hub-serveren får den aldrig at se.
+</li>
+<li><b>Hub-serveren</b> (<code>hub-server/hub_server.py</code> i pakken, se <code>HUB_SERVER.md</code>): et lille Python-program uden
+ afhængigheder, som skal køre på en maskine, der er tændt og har UDP-port 24567 åben. Den holder kun listen;
+ spillet går stadig direkte til værten (port 24565 skal være åben hos værten).
+</li>
+<li>Man kan stadig skrive en IP-adresse direkte (nu også med adgangskode).
+</li>
+</ul>
+<h3>Ændret</h3>
+<ul>
+<li><code>Net.PROTOCOL</code> → <code>hearthdelve-mp-12</code>.
+</li>
+</ul>
+<h3>Test</h3>
+<ul>
+<li>1276 enhedstests (nyt: et spil høres på netværket, adgangskoden sendes som hash). Hub-serverens egen test
+ (<code>--selftest</code>). Net-testen starter nu en hub-server: værten melder sit spil med navn og kode, klienten finder
+ det i listen, bliver afvist med forkert og uden kode og kommer ind med den rigtige.
+</li>
+<li><b>Ikke testet:</b> hub-serveren på en rigtig server på internettet, og LAN-listen på et rigtigt netværk med
+ flere computere (testet på én maskine).
+</li>
+</ul>
+</section>
+<section id="v0-9-4"><h2><span class="ver">0.9.4</span> 2026-10-27 — Fog of war</h2>
+<h3>Tilføjet</h3>
+<ul>
+<li><b>Fog of war:</b> rum, du ikke har været inde i, er dækket af mørke. Du kan ikke se gulv, monstre, fakler,
+ kister, fanger eller trappen på den anden side af væggene. Når du går ind i et rum, letter mørket (det
+ fader væk). Monstre i mørket er usynlige, også deres livsbjælker.
+</li>
+<li><b>Minikortet</b> viser nu kun de rum, du har været i (før kunne man skimte rummene bag dørene).
+</li>
+</ul>
+<h3>Test</h3>
+<ul>
+<li>1273 enhedstests (nyt: mørket over rummene, skjulte monstre, bure og trappe, og at det letter, når du går
+ ind). Net-testen grøn. Skærmbilleder tjekket: start-rummet, stående i en døråbning, og efter at være gået ind.
+</li>
+<li><b>Kendt begrænsning:</b> ved den nordlige kant af et mørkt rum ligger mørket lavt (ellers ville det dække
+ helten, når han står ved væggen nedenfor), så man kan ane toppen af væggen dér.
+</li>
+</ul>
+</section>
+<section id="v0-9-3"><h2><span class="ver">0.9.3</span> 2026-10-27 — Kort, relikvier og ingen flugt fra døden</h2>
+<h3>Tilføjet</h3>
+<ul>
+<li><b>Minikort</b> nederst til højre i dungeons. Det viser de rum, du har været i (og dem, du har skimtet gennem
+ en dør), dørene, dig (en guldpil), dine medspillere (blå), bosætterne der følger dig (grønne) og trappen,
+ når du har set den. I Brøndens kulsorte grotte vises udgangen først, når du har fundet den. <b>M</b> giver et
+ stort kort midt på skærmen.
+</li>
+<li><b>Hellige og vanhellige relikvier</b> — det sjældneste i spillet (fra etage 6). Et helligt relikvie giver
+ meget liv, livsgenvinding og rustning — og en lysende <b>glorie</b> og hvide <b>englevinger</b>. Et vanhelligt
+ giver meget skade, livsdræn og kritisk skade — og <b>horn</b> og mørkerøde <b>dæmonvinger</b>. Vingerne slår
+ langsomt (hurtigere når du løber), og medspillere kan se dem. <b>Du kan kun bære ét relikvie ad gangen.</b>
+</li>
+<li><b>Lukker du spillet eller forlader multiplayer under et dyk</b>, sker det ikke med det samme: der kommer en
+ advarsel om, at det tæller som et dødsfald, og en nedtælling på 10 sekunder (spillet kører imens).
+ *Annullér* eller Esc stopper den. Det gælder også vinduets luk-knap.
+</li>
+</ul>
+<h3>Ændret</h3>
+<ul>
+<li><b>Legendariske ting er over 3 gange sjældnere</b>, og <b>sæt-ting er ca. 3 gange sjældnere</b> (også hos bosser).
+</li>
+<li><code>Net.PROTOCOL</code> → <code>hearthdelve-mp-11</code> (relikvier vises for medspillere).
+</li>
+</ul>
+<h3>Rettet</h3>
+<ul>
+<li>Monstre kunne give en fejlbesked, hvis deres mål forsvandt i samme øjeblik (fx ved sceneskift).
+</li>
+</ul>
+<h3>Test</h3>
+<ul>
+<li>1267 enhedstests (nye: minikortet, nedtællingen og dødsfaldet, relikvierne og reglen om ét relikvie).
+ Net-testen grøn (69 + 11). Skærmbilleder tjekket: kortet (lille og stort), nedtællingen, glorie og
+ englevinger, horn og dæmonvinger.
+</li>
+<li><b>Ikke testet:</b> på Windows, over internettet, og opdateringen mod GitHub selv.
+</li>
+</ul>
+</section>
+<section id="v0-9-2"><h2><span class="ver">0.9.2</span> 2026-10-27 — Nye funktioner og fejlrettelser</h2>
+<h3>Rettet</h3>
+<ul>
+<li><b>Værten kunne ikke befri fanger i co-op.</b> Værtens eget klik slog buret fra, før værten selv tjekkede det,
+ så værten troede, det allerede var åbnet. Nu husker værten åbnede bure for sig.
+</li>
+<li><b>Spyddets angreb:</b> spyddet pegede lodret op mod himlen, mens man trak det tilbage. Nu holdes det vandret.
+ Helte i lang kåbe (Nekromantikeren) får ikke længere benene ud gennem kåben, når de udfalder.
+</li>
+</ul>
+<h3>Tilføjet</h3>
+<ul>
+<li><b>Mørket:</b> når lanternen er under 25%, begynder helten at hallucinere: skærmen bliver grå og dobbelt,
+ kanterne mørkner, og skygger med røde øjne står i kanten af lyset og hvisker ("Dit lys dør snart."). De
+ forsvinder, når man går hen til dem, og kan ikke skade. Når lanternen er tom, mister man 2,5% af sit liv
+ pr. sekund — mørket kan dræbe. Begge dele annonceres på skærmen.
+</li>
+<li><b>Afstemning i co-op:</b> før holdet går ned ad trappen, stemmer alle (Ja / Nej i en boks øverst). Den, der
+ tog trappen, har stemt ja. Når alle har stemt, eller efter 30 sekunder, tæller de afgivne stemmer: flere
+ end halvdelen skal sige ja.
+</li>
+<li><b>Ny skrift</b> med Dungeons &amp; Dragons-stemning: Alegreya til tekst, Cinzel til overskrifter, knapper og
+ skilte, Cinzel Decorative til spillets navn. Gratis skrifttyper (SIL Open Font License).
+</li>
+<li><b>Kisten får sider (faner):</b> købt plads kommer nu som hele sider på 60 felter (400 guld for den første,
+ op til 5). Ting kan aldrig ligge hen over to sider. Gamle køb: hver 3 købte rækker blev til én side.
+</li>
+</ul>
+<h3>Ændret</h3>
+<ul>
+<li><b>Bosserne har dobbelt så meget liv</b> som i v0.9.0 (6× i stedet for 3×).
+</li>
+<li><b>Helten skalerer langsommere:</b> 20% mindre erfaring og guld, våben og skadeegenskaber vokser langsommere
+ pr. niveau, og der falder færre ting (ca. 25-30% færre).
+</li>
+<li><b>Brønden er dobbelt så lang:</b> 8 etager (2 under vandet, 2 krypt, 2 grotte, 2 kult), og hver etage er
+ dobbelt så stor. Når dykket i brønden slutter (hjem eller død), er <b>blodpagten brudt</b>, og byen skal ofre
+ forfra for at åbne brønden igen.
+</li>
+<li><code>Net.PROTOCOL</code> → <code>hearthdelve-mp-10</code> (afstemning). Alle skal have v0.9.2 for at spille sammen.
+</li>
+</ul>
+<h3>Test</h3>
+<ul>
+<li>1241 enhedstests (nye: mørket og hallucinationer, afstemningens regler, kistens sider, 8 brønd-etager og
+ brudt pagt). Net-testen (69 + 11 checks) kører nu også afstemning (nej og ja), værten der befrier en fange,
+ og alle 8 brønd-etager med to spillere.
+</li>
+<li>Bot-simuleringen (Barbar, 8 dyk) er blevet <b>meget</b> sværere: botten dør på etage 3-5 og når niveau 9 efter
+ 8 dyk (før nåede den etage 12). Mest på grund af bosserne med 6× liv på etage 5. Botten undviger ikke, så
+ for et menneske er det lettere — men sig til, hvis det er for meget.
+</li>
+<li>Skærmbilleder tjekket: spyddet på Nekromantikeren, mørket med skygger, skriften i alle vinduer og på startskærmen.
+</li>
+<li><b>Ikke testet:</b> på Windows, over internettet, og opdateringen mod GitHub selv.
+</li>
+</ul>
+</section>
+<section id="v0-9-1"><h2><span class="ver">0.9.1</span> 2026-10-27 — Automatisk opdatering</h2>
+<h3>Tilføjet</h3>
+<ul>
+<li><b>Spillet opdaterer sig selv:</b> ved start henter det <code>latest.json</code> fra sit GitHub-repository
+ (Hearthdelve_Windows / Hearthdelve_Linux). Er der en nyere version, står der "Ny version ... er klar"
+ øverst til højre på startskærmen. *Opdatér nu* henter pakken, tjekker kontrolsummen (sha256), lægger den
+ nye programfil på plads, gemmer og genstarter. Den gamle fil hedder <code>*.old</code> til næste start.
+</li>
+<li><code>tools/make_release.sh &lt;mappe&gt;</code> bygger begge pakker og deres <code>latest.json</code>.
+</li>
+<li>Versionen står nederst til højre på startskærmen (<code>Updater.VERSION</code>).
+</li>
+</ul>
+<h3>Ændret</h3>
+<ul>
+<li>Linux-pakken er nu en <code>.zip</code> (som Windows), så spillet selv kan pakke den ud.
+</li>
+</ul>
+<h3>Forudsætninger</h3>
+<ul>
+<li>De to repositories skal være <b>offentlige</b> (spillet logger ikke ind på GitHub).
+</li>
+<li>Spillet skal ligge i en mappe, brugeren selv ejer (ikke "Programmer"), ellers kan det ikke skifte sig selv ud.
+</li>
+<li>Spillere med v0.9.0 skal hente v0.9.1 manuelt én gang (v0.9.0 har ingen opdatering indbygget).
+</li>
+</ul>
+<h3>Test</h3>
+<ul>
+<li>1196 enhedstests. Hele opdateringen er testet mod en lokal webserver med en falsk programfil: ny version
+ findes, hentes, kontrolsummen tjekkes, filen skiftes ud, den gamle ryddes op ved næste start, og en
+ beskadiget fil afvises.
+</li>
+<li><b>Ikke testet:</b> mod GitHub selv (containeren kan ikke nå raw.githubusercontent.com) og på Windows.
+</li>
+</ul>
+</section>
+<section id="v0-9-0"><h2><span class="ver">0.9.0</span> 2026-10-27 — Den store ønskeliste</h2>
+<h3>Tilføjet</h3>
+<ul>
+<li><b>Startskærm ved bålet:</b> dine helte står om et lejrbål om natten. Peg på en helt, og den træder frem i
+ lyset med navn, class og niveau. Klik for at vælge den. Knapper: *Spil som ...*, *Ny helt*,
+ *Multiplayer og flere valg* (det gamle startvindue) og *Afslut*. Esc → *Skift helt* fører også hertil.
+</li>
+<li><b>Brønden</b> (kun ved højeste blodpagt): brønden i byen gløder rødt, og man kan springe i. Fire etager i træk:
+ *Under vandet* (man går langsommere), *Den glemte krypt*, *Grotten uden vej* (kulsort, større, udgangen vises
+ først tæt på) og *Kultens helligdom*. Her har en hemmelig kult malet et pentagram af blod, og navnene på
+ dem, byen ofrede, står omkring det. Bossen er <b>Kultens Ypperstepræst</b>, og hans pentagram-angreb er fem
+ stråler. Hjemvendingsrunen virker ikke i de tre første etager. Belønning: bossens bytte, en navngiven ting,
+ 1500 guld og samlertingen *Kultens blodkalk*. Virker også i co-op. Nye monstre: Blodkultist og Ofrets genfærd.
+</li>
+<li><b>Chat i multiplayer:</b> tryk Enter, skriv, Enter. Beskederne står nederst til venstre og forsvinder efter 12 sekunder.
+</li>
+<li><b>Hændelseslog til fejlfinding:</b> spillet skriver hændelser i en tekstfil (scener, net, kamp, chat, beskeder
+ og hop i medspillernes position). Esc → *Hændelseslog* viser de sidste linjer og gemmer en kopi, som kan
+ sendes til fejlretning.
+</li>
+<li><b>Bælte</b> (ny udstyrsplads): Rebbælte (2 lommer), Læderbælte (3) og Nittebælte (4). Sjældne bælter har en
+ lomme mere. Læg drikke og svampe i lommerne (højreklik eller træk dem), og brug dem med <b>Shift+1-5</b>. Lommerne
+ ses over evnebjælken. Bælter kan smedes i Værkstedet.
+</li>
+<li><b>Svampe:</b> 8 forbrugssvampe med mærkelige virkninger. Skærmens farver drejer rundt, verden bølger, verden
+ spejles, man løber 5× hurtigere eller gør 4× skade, man bliver kæmpestor eller lillebitte, monstrene kan ikke
+ se én, eller lanternen brænder ikke ned. Findes oftest i grotter og hos sporesvampe.
+</li>
+<li><b>Mere plads i kisten:</b> køb en række mere ved kisten i byen (150 guld for den første, stigende pris, op til 8 rækker).
+</li>
+</ul>
+<h3>Ændret</h3>
+<ul>
+<li><b>Sværere dyb:</b> monstrene varsler 15% kortere og bruger evner oftere. <b>Bosserne har 3× liv</b> og hver
+ sin store mekanik, som skal undgås, med navn over bossen og et rødt felt på gulvet i ca. 2 sekunder først:
+ cirkel om bossen, alt uden for en grøn cirkel, kryds, stråle eller pentagram.
+</li>
+<li><b>Auraerne er helt forskellige:</b> hver har sit eget tegn på gulvet og sine egne ting, der kredser om helten.
+ Ild har flammetunger og gnister. Frost har snefnug-tegn, iskrystaller og sne. Hellig har solstråler, en
+ glorie og en lyssøjle. Skygge har en sort hvirvel og røgranker. Død har en tornekrans og spøgelseslys.
+ Vind har spiral og blade. Guld har mønter. Regnbue har prismer i alle farver.
+</li>
+<li><b>Arenaen:</b> en helt med højere niveau end modstanderen møder stærkere monstre (+5% liv og +4% skade pr.
+ niveau over, højst 2,5×). Den lavere helt får mere kampguld at handle for.
+</li>
+<li><b>Jægerens evnetræ:</b> i grenen Vildmark ligger Ulvekald nu som nr. 2, under den evne, der skal læres først.
+</li>
+<li><b>Medspillere, der hoppede eller gled:</b> positionspakker har nu et løbenummer, så gamle pakker smides væk.
+ Ved store spring hopper figuren direkte på plads i stedet for at glide hen over gulvet. Begge dele skrives i
+ hændelsesloggen.
+</li>
+<li><code>Net.PROTOCOL</code> → <code>hearthdelve-mp-9</code> (chat, brønd-etager).
+</li>
+</ul>
+<h3>Test</h3>
+<ul>
+<li>1185 enhedstests (nye: startskærm, Brønden hele vejen ned, chat og log, bælte, svampe, kisterækker,
+ bossmekanikker, træets rækkefølge, arena-handicap). Net-testen kører nu også chat og et dyk gennem alle fire
+ brønd-etager med to spillere (55 + 11 checks). Bot-simuleringen (Barbar, 8 dyk) kører igennem; i de sidste dyk når botten etage 12 og vender hjem.
+</li>
+<li>Skærmbilleder tjekket: auraer, startskærm (stille og med en helt, der træder frem), brønden i byen, de fire
+ brønd-etager, svampenes skærmeffekter og alle vinduer.
+</li>
+<li><b>Ikke testet af AI:</b> spillet på Windows, multiplayer over internettet, om hændelsesloggen fanger det
+ hop, du så (det kræver en rigtig session), og at pege med en rigtig mus på startskærmen (testen sætter
+ "musen" i koden). Botten spiller ikke som et menneske, så sværhedsgraden kræver din spiltest.
+</li>
+</ul>
+</section>
+<section id="v0-8-2"><h2><span class="ver">0.8.2</span> 2026-10-27 — Fuldskærm</h2>
+<h3>Tilføjet</h3>
+<ul>
+<li><b>Esc → Skærm:</b> vælg *Vindue*, *Kantløs fuldskærm* eller *Fuldskærm* (rigtig, eksklusiv fuldskærm).
+ <b>F11</b> eller <b>Alt+Enter</b> skifter mellem vindue og fuldskærm overalt i spillet. Valget huskes
+ (<code>user://settings.cfg</code>, [graphics] screen) og bruges ved næste start.
+</li>
+</ul>
+<h3>Test</h3>
+<ul>
+<li>997 enhedstests (skift, rækkefølge, gemning). I containeren er det afprøvet, at spillet beder om
+ fuldskærm (vinduestilstand 4 = eksklusiv fuldskærm), men den har ingen vinduesmanager, så selve
+ billedet kunne ikke ses fylde skærmen. <b>Ikke testet:</b> på en rigtig Windows-skærm.
+</li>
+</ul>
+</section>
+<section id="v0-8-1"><h2><span class="ver">0.8.1</span> 2026-10-27 — Fejlrettelser og nye funktioner</h2>
+<h3>Rettet</h3>
+<ul>
+<li><b>Tekst, der stod lodret</b> (et bogstav pr. linje) i Samlingen, på Opslagstavlen ("I gang") og andre steder:
+ korte tekster ombrydes aldrig, og lange tekster har altid en fornuftig mindstebredde (<code>UiStyle.label/para</code>).
+</li>
+<li><b>Vinduer, der voksede ud over skærmen</b>, når teksten blev lang (fx Evnetræet): vinduer kan højst fylde
+ 88% af skærmhøjden og ruller ellers. Detaljeboksene (evnetræ, værksted) har fast størrelse og ruller
+ indvendigt, og værktøjstips om ting har fast bredde (lange linjer ombrydes).
+</li>
+<li>HUD'ens højre kolonne ombryder lange linjer (fx "Samlet: ...") i stedet for at løbe ud af skærmen.
+</li>
+<li>Teksten "[E] ..." kunne hænge fast fra dungeonen, når man kom hjem.
+</li>
+<li>Alle vinduer er gennemgået på skærmbilleder (1280×720).
+</li>
+</ul>
+<h3>Ændret</h3>
+<ul>
+<li><b>Skattekister:</b> hold <b>E</b> nede i 2 sekunder for at åbne dem. En ring over kisten fyldes op, og låget
+ knirker op imens. Slip E, og det starter forfra. (Kisten i byen åbnes stadig med ét tryk.)
+</li>
+<li><b>Ingen udgang før etagen er (næsten) ryddet:</b> trappen ned og hjemvendingsrunen virker først, når
+ mindst 80% af etagens monstre er dræbt <b>og</b> bossen/skattevogteren er død. HUD'en viser
+ "Fældet x/y — udgangen åbner om z", og vinduet ved trappen siger, hvad der mangler.
+</li>
+<li><b>Øret fra en duel kan ikke længere tages på.</b> Kast det i <b>Dødens Grube</b> (ny grube ved Offerstenen):
+ din helt bærer titlen <b>"Slayer of &lt;navn&gt;"</b> i et døgn. Titlen svæver over helten (medspillere kan se
+ den) og står i udstyrsvinduets overskrift. Gamle ører fra gemte spil bliver automatisk til trofæer.
+</li>
+<li><b>Buen</b> holdes nu i venstre hånd. Højre hånd spænder strengen helt tilbage til ansigtet med en pil på
+ strengen og slipper. Strengen springer frem efter skuddet. Det gælder også skeletskytterne. Jægere bærer
+ lanternen i bæltet, fordi de skal bruge begge hænder.
+</li>
+<li><code>Net.PROTOCOL</code> → <code>hearthdelve-mp-7</code> (titel i spillerens tilstand).
+</li>
+</ul>
+<h3>Test</h3>
+<ul>
+<li>991 enhedstests (bl.a. hold-E på kister, 80%-reglen og bossen på trappe og rune, øret som trofæ,
+ titlen og at den udløber efter et døgn, buen og strengen). Net-test grøn. Bot-simuleringen kører med
+ 80%-reglen (Barbaren når etage 12 fra dyk 4).
+</li>
+<li><b>Ikke testet af AI:</b> at holde E nede med et rigtigt tastatur (testen trykker tasten i koden),
+ Windows-buildet, og at medspillere ser titlen over internettet.
+</li>
+</ul>
+</section>
+<section id="v0-8-0"><h2><span class="ver">0.8.0</span> 2026-10-27 — Tema-monstre og tema-bosser</h2>
+<h3>Tilføjet</h3>
+<ul>
+<li><b>16 nye monstre, bundet til etagens tema:</b>
+</li>
+<li>*Krypten:* Gravvagt (skelet med sværd og skjold, pansret), Gravkultist (fremmaner en cirkel på gulvet,
+ der eksploderer), Knoglehund (stormer frem i en lige linje).
+</li>
+<li>*Troldegrotten:* Huleplyndrer (hurtig, <b>stjæler guld</b> — dræb den, så taber den det igen),
+ Sporesvamp (giftcirkel, <b>gift</b> over tid), Hulespinder (stormløb, <b>spind gør dig langsom</b>).
+</li>
+<li>*Den Sunkne Fæstning:* Druknet soldat (kulde gør dig langsom), Armbrøstskytte (tunge bolte),
+ Klippekrabbe (pansret skal).
+</li>
+<li>*Askesmedjen:* Glødeimp (kaster ildkugler), Magmaklump (<b>deler sig</b> i to Gløder, når den dør),
+ Smedegolem (pansret sten med glødende revner).
+</li>
+<li>*Guldkammeret:* Kistemimik (ligner en skattekiste, indtil du kommer tæt på), Forgyldt vagt.
+</li>
+<li>*Regnbuehulen:* Krystalånd (skyder krystaller), Prismebille (stormløb, pansret).
+</li>
+<li><b>Bosser efter tema</b> (hver 5. etage — bossen passer altid til etagens tema, temaets to bosser skiftes):
+ Krypten: Knoglekongen / Lygtetyven · Troldegrotten: Troldemoderen / <b>Spindeldronningen</b> ·
+ Fæstningen: <b>Den Druknede Admiral</b> / <b>Jernkrabben</b> · Askesmedjen: <b>Askesmeden</b> / <b>Magmamoderen</b>.
+ Nye boss-evner: cirkler på gulvet, spind-salver, ildkugle-salver, deling ved død, eget kampråb.
+</li>
+<li><b>Skattevogtere</b> i specialetagerne: *Den Grådige Kiste* (Guldkammeret) og *Prismevogteren*
+ (Regnbuehulen) venter ved trappen. Trappen er ikke forseglet, men de taber næsten altid temaets
+ navngivne ting.
+</li>
+<li><b>Nye angrebstyper:</b> stormløb (rød stribe varsler retningen), cirkler på gulvet (vokser og eksploderer),
+ panser (tager en del af skaden), deling ved død, og effekter ved træf (langsom, gift, guldtyveri).
+</li>
+<li><b>Nye figurer:</b> edderkop (og bille), krabbe, svamp, magmaklump, kistemimik; temavarianter af skeletter
+ (skjold, hjelm, guld), ådselædere (nisse, druknet, imp, admiral), trolde (golem, krystal) og genfærd
+ (krystal). Projektiler efter monster: bolte, ildkugler, krystaller, spind, sten.
+</li>
+</ul>
+<h3>Ændret</h3>
+<ul>
+<li>Temaernes monsterblanding er lavet om, så hvert tema mest har sine egne monstre.
+</li>
+<li>Advarslen ved trappen før en bossetage nævner ikke længere en bestemt boss (den afhænger af temaet).
+</li>
+<li><code>Net.PROTOCOL</code> → <code>hearthdelve-mp-6</code> (ny "zone"-angrebsbesked).
+</li>
+</ul>
+<h3>Test</h3>
+<ul>
+<li>956 enhedstests (bl.a. at hvert tema har egne monstre og bosser, at alle modeller kan bygges, panser,
+ stormløb, cirkler, gift, kulde, guldtyveri og at guldet kommer igen, deling, tema-boss, skattevogter).
+ Net-test grøn. Bot-simulering (8 dyk): Barbar og Magiker når etage 12 omtrent lige så hurtigt som i v0.7; skytter (imp,
+ armbrøst, krystalånd) blev skruet ned, efter at de var for hårde ved Magikeren. Botten logger nu, hvilke monstre der gør mest skade.
+</li>
+<li><b>Ikke testet af AI:</b> hvordan monstrene *føles* at kæmpe mod; at undvige cirkler og stormløb (botten
+ undviger ikke); Windows-buildet; co-op over internettet.
+</li>
+</ul>
+</section>
+<section id="v0-7-0"><h2><span class="ver">0.7.0</span> 2026-10-26 — Temaer, sætting, navngivne ting, auraer og ny grafik</h2>
+<h3>Tilføjet</h3>
+<ul>
+<li><b>Tilfældige temaer pr. etage:</b> *Krypten*, *Troldegrotten*, *Den Sunkne Fæstning* og *Askesmedjen* —
+ hver med egne sten, lys, tåge, rekvisitter (sarkofager, stearinlys, drypsten, svampe, pytter,
+ lavarevner) og egne monstre. Alle i co-op får samme tema (det følger etagens frø).
+</li>
+<li><b>Sjældne specialetager</b> (aldrig etage 1 eller bossetager): <b>Guldkammeret</b> (~4%: guldbunker,
+ ekstra skattekister, guld fra hvert drab) og <b>Regnbuehulen</b> (~2,5%: krystaller, mange eliksirer,
+ samlerting og regnbue-våben/-rustning).
+</li>
+<li><b>Forbrugsting</b> (højreklik i rygsækken): Feltflaske, Manadrik, Lampeolie, Styrke-, Sten- og
+ Lykkeeliksir og den sjældne Regnbueeliksir.
+</li>
+<li><b>Samlerting og Samlingen:</b> 16 samlerting (2–4 pr. tema). Hver ny giver alle dine helte lidt bedre
+ bytte og mere guld; dubletter bliver til guld. Se Esc → *Samlingen* eller knappen i rygsækken.
+</li>
+<li><b>Sætting — ét sæt pr. class</b> (4 dele hver): *Bjørnekongens Arv* (Barbar), *Ærkemagikerens
+ Klædning* (Magiker), *Ulvejægerens Udrustning* (Jæger), *Natravnens Skygger* (Tyv) og
+ *Gravherrens Regalier* (Nekromantiker). 2/3/4 dele giver bonusser; det fulde sæt giver en <b>aura</b>.
+ Bonusserne virker kun for sættets egen class. Grønne navne. Dropper sjældent fra etage 3
+ (bosser 25%, eliter 1,5%), og 70% af gangene er det fra din egen class' sæt.
+</li>
+<li><b>15 navngivne ting</b> med faste egenskaber, særlige effekter og ofte en aura — hvert tema har sine
+ egne (fx *Benkongens Klinge*, *Troldeknuseren*, *Den Druknede Admirals Ring*, *Glødehjertet*,
+ *Midas' Ring*, *Regnbuebuen*, *Prismebrynjen*). I specialetagerne er temaets ting 6× så hyppige.
+ Kan forbedres og omsmedes, men ikke fortrylles.
+</li>
+<li><b>8 auraer, som man kan se:</b> en roterende rune-cirkel på gulvet, partikler og et farvet lys —
+ *Ild* (fjender brænder), *Frost* (sænker), *Lys* (heler dig), *Skygge* (forbander), *Død* (svækker og
+ visner), *Vind* (fart), *Midas* (bytte flyver hen til dig, mere guld), *Regnbue* (lidt af det hele,
+ skifter farve). Medspillere ser din aura online.
+</li>
+<li><b>Ny grafik på figurerne:</b> krop, arme og ben er nu ét blødt, "skinned" mesh, der bøjer i albuer,
+ knæ, skuldre og liv (før: stive dele med kugleled). Øjne med hvide, iris og øjenlåg, bryn og mund.
+</li>
+<li><b>Rigtige angrebsanimationer pr. våben:</b> sværd (skiftevis forhånds- og baghåndshug), økse
+ (tohånds-hug fra oven), dolke (hurtige stik med skiftevis hånd), spyd (udfald), bue (spænd og
+ slip), stav (løft og stød), le (stor tohånds-fejning). Figurer rykker sig, når de bliver ramt.
+</li>
+<li><b>Projektiler gjort om:</b> pile med skaft, spids og fjer; ildkugle med flammer, røg og lys; lynkæde
+ som takkede, flimrende lyn med forgreninger; knoglespyd, kastekniv, magiske kugler; meteoren
+ falder synligt ned; nedslag med gnister.
+</li>
+</ul>
+<h3>Ændret</h3>
+<ul>
+<li>Nye monstre i temaerne bruger de eksisterende typer (rotte, bombekaster, shaman, genfærd).
+</li>
+<li><code>Net.PROTOCOL</code> → <code>hearthdelve-mp-5</code> (auraer sendes med spillerens tilstand). Gem-formatet er stadig v4
+ (nye felter: <code>collection</code>, og <code>set_id</code>/<code>unique_id</code> på ting).
+</li>
+</ul>
+<h3>Test</h3>
+<ul>
+<li>817 enhedstests (bl.a. temaer, specialetager, forbrugsting, Samlingen, sætbonusser pr. class,
+ navngivne ting, auraer i kamp, at kroppen følger skelettet, angrebsposer pr. våben).
+ Net-test (vært + klient) grøn. Bot-simulering kører igennem (fandt 2 sætting på 8 dyk).
+</li>
+<li><b>Ikke testet af AI:</b> hvordan animationerne og auraerne *føles* i spil, Windows-buildet, og at
+ medspillere ser auraer over internettet (kun to processer på samme maskine).
+</li>
+</ul>
+</section>
+<section id="v0-6-1"><h2><span class="ver">0.6.1</span> 2026-10-23 — Valg af grafikkort</h2>
+<h3>Tilføjet</h3>
+<ul>
+<li><b>Esc → Grafikkort:</b> vælg *Automatisk*, *Integreret (strømbesparende)* eller *Dedikeret (høj ydelse)* på
+ computere med to grafikkort. Vinduet viser, hvilket kort der tegner spillet nu, og hvilke kort der findes.
+ Har computeren kun ét (eller kun én slags), står der, at der intet er at vælge imellem — valget gemmes stadig.
+</li>
+<li>Windows: bruger Windows' egen indstilling pr. program (samme som *Indstillinger → System → Skærm → Grafik*)
+ for spillets .exe; virker fra næste start (knap: *Genstart spillet nu*).
+ Linux: spillet genstarter sig selv med PRIME-variablerne (<code>DRI_PRIME</code>, og for NVIDIA
+ <code>__NV_PRIME_RENDER_OFFLOAD</code>/<code>__GLX_VENDOR_LIBRARY_NAME</code>).
+</li>
+<li><b>Sikkerhedsnet:</b> kan det valgte kort ikke starte spillet, går næste start automatisk tilbage til
+ *Automatisk*. Kan også sættes fra kommandolinjen: <code>--gpu=auto|integrated|dedicated</code>.
+</li>
+</ul>
+<h3>Test</h3>
+<ul>
+<li>571 enhedstests (genkendelse af grafikkort fra lspci/Windows-lister, Intel/AMD/NVIDIA/Arc, Linux-variabler).
+</li>
+<li>Linux, eksporteret spil: genstarten med det valgte kort, at den gamle kopi lukker, og at sikkerhedsnettet
+ slår til, er afprøvet. <b>Ikke afprøvet:</b> Windows (registreringsdatabasen) og en rigtig computer med to
+ grafikkort.
+</li>
+</ul>
+</section>
+<section id="v0-6-0"><h2><span class="ver">0.6.0</span> 2026-10-23 — Classes, mana og HUD med globusser</h2>
+<h3>Tilføjet</h3>
+<ul>
+<li><b>5 classes:</b> Barbar, Magiker, Jæger, Tyv og Nekromantiker. Hver har <b>sit eget evnetræ</b> (3 grene)
+ med <b>4 aktive evner</b> på tast 1–4 (20 i alt), passive bonusser og nøgleevner. Classerne har hver deres
+ liv/mana og foretrukne våben (+20% skade, +10% angrebshastighed — alle kan bruge alle våben).
+</li>
+<li><b>Evnerne:</b> Kløvende hug, Krigsråb, Spring, Hvirvelvind · Ildkugle, Frostnova, Lynkæde, Meteor ·
+ Pilesalve, Sprængfælde, Gennemborende pil, Ulvekald · Skyggespring, Giftklinge, Røgbombe, Dolkeregn ·
+ Knoglespyd, Rejs skelet, Svækkelse, Ligeksplosion.
+</li>
+<li><b>Nye våben:</b> Bue og Stav (skyder i stedet for at hugge) og Le. Grundopskrifter til alle classers våben.
+</li>
+<li><b>Mana</b> (ny ressource): koster for evner, genvindes over tid; helbredsdrikke giver også 30% mana.
+ Nye egenskaber på ting: +mana og +mana pr. sekund.
+</li>
+<li><b>Statuseffekter</b> på fjender (sænket, blindet, forbandet, forgiftet) og <b>tjenere</b> (skeletter, ulv),
+ som fjenderne også angriber.
+</li>
+<li><b>HUD som på referencebilledet:</b> rød livsglobus og blå managlobus med bølgende væske og bobler, en lille
+ ravfarvet lysglobus (lanterneolie), og i midten en niveau-diamant, en gylden XP-bjælke og 6 felter
+ (angreb, undvig, evne 1–4) med nedkøling og mana-advarsel.
+</li>
+<li><b>Flere helte, én by:</b> opret op til 8 helte; byen, kisten, materialerne og opskrifterne deles. Heltelisten
+ og class-valget er i startmenuen (og Esc → Skift helt). Hver class har sit eget udseende (farver, hætte,
+ kåbe, våben).
+</li>
+<li>Co-op: evner rammer værtens fjender, statuseffekter sendes til værten, og de andre ser evnernes effekter
+ og din class. <code>Net.PROTOCOL</code> → <code>hearthdelve-mp-4</code>.
+</li>
+</ul>
+<h3>Ændret</h3>
+<ul>
+<li>Det fælles 6-grens evnetræ er erstattet af classernes træer. <b>Gamle helte</b> beholder niveau, udstyr og
+ by, vælger en class næste gang, og deres evnepoint gives tilbage. Savegame version 4.
+</li>
+<li>Lidt liv pr. niveau (+1). "+liv"-egenskaben på ting vokser halvt så hurtigt med tingniveau (8 pladser
+ gjorde livet alt for stort). Startvåbnene er slidte (60% af et normalt våben), så Værkstedet stadig er vejen frem.
+</li>
+</ul>
+<h3>Test</h3>
+<ul>
+<li>558 enhedstests grønne — bl.a. alle 20 evner brugt mod fjender i en rigtig etage for hver class,
+ afstandsangreb, heltelisten (opret/skift/slet/gem), gamle savegames, class-træerne. Net-test 42 + 11 grønne.
+</li>
+<li>Balance-bot, forsigtig, 8 dyk pr. class (før de svagere startvåben): Barbar og Tyv nåede etage 12 i 4. dyk,
+ Jæger i 6., Magiker og Nekromantiker i 7. Til sammenligning nåede boten uden classes (v0.5) etage 11 i 12. dyk.
+ Med de slidte startvåben (endelig version) når Barbaren etage 12 først i 8. dyk (uden dødsfald) — tættere
+ på tempoet fra før. De andre classes er ikke kørt igen med de svagere startvåben.
+</li>
+<li><b>Ikke testet:</b> hvordan evnerne føles at spille, Windows, internettet. Tjenere ses ikke af de andre online.
+</li>
+</ul>
+</section>
+<section id="v0-5-0"><h2><span class="ver">0.5.0</span> 2026-10-23 — Udstyr og UI inspireret af Diablo II</h2>
+<h3>Tilføjet</h3>
+<ul>
+<li><b>8 udstyrspladser:</b> våben, hjelm, rustning, handsker, støvler, amulet og 2 ringe. Nye grundtyper:
+ Læderhue/Jernhjelm/Stormhjelm, Læderhandsker/Jernhandsker, Læderstøvler/Jernstøvler, Amulet/Talisman, Ring.
+ Egenskaberne er fordelt på de nye pladser (fx angrebsfart på handsker, fart på støvler).
+</li>
+<li><b>Udstyrsvindue (I):</b> figur med pladserne, <b>ternet rygsæk</b> (10 × 4), hvor tingene fylder efter form
+ (ring 1×1 … rustning 2×3), <b>træk og slip</b>, <b>højreklik</b> for hurtig handling, *Ryd op*, guld med mønt.
+ Træk en ting ud af vinduet i dybet for at smide den på jorden.
+</li>
+<li><b>Kisten</b> og <b>Kræmmeren</b> bruger samme net + figur; køb/sælg med højreklik eller træk.
+</li>
+<li><b>Ikoner</b> til alle ting, tegnet i kode (ingen billedfiler). <b>Tooltips</b> i Diablo-stil med farver og
+ sammenligning med det, du har på.
+</li>
+<li><b>Navne på jorden:</b> ting og opskrifter har altid et farvet navn; hold <b>Alt</b> for navne på alt i mørke
+ bokse, der ikke overlapper.
+</li>
+<li><b>Opgavelog (J / L)</b> med fremskridtsbjælker; HUD'en viser kun "Opgaver: N i gang [J]".
+</li>
+<li><b>Waypoints:</b> besejr bossen på etage 10, 20 … → start et dyk på etage 11, 21 … for 15 guld × etagen.
+ Virker i co-op (værten vælger og betaler, hele holdet starter dér).
+</li>
+<li><b>Hjelmen ses på helten</b> i 3D, også hos de andre spillere.
+</li>
+<li>6 opskrifter fra start (én pr. type), 4 nye boss-opskrifter (Jernhjelm, Jernhandsker, Jernstøvler, Stormhjelm).
+</li>
+</ul>
+<h3>Ændret (balance)</h3>
+<ul>
+<li>Guldprisen i Værkstedet er sænket (8 pladser at smede til): grundopskrifter koster <b>kun materialer</b>,
+ boss-opskrifter 1,5 guld pr. tingniveau (før 4), forbedr 2 (før 4), fortryl 3 (før 6), omsmed 1,5 (før 3).
+ Grund: i bot-testen havde boten masser af materialer men intet guld, og kom aldrig på benene efter en død.
+</li>
+<li>Kisten er nu rækker: 4 fra start, +3 med Lagerhus, +2 med *Kistens velsignelse*. Kræmmeren har 4 varer.
+</li>
+<li>Savegame version 3. Gamle savegames indlæses: "smykket" bliver amulet eller ring, og det, der ikke kan være
+ i den ternede rygsæk, flyttes til kisten. Intet går tabt. <code>Net.PROTOCOL</code> → <code>hearthdelve-mp-3</code>.
+</li>
+</ul>
+<h3>Test</h3>
+<ul>
+<li>360 enhedstests grønne (bl.a. net-logik, ringpladser, bytte, gem/indlæs med placeringer, waypoints,
+ regler for træk-og-slip, alle vinduer tegnes). Net-test 42 + 11 grønne (inkl. waypoint-dyk i co-op).
+</li>
+<li>Balance-bot (forsigtig, 12 dyk): døde 6 gange tidligt, kom sig derefter og nåede etage 11 (waypoint åbnet)
+ i 12. dyk med et sværd +5 på niveau 32. Én kørsel varierer meget fra gang til gang. Materialerne hober sig
+ op (ca. 200 af hver efter 12 dyk) — der mangler stadig noget at bruge dem på sent i spillet (ROADMAP M3).
+</li>
+<li><b>Ikke testet:</b> at trække ting med en rigtig mus (kun reglerne bag er testet), Windows, internettet.
+</li>
+</ul>
+</section>
+<section id="v0-4-0"><h2><span class="ver">0.4.0</span> 2026-10-23 — Crafting, bosser og byens folk</h2>
+<h3>Ændret (balance)</h3>
+<ul>
+<li><b>Mindre guld:</b> færre bunker (22% mod 35% pr. drab), mindre pr. bunke (1–4 mod 2–6), og bunkerne vokser
+ langsommere med dybden (+60% pr. etage mod +100%). På etage 5 giver et drab ca. 73% mindre guld end før.
+ Opgavebelønninger: 15 mod 25 guld i grundbeløb.
+</li>
+<li><b>Færre færdige ting:</b> 4% pr. almindeligt monster (før 14%), 10% trolde (før 35%), 25% eliter.
+ Sjældne og legendariske er nu ca. 2% af de ting, der dropper (før ca. 12%).
+</li>
+<li>Smedjen sælger ikke længere udstyr — den giver i stedet *mestersmedning* i Værkstedet.
+</li>
+</ul>
+<h3>Tilføjet</h3>
+<ul>
+<li><b>Materialer</b> fra monstre: Jernskrot, Skind, Knogler, Troldesener og den sjældne Glødesten (eliter, bosser,
+ skattekister). De gemmes på et lager i byen; det, du har samlet på et dyk, mistes ved død.
+</li>
+<li><b>Værkstedet</b> på torvet: *Smed nyt* fra opskrifter, *Forbedr* (+10% pr. trin, maks +3 / +5 med Smedje),
+ *Fortryl* (ny egenskab for Glødesten), *Omsmed* (løft en gammel ting til dit smedeniveau) og *Skil ad*.
+ Smedeniveauet følger din dybeste etage.
+</li>
+<li><b>14 opskrifter</b>: 3 kendt fra start, resten tabes af bosser — inkl. 4 legendariske (Morgengry, Ravnens Næb,
+ Jættehud, Ulvetand).
+</li>
+<li><b>Bosser på hver 5. etage</b> med egne evner og livsbjælke; trappen ned er forseglet, til bossen er død:
+ Knoglekongen (rejser skeletskytter), Troldemoderen (stenvifte), Lygtetyven (stjæler lanterneolie, kalder
+ ådselædere). Virker også i co-op (værten styrer bossen).
+</li>
+<li><b>Offerstenen</b>: bed en indbygger om at gå (bygningen står tom, til en ny med samme fag sættes ind), eller
+ *ofr* vedkommende. Hver ofring = ét niveau <b>blodpagt</b> (maks 10): fjender +12% liv / +7% skade pr. niveau,
+ mod +15% materialer, +20% chance for bedre bytte, +8% XP og flere Glødesten. Kan brydes ved stenen.
+ *Antagelse:* pagten er permanent, til man selv bryder den.
+</li>
+<li>Gamle savegames indlæses (indbyggere får id'er, kendte opskrifter tilføjes). <code>Net.PROTOCOL</code> → <code>hearthdelve-mp-2</code>.
+</li>
+</ul>
+<h3>Rettet</h3>
+<ul>
+<li>Værkstedet og Offerstenen åbnede ikke deres egne vinduer (manglede i <code>UiManager</code>); ny test dækker alle byens vinduer.
+</li>
+<li>Materialelinjen i Værkstedet blev vist lodret.
+</li>
+</ul>
+<h3>Test</h3>
+<ul>
+<li>305 enhedstests grønne, net-test 41 + 11 grønne.
+</li>
+<li>Balance-bot, forsigtig (vender hjem, når den er svag): i én kørsel på 12 dyk klarede den etage 5's boss fra
+ 3. dyk og etage 10's boss i 12. dyk; i en anden på 10 dyk nåede den etage 5 tre gange og døde mod bossen to gange.
+ Guld og materialer hober sig op efter ca. 10 dyk — se ROADMAP M3.
+</li>
+<li>Balance-bot, grådig (går altid dybere): dør hver gang på etage 3–4, når aldrig hjem med materialer og kommer
+ derfor aldrig i gang med at smede. Spillet belønner nu klart at vende hjem i tide.
+</li>
+<li>Ikke testet: hvordan crafting *føles* for en rigtig spiller, og bosserne over internettet.
+</li>
+</ul>
+</section>
+<section id="v0-3-0"><h2><span class="ver">0.3.0</span> 2026-10-22 — Grafik: mere realistiske modeller og stemning</h2>
+<p>Inspireret af et referencebillede (mørk middelalder, varmt lanternelys, mursten, røde bannere, bure).</p>
+<h3>Tilføjet</h3>
+<ul>
+<li><b>Procedurale teksturer</b> (<code>scripts/art/texture_factory.gd</code>): mursten, fliser, brosten, træ, puds, tagsten,
+ stof, læder, metal, hud, sand, græs, bark, sten — med normal maps og triplanar-mapping. Genereres første gang
+ (~3 s) og gemmes derefter i <code>user://texcache</code> (indlæses på ~50 ms).
+</li>
+<li><b>Animerede figurer</b> (<code>scripts/art/character_model.gd</code>) på et lille knogleskelet (hofter, ryg, hoved, arme, ben):
+ helt med kappe, lanterne i hånden og det våben, man har på (sværd/økse/dolke/spyd); ådselæder, skelet-skytte
+ med bue, trold med kølle, rotte, bombebasse med bombe, shaman med stav, mørkeånd; bosættere og byens folk
+ (smed, alkymist, købmand, tømrer). Gang-, angrebs- og fald-animationer.
+</li>
+<li><b>Rekvisitter</b> (<code>scripts/art/prop_factory.gd</code>): fakler med flakkende lys og gnister, glødepander, røde bannere,
+ kæder, hængende bure med fanger, søjler, kasser, tønder, knogler, stentrappe-portal, skattekister, olieflasker,
+ mønter, bindingsværkshuse med oplyste vinduer, lygtepæle, bymur med tårne, træer, brønd, markedsbod, ambolt.
+</li>
+<li>Byen i aftenstemning, dungeonen lyst op af fakler, arenaen med sand og bannere.
+</li>
+<li>Kamera: zoom med musehjulet (tættere zoom sænker også vinklen). Vignet i skærmkanten, glød (bloom), tåge.
+</li>
+<li><b>Grafikindstilling Høj/Lav</b> (Esc-menuen) til svage computere: Lav slår normal maps, gnister, ekstra fakler,
+ skygger og glød fra.
+</li>
+</ul>
+<h3>Ydelse</h3>
+<ul>
+<li>Mange små dele lægges sammen til få meshes (<code>MeshBuilder</code>), modeller caches pr. type, byens faste kulisser
+ samles i ét mesh. Målt: dungeon ~110–300 tegnekald, by ~210–430. Etager bygges på 0,1–0,3 s.
+</li>
+</ul>
+</section>
+<section id="v0-2-0"><h2><span class="ver">0.2.0</span> 2026-10-22 — Milestone 2: multiplayer</h2>
+<h3>Tilføjet</h3>
+<ul>
+<li><b>Multiplayer</b> (2–4 spillere): vært/deltag via IP-adresse (ENet, port 24565/UDP), versionstjek.
+</li>
+<li>Startmenu med navn, *Spil alene*, *Vær vært*, *Deltag*. Esc → *Multiplayer*.
+</li>
+<li>Værtens by som mødested; andre spillere vises med navn, niveau og farve; holdliste i HUD.
+</li>
+<li><b>Co-op dyk</b>: værtsstyrede fjender (+60% liv pr. ekstra spiller), personligt bytte, XP til alle,
+ "slået ned" + genoplivning, tilskuer efter død, fælles fanger til værtens by, trappevalg for hele holdet,
+ udslettelse af holdet.
+</li>
+<li><b>Duel-arena</b>: udfordring med indsatser, egen arena pr. spiller med ens bølger, monsterbutik med timer,
+ 8 monstre at sende, indkomst-system, kampguld, sudden death fra runde 7, vinderen får begge indsatser
+ + taberens øre (trofæ-smykke).
+</li>
+<li>Nye monstre: Rotte, Bombebasse (eksploderer), Shaman (heler), Mørkeånd (slukker lyset).
+</li>
+<li>Tests: 53 nye enhedstests + netværkstest med to rigtige spilprocesser (<code>tests/run_net_test.sh</code>).
+</li>
+</ul>
+<h3>Ændret</h3>
+<ul>
+<li>Fjender vælger nærmeste gyldige spiller som mål; angreb beregnes pr. spiller.
+</li>
+<li>Vinduer pauser ikke spillet, når man spiller online.
+</li>
+<li>Dekorative sten i dybet bruger egen tilfældighed (påvirker ikke spillet).
+</li>
+</ul>
+</section>
+<section id="v0-1-1"><h2><span class="ver">0.1.1</span> 2026-10-22</h2>
+<h3>Tilføjet</h3>
+<ul>
+<li>Linux-build (x86_64, Ubuntu 22.04+). Eksport-preset "Linux" i projektet.
+</li>
+</ul>
+<h3>Rettet</h3>
+<ul>
+<li><code>.godot/</code>-cachen var ved en fejl med i git; den er nu fjernet fra repoet (ligger i .gitignore).
+</li>
+</ul>
+</section>
+<section id="v0-1-0"><h2><span class="ver">0.1.0</span> 2026-10-22 — Milestone 1: kerneprototype</h2>
+<h3>Tilføjet</h3>
+<ul>
+<li>Godot 4.7-projekt (GL Compatibility) med by-scene og proceduregenererede dungeon-etager.
+</li>
+<li>Kamp: hug i bue, undvigelse med usårlighed, helbredsdrikke, kritiske slag, livsdræn, skadetal, kameraryst.
+</li>
+<li>Fjender: Ådselæder (nærkamp), Knokkelskytte (afstand), Trold (varslet område-slag), eliter. A*-navigation.
+</li>
+<li>Bytte: 4 våbentyper, 3 rustninger, 3 smykker, 4 sjældenheder, 14 egenskaber, 4 legendariske effekter.
+</li>
+<li>Lanterneolie som overlevelsespres (mørke gør fjender stærkere).
+</li>
+<li>Trappe-valget: gå dybere eller brug hjemvendingsrunen.
+</li>
+<li>Fanger i bure, der følger dig og flytter til byen, hvis du kommer hjem.
+</li>
+<li>By: kiste, kræmmer (køb/salg), opslagstavle med 4 opgavetyper, 6 grunde, 4 bygninger.
+</li>
+<li>Evnetræ: 6 grene, 36 knuder (~180 rang), 12 nøgleevner, niveau 1–100.
+</li>
+<li>Død: mist guld, rygsæk, påført udstyr og eskorte; behold niveau/evner/by/kiste. Snyd-sikring ved lukning under dyk.
+</li>
+<li>Gem/indlæs (JSON), HUD, 11 vinduer, hjælpeskærm.
+</li>
+<li>163 automatiske tests, bot-balancesimulering, screenshot-script, Windows-eksport-preset.
+</li>
+</ul>
+<h3>Balance (fra bot-simulering)</h3>
+<ul>
+<li>Våbenskade pr. genstandsniveau 12% → 9%, fjende-liv pr. etage 20% → 25%, fjende-skade 12% → 14%.
+</li>
+<li>Fangechance 55% → 40%. Ådselæder-skade 9 → 7.
+</li>
+<li>Kræmmeren sælger altid simpelt udstyr, så man kan komme på benene efter en død.
+</li>
+</ul>
+<h3>Rettet</h3>
+<ul>
+<li>Fjender og bot satte sig fast på dørkarme (navigationsgitter pustes nu 1 m op).
+</li>
+<li>"Nærmeste frie felt" kunne springe gennem en væg (bruger nu fysisk geometri).
+</li>
+<li>Bytte kunne havne inde i vægge/kasser (flyttes nu til nærmeste frie felt).
+</li>
+</ul>
+</section><footer>Lavet automatisk (version 1.6.4).</footer></main><script>
+const q=document.getElementById('q');
+q&&q.addEventListener('input',()=>{const t=q.value.trim().toLowerCase();
+document.querySelectorAll('main section').forEach(s=>{let any=false;
+s.querySelectorAll('tbody tr, li, p').forEach(r=>{const m=!t||r.textContent.toLowerCase().includes(t);r.classList.toggle('hide',!m);if(m)any=true});
+s.classList.toggle('hide',!!t&&!any&&!s.textContent.toLowerCase().includes(t));});});
+</script></body></html>

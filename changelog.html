@@ -1,0 +1,1217 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hearthdelve — Changelog</title><style>
+:root{--bg:#14110e;--panel:#1d1915;--panel2:#252019;--line:#3a3127;--text:#ece4d3;--muted:#a89c86;--gold:#e8bf55;--accent:#c96a3a;--link:#f0c66a}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:12px}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.55 Georgia,'Iowan Old Style','Palatino Linotype',serif;display:flex;min-height:100vh}
+nav#toc{position:sticky;top:0;align-self:flex-start;height:100vh;overflow:auto;width:250px;flex:none;background:var(--panel);border-right:1px solid var(--line);padding:18px 14px}
+.brand{font:700 22px/1.1 Georgia,serif;color:var(--gold);letter-spacing:.5px;margin-bottom:14px}.brand span{display:block;font:400 12px/1.6 system-ui,sans-serif;color:var(--muted);letter-spacing:0}
+nav#toc a{display:block;color:var(--text);text-decoration:none;padding:5px 8px;border-radius:6px;font:14px/1.3 system-ui,sans-serif}
+nav#toc a:hover{background:var(--panel2);color:var(--gold)}nav#toc a.cl{margin-top:12px;color:var(--link);border:1px solid var(--line)}nav#toc a.lng{display:inline-block;margin:0 0 10px;font-size:12px;color:var(--muted);border:1px solid var(--line);padding:2px 8px}
+#q{width:100%;margin:0 0 12px;padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:#0f0d0b;color:var(--text);font:14px system-ui,sans-serif}
+main{flex:1;min-width:0;padding:24px 34px 60px;max-width:1200px}
+section{margin-bottom:34px}h2{font:700 26px/1.2 Georgia,serif;color:var(--gold);border-bottom:1px solid var(--line);padding-bottom:6px;margin:0 0 12px}
+h3{font:700 18px/1.3 Georgia,serif;color:#e9d7a9;margin:22px 0 8px}p{margin:8px 0}.intro{color:var(--muted)}
+a{color:var(--link)}code{background:#0f0d0b;border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
+.tw{overflow-x:auto;margin:8px 0 14px;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;font:14px/1.45 system-ui,sans-serif}table.small{width:auto;min-width:340px}
+th{position:sticky;top:0;background:var(--panel2);color:var(--gold);text-align:left;font-weight:600;padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:7px 10px;border-bottom:1px solid #2a241d;vertical-align:top}tr:nth-child(even) td{background:#191510}tr:hover td{background:#211c16}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:7px;vertical-align:middle;border:1px solid #0006}
+.leg{font-size:11px;color:#ff9a3c;border:1px solid #ff9a3c66;border-radius:4px;padding:0 4px;margin-left:4px}
+.ver{display:inline-block;background:var(--accent);color:#fff;border-radius:6px;padding:0 8px;margin-right:6px;font:600 16px/1.5 system-ui,sans-serif;vertical-align:middle}
+ul{padding-left:22px}.nw{white-space:nowrap}.muted{color:var(--muted);font-size:12px}li{margin:5px 0}footer{color:var(--muted);font:12px system-ui,sans-serif;margin-top:40px;border-top:1px solid var(--line);padding-top:10px}
+.hide{display:none!important}mark{background:#e8bf5555;color:inherit;border-radius:3px}
+@media (max-width:820px){body{display:block}nav#toc{position:static;width:auto;height:auto;border-right:0;border-bottom:1px solid var(--line)}nav#toc a{display:inline-block}main{padding:16px}}
+</style></head><body><nav id="toc"><div class="brand">Hearthdelve<span>Changelog</span></div><a class="lng" href="changelog_da.html">Dansk</a><input id="q" type="search" placeholder="Search the changes ..." autocomplete="off"><a class="cl" href="index.html">&larr; To the wiki</a><a href="#v1-6-4">1.6.4</a><a href="#v1-6-3">1.6.3</a><a href="#v1-6-2">1.6.2</a><a href="#v1-6-1">1.6.1</a><a href="#v1-6-0">1.6.0</a><a href="#v1-5-2">1.5.2</a><a href="#v1-5-1">1.5.1</a><a href="#v1-5-0">1.5.0</a><a href="#v1-4-0">1.4.0</a><a href="#v1-3-0">1.3.0</a><a href="#v1-2-0">1.2.0</a><a href="#v1-1-0">1.1.0</a><a href="#v1-0-2">1.0.2</a><a href="#v1-0-1">1.0.1</a><a href="#v1-0-0">1.0.0</a><a href="#v0-9-6">0.9.6</a><a href="#v0-9-5">0.9.5</a><a href="#v0-9-4">0.9.4</a><a href="#v0-9-3">0.9.3</a><a href="#v0-9-2">0.9.2</a><a href="#v0-9-1">0.9.1</a><a href="#v0-9-0">0.9.0</a><a href="#v0-8-2">0.8.2</a><a href="#v0-8-1">0.8.1</a><a href="#v0-8-0">0.8.0</a><a href="#v0-7-0">0.7.0</a><a href="#v0-6-1">0.6.1</a><a href="#v0-6-0">0.6.0</a><a href="#v0-5-0">0.5.0</a><a href="#v0-4-0">0.4.0</a><a href="#v0-3-0">0.3.0</a><a href="#v0-2-0">0.2.0</a><a href="#v0-1-1">0.1.1</a><a href="#v0-1-0">0.1.0</a></nav><main><section><h2>Changelog</h2><p class="intro">All versions, newest first. The game updates itself when a new version is out.</p></section><section id="v1-6-4"><h2><span class="ver">1.6.4</span> 2026-10-28 — The wiki and changelog in English</h2>
+<h3>Changed</h3>
+<ul>
+<li><b>The wiki and the changelog are now in English by default</b> (<code>wiki/index.html</code>, <code>wiki/changelog.html</code>). The Danish
+ version sits next to them (<code>index_da.html</code>, <code>changelog_da.html</code>), and every page links to the other language.
+ The Esc menu button opens the Danish wiki when the game runs in Danish.
+</li>
+<li>The changelog no longer mentions who asked for what.
+</li>
+</ul>
+<h3>Tests</h3>
+<ul>
+<li>The wiki test checks both languages, that the English page is the default, and that the English changelog has every version.
+</li>
+</ul>
+</section>
+<section id="v1-6-3"><h2><span class="ver">1.6.3</span> 2026-10-28 — English as the default language</h2>
+<h3>Changed</h3>
+<ul>
+<li><b>The game starts in English</b> if you have not picked a language yourself. If you have chosen Danish (on the start screen or Esc →
+ Sprog / Language), it stays Danish. The wiki is still in Danish.
+</li>
+</ul>
+</section>
+<section id="v1-6-2"><h2><span class="ver">1.6.2</span> 2026-10-28 — The wiki comes with the updates</h2>
+<h3>Fixed</h3>
+<ul>
+<li>The automatic update only replaced the program file itself, so the wiki (the <code>wiki</code> folder) was left out. Now
+ the wiki's files are also placed next to the game when it updates itself (only files in the <code>wiki</code> folder, nowhere else).
+ Note: coming from 1.6.0 or older, the wiki only arrives with the next update — or download the zip again.
+</li>
+</ul>
+<h3>Tests</h3>
+<ul>
+<li>The update test checks that the wiki comes along, and that a file with a sneaky path outside <code>wiki</code> is not written.
+</li>
+</ul>
+</section>
+<section id="v1-6-1"><h2><span class="ver">1.6.1</span> 2026-10-28 — Item level follows the hero's level</h2>
+<h3>Changed</h3>
+<ul>
+<li><b>Found, bought and forged items have the hero's level</b> (or up to 2 below) — no longer about 3 x the floor. New finds
+ therefore always work in full; the rule from 1.6 (an item above the hero's level only works partly) only affects items from before,
+ from other heroes or from the Legacy chest. The floor still decides how rare and good the finds are (magic, rare,
+ legendary), and relics, set pieces and named items also follow the hero.
+</li>
+<li>The Workshop forges and reforges to the hero's level (before: the deepest floor), and the merchant sells at the hero's level.
+</li>
+</ul>
+<h3>Added</h3>
+<ul>
+<li><b>Wiki for players (HTML):</b> <code>wiki/index.html</code> with classes and skills, monsters per theme (share, strength, materials),
+ bosses, floors and worlds, random events, all drop chances, rarity by floor, gear and properties,
+ set pieces, named items (and where to find them), relics, recipes (and where to learn them), materials, drinks, mushrooms,
+ collectibles and the town's buildings — with a search box. It is generated automatically from the game's own numbers, so it is always correct.
+</li>
+<li><b>Changelog as HTML:</b> <code>wiki/changelog.html</code> (from this file).
+</li>
+<li>The wiki ships in the game's folder (<code>wiki</code>), and the Esc menu has a "Wiki and changelog" button that opens it in the browser.
+</li>
+</ul>
+<h3>Tests</h3>
+<ul>
+<li>New test: finds have the hero's level or a little below (never above), and the Workshop and the merchant follow the hero.
+</li>
+</ul>
+</section>
+<section id="v1-6-0"><h2><span class="ver">1.6.0</span> 2026-10-28 — Gear above the hero's level only works partly</h2>
+<h3>Changed</h3>
+<ul>
+<li><b>Gear scales with the hero's level:</b> an item with a higher level than the hero only works with a percentage of its
+ strength — the hero's level divided by the item's level. A level 5 hero with a level 20 axe gets 25% of its
+ damage (and of all its properties); at level 10, 50%; from level 20, its full strength. This applies to weapon damage, armour and
+ all properties (the special powers of named items and set bonuses still work in full).
+</li>
+<li>The item shows the percentage in the top right corner (orange), and the tooltip explains it: "Level too high: only works
+ with 25% of its strength ... Full strength at level 20."
+</li>
+<li>Note: items from a floor have a level of about 3 x the floor, so a hero who is behind in level will notice it on finds from deep floors.
+</li>
+</ul>
+<h3>Tests</h3>
+<ul>
+<li>New test: level 5 with a level 20 axe gives 25% of the damage, a level 10 helmet half the armour,
+ and at level 20 the axe works in full; the tooltip says so.
+</li>
+</ul>
+</section>
+<section id="v1-5-2"><h2><span class="ver">1.5.2</span> 2026-10-28 — Character selection instead of "new game", and attacks that moved the body</h2>
+<h3>Changed</h3>
+<ul>
+<li><b>"Start a new game" has been removed</b> from the Esc menu (it deleted all heroes, the town and the chest). Instead there is
+ <b>"Choose hero (character selection)"</b>, which takes you to the start screen by the campfire, where you choose or create a hero. In the middle of a
+ delve or online, the button is greyed out and tells you why.
+</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li><b>The body slid away from the hero after attacks:</b> the spear's thrust pushed the hips forward every frame without resetting them,
+ so with every thrust the figure moved further away from the hero's real position (the halo, the light and the ring on the ground
+ stayed put). After six thrusts it was 7.5 metres away. Now the body returns to above the feet after every thrust.
+</li>
+</ul>
+<h3>Tests</h3>
+<ul>
+<li>New test: after six attacks with each weapon, the body is still above the hero's position (the test failed before the fix:
+ -7.5 m with the spear). The menu no longer has "new game", but "Choose hero".
+</li>
+</ul>
+</section>
+<section id="v1-5-1"><h2><span class="ver">1.5.1</span> 2026-10-28 — The blood pact on rebirth, and the multiplayer connection</h2>
+<h3>Changed</h3>
+<ul>
+<li><b>Rebirth breaks the blood pact</b> (as the Well already does): the pact is back at 0, and the town has to sacrifice all over again.
+</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li><b>The right IP address:</b> the host's window showed the first address the computer had — often a virtual network adapter
+ (VirtualBox, Hyper-V/WSL, Docker, VPN) that the others cannot reach. Now the home network's address is shown first.
+</li>
+<li><b>Code in the same house:</b> when an invitation code points to a game that is also in the list on your own network,
+ the game connects to the local address. Before, it tried over the internet, which most routers cannot do
+ (NAT loopback) — so players in the same house could not get in with the code.
+</li>
+<li><b>No useless codes:</b> if your internet connection shares its address with others (CGNAT, two routers in a row),
+ the game no longer makes a code that can never work, but explains that you need to use Tailscale/ZeroTier.
+</li>
+<li><b>Better error messages:</b> different versions now say which ("the host has 1.5.1, you have 1.4.0"), the game list shows
+ the host's version, and a failed connection explains the likely reasons. The event log writes the address and version.
+</li>
+<li>1.5.0 and 1.5.1 can play together (the protocol is unchanged). Older versions must be updated.
+</li>
+</ul>
+<h3>Tests</h3>
+<ul>
+<li>New test of the addresses (home network before virtual network adapters, internet vs. home/CGNAT addresses, code in the same house),
+ and that rebirth breaks the blood pact.
+</li>
+</ul>
+</section>
+<section id="v1-5-0"><h2><span class="ver">1.5.0</span> 2026-10-28 — Pets follow the hero, and they are rats</h2>
+<h3>Changed</h3>
+<ul>
+<li><b>Pets grow with the hero:</b> the hunter's giant rat, the Shadow Stalker's Hell rats and the necromancer's skeletons
+ get 15% of the hero's life, damage per hit and armour on top of the skill's own numbers. So they never get weaker than before.
+</li>
+<li><b>Rats instead of wolves and dogs:</b> "Wolf call" is now called <b>Rat call</b> (a giant rat), and the Shadow Stalker's
+ "Hellhounds" are now called <b>Hell rats</b>. The figures are rats (brown fur, long tail; the Hell rats
+ charred with flames on their backs). The monsters in Hell are unchanged.
+</li>
+</ul>
+<h3>Tests</h3>
+<ul>
+<li>New test: Rat call gives a rat with the skill's life + 15% of the hero's, the skill's damage + 15% of the hero's hit, and 15%
+ of the hero's armour.
+</li>
+</ul>
+</section>
+<section id="v1-4-0"><h2><span class="ver">1.4.0</span> 2026-10-28 — Faster monsters, elite packs and champions, bigger rooms</h2>
+<h3>Changed</h3>
+<ul>
+<li><b>Monsters attack 20% faster per floor:</b> 1.2 times as fast on floor 2, twice as fast on floor 6
+ and up to 4 times as fast (from floor 16 and in Hell/Heaven). The warning before a hit is never shorter than
+ 0.3 seconds, though, so you still have time to dodge.
+</li>
+<li><b>Softer start:</b> monsters grow from half of "the hero + 10%" on floor 1 to full strength
+ from floor 10 (and in Hell, Heaven and the Dragon's Lair). Without it, the test bot died in every delve on floors 1-2.
+</li>
+<li><b>The bosses are tough again:</b> in 1.3 the bosses only had about 50 hits' worth of life (a mistake in my scaling). Now they again have
+ roughly the toughness they had before 1.3 (the hero's life x 6 x 4 — about 200 hits), and the raid bosses follow suit.
+</li>
+<li><b>The rooms are twice as big</b> (twice the floor area: 20 x 20 tiles compared to 14 x 14 before) with twice as many monsters
+ and twice as much decoration, so they are just as full as before. The obstacles stand further out.
+</li>
+</ul>
+<h3>Added</h3>
+<ul>
+<li><b>The floor's extra challenge</b> (about 40% of floors from floor 2, not on treasure floors, in the Well or
+ Lepreconland): either <b>a pack of elite monsters</b> (3-5 of the same kind in one room) or <b>a champion</b> — one giant monster
+ with 8 times the life, double damage, 1.7 times the size and six times the experience. A message tells you when the floor
+ begins. The champion leaves two good items and a pile of gold for each player.
+</li>
+</ul>
+<h3>Tests</h3>
+<ul>
+<li>New tests for the attack speed, the challenges (about 40%, the elite pack, the champion and its loot) and the rooms.
+</li>
+<li>The balance bot (8 careful delves): level 9, floor 3, 4 deaths (without the softer start: dead on floors 1-2 every time).
+</li>
+</ul>
+<h3>Technical</h3>
+<ul>
+<li><code>Enemy.hero_factor</code>, <code>Enemy.attack_speed_for/recover_time/make_champion</code>, <code>DungeonFloor.challenge_for/_spawn_challenge</code>, numbers in <code>Balance</code>
+ (<code>ENEMY_ATTACK_SPEED_*</code>, <code>ROOM_SIZE</code>, <code>ROOM_MONSTER_MULT</code>, <code>CHALLENGE_*</code>, <code>CHAMPION_*</code>). Spawn messages have "ch";
+ <code>Net.PROTOCOL</code> = 18.
+</li>
+</ul>
+</section>
+<section id="v1-3-0"><h2><span class="ver">1.3.0</span> 2026-10-28 — Monsters follow the hero</h2>
+<h3>Changed</h3>
+<ul>
+<li><b>Monsters are always as strong as the hero + 10%:</b> an ordinary monster has the hero's life, damage per hit and
+ armour plus 10% — on all floors and in all worlds, regardless of the hero's level and gear. If the hero gets stronger,
+ so do the monsters. The floor still decides loot, experience and theme.
+</li>
+<li>Each monster type keeps its strength relative to the others (a rat is weaker than a troll), and elite monsters,
+ guardians, bosses and raid bosses keep their extra life and damage on top. The raid bosses: 20 x a typical boss.
+</li>
+<li>In co-op, the monsters measure themselves against the team's average (the players send their life, damage and armour).
+</li>
+<li>The numbers are in <code>Balance</code> (<code>MONSTER_VS_HERO</code> = 1.1), so they are easy to adjust.
+</li>
+</ul>
+<h3>Tests</h3>
+<ul>
+<li>New test: an average monster has about the hero's life and damage + 10%, the same on floor 1 and 40, the armour
+ follows along, elite monsters still have more life, and a stronger hero meets stronger monsters.
+</li>
+<li>The balance bot (8 delves, careful) now reaches level 6 and floors 3-4 with 2 deaths (before: level 9-10 and floors 4-5).
+</li>
+</ul>
+</section>
+<section id="v1-2-0"><h2><span class="ver">1.2.0</span> 2026-10-28 — Rebirth from scratch, Prestige items and prestige badges</h2>
+<h3>Changed</h3>
+<ul>
+<li><b>Rebirth (prestige) starts the hero COMPLETELY from scratch:</b> level 1, no gold, a new skill tree, no waypoints, the Deep
+ from floor 1, and Hell/the Stairway to Heaven must be opened again (the victories are remembered, so the rebirths are not lost). The town, the
+ shared chest, the materials and the recipes stay — they are shared by all your heroes.
+</li>
+<li><b>The Legacy chest:</b> everything the hero owned (gear, backpack and belt) is moved on rebirth to the hero's own
+ Legacy chest in town (a button in the chest window). It can never get full. The hero cannot use the items themselves, but can pass
+ them on to the shared chest, so your other heroes can use them.
+</li>
+<li><b>Prestige items:</b> all gear that a hero with prestige finds, forges or buys is called "Prestige &lt;number&gt; ...". A hero
+ can ONLY use gear from their own prestige level (a hero without prestige only ordinary gear). Items you cannot
+ use have a red veil in the backpack and the chest, and the tooltip says why. Drinks, mushrooms and collectibles
+ can be used by everyone. Only a relic from the hero's own level calls Natas or the nuns.
+</li>
+</ul>
+<h3>Added</h3>
+<ul>
+<li><b>The prestige badge (PL):</b> a badge with the prestige level inside — Bronze (1), Silver (2), Gold (3), Platinum (4),
+ Diamond (5), Master (6) and Legend (7+). It gets fancier with every level: a notched ring, laurel leaves, a
+ crown of spikes, wings, rays and finally a rainbow border. It is shown above the hero's head (other players see it
+ too), in the corner of every Prestige item and in the rebirth window.
+</li>
+<li>Old saved games: a hero who has already been reborn gets their own gear turned into items of their prestige level.
+</li>
+</ul>
+<h3>Technical</h3>
+<ul>
+<li><code>Item.prestige</code>, <code>LootGenerator.finder_prestige()</code>, `GameState.prestige_block/can_use/legacy/_start_over/
+ add_to_legacy/legacy_to_chest<code>, </code>PrestigeBadge<code> (</code>scripts/art/prestige_badge.gd<code>), </code>LegacyPanel`.
+ <code>PlayerSync</code> sends "pl"; <code>Net.PROTOCOL</code> = 16.
+</li>
+</ul>
+</section>
+<section id="v1-1-0"><h2><span class="ver">1.1.0</span> 2026-10-28 — Random events, Lepreconland and update notice</h2>
+<h3>Added</h3>
+<ul>
+<li><b>Random events in the Deep:</b> about every third ordinary floor (from floor 2) has a surprise.
+ It is chosen from the floor's seed, so everyone in co-op gets the same one.
+</li>
+<li><b>The Leprechaun</b> (from floor 3): a little man in green runs away quickly, giggling, straight through the walls.
+ Now and then he stops to laugh at you — that is your chance. If you catch and kill him before he
+ disappears (about 24 seconds), he leaves gold and a <b>rainbow portal to Lepreconland</b>. He does not count
+ towards the rule about slaying 80% of the floor.
+</li>
+<li><b>The old shrine:</b> touch it for a blessing (damage, full life and lantern, or more luck) — or a
+ curse (more damage to you, less oil, or heavy legs).
+</li>
+<li><b>The fairy ring:</b> a ring of glowing mushrooms. Step inside, and the fairies play a trick on you: you become giant or
+ tiny, run like the wind, see the world mirrored or in the colours of the rainbow — or get moved somewhere else
+ entirely.
+</li>
+<li><b>The goblin party:</b> goblins party under coloured lanterns. Smash the party and take a swig from the ale barrel: you get
+ drunk (the world sways), but hit four times as hard.
+</li>
+<li><b>The wishing well:</b> throw gold in (10 x the floor) and make a wish: four times the gold back, a gift, healing and refilled
+ flasks — or a splash and nothing.
+</li>
+<li><b>Lepreconland:</b> one floor behind the leprechaun's portal. Green hills, rainbows over every room, pots of gold,
+ four-leaf clovers and toadstool houses. Clurichauns (who steal gold), elves and Gold Golems — and <b>the Leprechaun King</b>
+ (cloak, crown and a pot of gold) with a rain of gold coins and his lads to help him. The monsters are as strong as the
+ floor the portal was found on. Slay the king for his pot of gold (60 gold x the floor) and loot; the way out leads
+ further down into the Deep, one floor deeper. In co-op, the team votes on going through the portal.
+</li>
+<li><b>Update notice in the game:</b> a small box on the left side shows when a new version is out — even in the middle of
+ a delve. The game checks for a new version every 10 minutes. "Update now" works in town (the game restarts);
+ on a delve it says that you can update when you are home. "Later" hides it until an even newer version comes out.
+</li>
+</ul>
+<h3>Technical</h3>
+<ul>
+<li><code>RandomEvents</code> (<code>scripts/world/random_events.gd</code>), <code>EventProps</code> (<code>scripts/art/event_props.gd</code>), <code>UpdateNotice</code>
+ (<code>scripts/ui/update_notice.gd</code>). Realm "lepre" (<code>Realms.continues_deep</code>). The monster type "flee" and <code>no_count</code>.
+ <code>Net.PROTOCOL</code> = 15 (new message "portal", the vote has "rm").
+</li>
+</ul>
+<h3>Tests</h3>
+<ul>
+<li>Unit tests for the events (choice from the seed, the leprechaun flees, is caught or gets away, the portal, the shrine,
+ the fairy ring, the party, the wishing well), Lepreconland (theme, rainbows, the king and the gold, the way on to the next floor,
+ all the way through Main) and the update box. The network test: the leprechaun is caught at the host, the portal
+ appears for both, the team goes through it and on to floor 5.
+</li>
+</ul>
+</section>
+<section id="v1-0-2"><h2><span class="ver">1.0.2</span> 2026-10-28 — Relics unlock, and rarer special floors</h2>
+<h3>Changed</h3>
+<ul>
+<li><b>It is enough to have the relic.</b> If the hero has found an angel relic (holy), the unholy comes to town
+ (Natas and the way to Hell); if the hero has a demon relic (unholy), the holy comes (the nuns and the
+ Stairway to Heaven). The relic does not have to be worn — it also counts in the backpack, the belt and the chest.
+ The tooltip says so: "Take it home to town — something (un)holy will come for it ...".
+</li>
+<li><b>The Gold Chamber and the Rainbow Cave are even rarer:</b> 1.2% and 0.7% of floors (before 4% and 2.5%).
+</li>
+</ul>
+<h3>Tests</h3>
+<ul>
+<li>1,901 unit tests (new: the relic counts in the backpack and the chest; the new rarity of the two special floors).
+</li>
+</ul>
+</section>
+<section id="v1-0-1"><h2><span class="ver">1.0.1</span> 2026-10-28 — Satan and no checkpoints</h2>
+<h3>Changed</h3>
+<ul>
+<li><b>Satan, the Devil</b> is Hell's final boss on floor 666 (instead of Natas, who is now Satan's messenger in town:
+ "My master awaits you"). He is just as hard as Jesus — the same life, damage, speed, just as many big attacks, two
+ phases and a "second life" — but fights differently: <b>the fire cage</b> (a ring of hellfire around you with one gap, and
+ the middle burns too), <b>hellfire breath</b> (a cone of fire) and the pentagram. When he falls the first time, he rises
+ in his <b>true form</b>: bigger and faster. New look: black cloak, burning cracks across the chest, a crown
+ of flames and goat horns.
+</li>
+<li><b>No checkpoints:</b> both Hell and the Stairway to Heaven always start on the first floor (650 / step 1).
+</li>
+</ul>
+<h3>Tests</h3>
+<ul>
+<li>1,900+ unit tests, including that Satan has exactly the same numbers as Jesus, but at least two attacks of his own and the true form.
+</li>
+</ul>
+</section>
+<section id="v1-0-0"><h2><span class="ver">1.0.0</span> 2026-10-28 — Language and endgame</h2>
+<h3>Added</h3>
+<ul>
+<li><b>Dansk / English:</b> the game can be switched between Danish and English (a button on the start screen and in the Esc menu;
+ the choice is saved). About 1,600 texts have been translated (<code>i18n/en.json</code>).
+</li>
+<li><b>Hell (floors 650-666):</b> if the hero carries a *holy* relic in town, <b>Natas</b> comes walking. Talk to him:
+ a burning pentagram opens beneath him, he sinks down into the fire and leaves a huge <b>rift</b> in the town square —
+ the way down to Hell. 17 floors (the Circle of Fire, the Bone Fields, the Frozen Circle, Pandemonium, the Throne of Darkness),
+ hellish monsters and an <b>archdemon</b> on every floor: Belphegor, Mammon, Leviathan, Asmodeus, Beelzebub, Belial,
+ Moloch, Astaroth, Baal, Paimon, Abaddon, Azazel, Lilith, Samael, Mephistopheles, Lucifer — and Natas himself on 666.
+</li>
+<li><b>The Stairway to Heaven (17 floors):</b> if the hero carries an *unholy* relic, a procession of <b>nuns</b> comes.
+ The abbess prays, the nuns kneel in a ring of light, and a <b>stairway of light</b> comes down from the sky. Up through
+ the clouds, the Garden of Eden, the Hall of Choirs and the Pearly Gates against holy symbols (the flaming cross, doves, the ichthys fish,
+ the chalice, the ophan — the wheel of eyes, candlesticks), Cherubs, Seraphs and Guardian Angels. An <b>archangel</b> on every floor
+ (Sariel ... Gabriel, Michael) — and at the very top <b>Jesus</b>, who is very hard: six big attacks, two phases — and he
+ rises again once.
+</li>
+<li><b>Prestige (rebirth):</b> once Hell or the Stairway to Heaven has been completed, the hero can be reborn at level 1 with a
+ <b>subclass</b> (holy after Hell, unholy after Heaven) and a permanent bonus (+5% damage and life per
+ rebirth). The chest, the town, the gear and the materials are kept. 10 subclasses: Paladin/Death Knight,
+ Lightweaver/Void Mage, Sky Archer/Shadow Stalker, Inquisitor/Nightshade, Grave Priest/Lich — each with its own branch
+ in the skill tree, a new skill on <b>key 5</b> and a new look.
+</li>
+<li><b>The Dragon's Lair (raid, 1-4 players):</b> opens when both Hell and the Stairway to Heaven have been completed (by any
+ of your heroes). Five floors full of old bosses in the rooms and a <b>raid boss</b> on every floor with **20 times as much
+ life as a boss on floor 60**: the Quartz Wyrm, the twin dragons Ignar and Hrim (sharing the 20x), the High Priest of the Dragon Cult,
+ the Bone Dragon and Vyrmorath the Elder Dragon. The rune of return does not work in there.
+</li>
+<li>New boss mechanics: a rain of circles, a spiral (two waves), dragon breath (cone), phases and resurrection.
+</li>
+<li>New figures built in code: demons, angels, nuns, holy symbols and dragons.
+</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li><code>Net.PROTOCOL</code> → <code>hearthdelve-mp-14</code> (the messages "dive", "floor" and the vote now have the field <code>rm</code> = realm).
+</li>
+<li>The Well is now one of four "realms" (<code>Realms</code>), so it shares rules with Hell, Heaven and the Dragon's Lair.
+</li>
+</ul>
+<h3>Tests</h3>
+<ul>
+<li>1,894 unit tests (new: test_language, test_realms, test_realm_floors, test_endgame_town, test_prestige).
+ The net test: the host and the client go down into Hell together, down to floor 651 and home again.
+</li>
+<li><b>Not tested by a bot:</b> fighting your way through all 17 floors or the raid. The endgame balance (e.g. that a raid boss
+ has about 1.1 million life) is set from the planned numbers, but not measured — please playtest it.
+</li>
+</ul>
+</section>
+<section id="v0-9-6"><h2><span class="ver">0.9.6</span> 2026-10-27 — The host hosts the game themselves</h2>
+<h3>Changed</h3>
+<ul>
+<li><b>No separate server program.</b> The hub server from v0.9.5 has been removed. Whoever chooses *Host* hosts
+ the map in their own game.
+</li>
+<li><b>The game opens the port itself</b> in the host's router (UPnP) when you become host, and finds the host's internet address.
+</li>
+<li><b>Invitation code:</b> the host gets a code like <code>HD-2N1GH-3GR15</code> (with a *Copy* button) in the Multiplayer window.
+ Friends over the internet type the code into *Join with an invitation code* (an IP address also works).
+ If the router cannot open the port itself, the game says so and explains what the host needs to do.
+</li>
+<li><b>The list</b> shows the open games on your own network — the host's game announces itself, no server.
+ (A list of strangers' games over the internet needs a shared place that all games announce themselves to, so it is
+ not included.)
+</li>
+<li><code>Net.PROTOCOL</code> → <code>hearthdelve-mp-13</code>.
+</li>
+</ul>
+<h3>Tests</h3>
+<ul>
+<li>1282 unit tests (new: invitation codes back and forth, ordinary IP addresses, nonsense is rejected, and that
+ a host without a router gets a message instead of an error). The net test: the client finds the host's game in the list
+ (announced by the host itself), is rejected with a wrong code and without a code, and gets in with the right one.
+</li>
+<li><b>Not tested:</b> UPnP against a real router (the container has none) and invitation codes over the internet.
+</li>
+</ul>
+</section>
+<section id="v0-9-5"><h2><span class="ver">0.9.5</span> 2026-10-27 — Multiplayer hub</h2>
+<h3>Added</h3>
+<ul>
+<li><b>The hub</b> (Esc → Multiplayer, and in the start menu): a list of open games with name, host, number of players,
+ whether the team is on a delve, whether the game has a password, and whether it is a different version. Press *Join*.
+ Games on your own network show up by themselves (LAN). Games over the internet are shown when a <b>hub server</b> has been set up.
+</li>
+<li><b>As host</b> you give your game a name and can set a <b>password</b>. Without the right password you cannot get
+ in ("Wrong password." / "The game is locked with a password."). The password is sent as a hash, never as text,
+ and the hub server never gets to see it.
+</li>
+<li><b>The hub server</b> (<code>hub-server/hub_server.py</code> in the package, see <code>HUB_SERVER.md</code>): a small Python program with no
+ dependencies, which must run on a machine that is switched on and has UDP port 24567 open. It only keeps the list;
+ the game still connects directly to the host (port 24565 must be open on the host's side).
+</li>
+<li>You can still type in an IP address directly (now also with a password).
+</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li><code>Net.PROTOCOL</code> → <code>hearthdelve-mp-12</code>.
+</li>
+</ul>
+<h3>Tests</h3>
+<ul>
+<li>1276 unit tests (new: a game is heard on the network, the password is sent as a hash). The hub server's own test
+ (<code>--selftest</code>). The net test now starts a hub server: the host announces its game with a name and password, the client finds
+ it in the list, is rejected with a wrong password and without one, and gets in with the right one.
+</li>
+<li><b>Not tested:</b> the hub server on a real server on the internet, and the LAN list on a real network with
+ several computers (tested on one machine).
+</li>
+</ul>
+</section>
+<section id="v0-9-4"><h2><span class="ver">0.9.4</span> 2026-10-27 — Fog of war</h2>
+<h3>Added</h3>
+<ul>
+<li><b>Fog of war:</b> rooms you have not been inside are covered in darkness. You cannot see the floor, monsters, torches,
+ chests, prisoners or the stairs on the other side of the walls. When you enter a room, the darkness lifts (it
+ fades away). Monsters in the darkness are invisible, including their health bars.
+</li>
+<li><b>The minimap</b> now only shows the rooms you have been in (before, you could glimpse the rooms behind the doors).
+</li>
+</ul>
+<h3>Tests</h3>
+<ul>
+<li>1273 unit tests (new: the darkness over the rooms, hidden monsters, cages and stairs, and that it lifts when you go
+ in). The net test is green. Screenshots checked: the starting room, standing in a doorway, and after going in.
+</li>
+<li><b>Known limitation:</b> at the northern edge of a dark room the darkness lies low (otherwise it would cover
+ the hero when he stands by the wall below), so you can make out the top of the wall there.
+</li>
+</ul>
+</section>
+<section id="v0-9-3"><h2><span class="ver">0.9.3</span> 2026-10-27 — Map, relics and no escaping death</h2>
+<h3>Added</h3>
+<ul>
+<li><b>Minimap</b> in the bottom right corner in dungeons. It shows the rooms you have been in (and those you have glimpsed through
+ a door), the doors, you (a gold arrow), your fellow players (blue), the settlers following you (green) and the stairs,
+ once you have seen them. In the Well's pitch-black cave, the exit is only shown once you have found it. <b>M</b> gives a
+ large map in the middle of the screen.
+</li>
+<li><b>Holy and unholy relics</b> — the rarest things in the game (from floor 6). A holy relic gives
+ lots of life, life regeneration and armour — and a glowing <b>halo</b> and white <b>angel wings</b>. An unholy one
+ gives lots of damage, life drain and critical damage — and <b>horns</b> and dark red <b>demon wings</b>. The wings beat
+ slowly (faster when you run), and fellow players can see them. <b>You can only wear one relic at a time.</b>
+</li>
+<li><b>If you close the game or leave multiplayer during a delve</b>, it does not happen right away: a
+ warning appears that it counts as a death, along with a 10-second countdown (the game keeps running meanwhile).
+ *Cancel* or Esc stops it. This also applies to the window's close button.
+</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li><b>Legendary items are more than 3 times rarer</b>, and <b>set items are about 3 times rarer</b> (also from bosses).
+</li>
+<li><code>Net.PROTOCOL</code> → <code>hearthdelve-mp-11</code> (relics are shown to fellow players).
+</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Monsters could cause an error message if their target disappeared at the same moment (e.g. on a scene change).
+</li>
+</ul>
+<h3>Tests</h3>
+<ul>
+<li>1267 unit tests (new: the minimap, the countdown and the death, the relics and the one-relic rule).
+ The net test is green (69 + 11). Screenshots checked: the map (small and large), the countdown, the halo and
+ angel wings, the horns and demon wings.
+</li>
+<li><b>Not tested:</b> on Windows, over the internet, and the update against GitHub itself.
+</li>
+</ul>
+</section>
+<section id="v0-9-2"><h2><span class="ver">0.9.2</span> 2026-10-27 — New features and bug fixes</h2>
+<h3>Fixed</h3>
+<ul>
+<li><b>The host could not free prisoners in co-op.</b> The host's own click switched the cage off before the host itself checked it,
+ so the host thought it had already been opened. Now the host remembers opened cages separately.
+</li>
+<li><b>The spear's attack:</b> the spear pointed straight up at the sky while it was being pulled back. Now it is held horizontally.
+ Heroes in a long robe (the Necromancer) no longer get their legs poking out through the robe when they lunge.
+</li>
+</ul>
+<h3>Added</h3>
+<ul>
+<li><b>The darkness:</b> when the lantern is below 25%, the hero starts to hallucinate: the screen turns grey and doubled,
+ the edges darken, and shadows with red eyes stand at the edge of the light and whisper ("Your light is dying soon."). They
+ disappear when you walk up to them, and cannot harm you. When the lantern is empty, you lose 2.5% of your life
+ per second — the darkness can kill. Both are announced on screen.
+</li>
+<li><b>Voting in co-op:</b> before the team goes down the stairs, everyone votes (Yes / No in a box at the top). Whoever
+ took the stairs has voted yes. When everyone has voted, or after 30 seconds, the votes cast are counted: more
+ than half must say yes.
+</li>
+<li><b>New fonts</b> with a Dungeons &amp; Dragons feel: Alegreya for text, Cinzel for headings, buttons and
+ signs, Cinzel Decorative for the game's name. Free fonts (SIL Open Font License).
+</li>
+<li><b>The chest gets pages (tabs):</b> bought space now comes as whole pages of 60 cells (400 gold for the first,
+ up to 5). Items can never lie across two pages. Old purchases: every 3 bought rows became one page.
+</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li><b>The bosses have twice as much life</b> as in v0.9.0 (6× instead of 3×).
+</li>
+<li><b>The hero scales more slowly:</b> 20% less experience and gold, weapons and damage properties grow more slowly
+ per level, and fewer items drop (about 25-30% fewer).
+</li>
+<li><b>The Well is twice as long:</b> 8 floors (2 under the water, 2 crypt, 2 cave, 2 cult), and each floor is
+ twice as big. When the delve into the Well ends (home or death), <b>the blood pact is broken</b>, and the town must sacrifice
+ all over again to open the Well again.
+</li>
+<li><code>Net.PROTOCOL</code> → <code>hearthdelve-mp-10</code> (voting). Everyone must have v0.9.2 to play together.
+</li>
+</ul>
+<h3>Tests</h3>
+<ul>
+<li>1241 unit tests (new: the darkness and hallucinations, the voting rules, the chest's pages, 8 Well floors and
+ the broken pact). The net test (69 + 11 checks) now also runs voting (no and yes), the host freeing a prisoner,
+ and all 8 Well floors with two players.
+</li>
+<li>The bot simulation (Barbarian, 8 delves) has become <b>much</b> harder: the bot dies on floors 3-5 and reaches level 9 after
+ 8 delves (before, it reached floor 12). Mostly because of the bosses with 6× life on floor 5. The bot does not dodge, so
+ for a human it is easier — but say so if it is too much.
+</li>
+<li>Screenshots checked: the spear on the Necromancer, the darkness with shadows, the font in all windows and on the start screen.
+</li>
+<li><b>Not tested:</b> on Windows, over the internet, and the update against GitHub itself.
+</li>
+</ul>
+</section>
+<section id="v0-9-1"><h2><span class="ver">0.9.1</span> 2026-10-27 — Automatic updates</h2>
+<h3>Added</h3>
+<ul>
+<li><b>The game updates itself:</b> on startup it fetches <code>latest.json</code> from its GitHub repository
+ (Hearthdelve_Windows / Hearthdelve_Linux). If there is a newer version, "New version ... is ready" is shown
+ in the top right corner of the start screen. *Update now* downloads the package, checks the checksum (sha256), puts the
+ new program file in place, saves and restarts. The old file is called <code>*.old</code> until the next start.
+</li>
+<li><code>tools/make_release.sh &lt;mappe&gt;</code> builds both packages and their <code>latest.json</code>.
+</li>
+<li>The version is shown in the bottom right corner of the start screen (<code>Updater.VERSION</code>).
+</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>The Linux package is now a <code>.zip</code> (like Windows), so the game can unpack it itself.
+</li>
+</ul>
+<h3>Requirements</h3>
+<ul>
+<li>The two repositories must be <b>public</b> (the game does not log in to GitHub).
+</li>
+<li>The game must be in a folder the user owns (not "Program Files"), otherwise it cannot replace itself.
+</li>
+<li>Players with v0.9.0 must download v0.9.1 manually once (v0.9.0 has no built-in updating).
+</li>
+</ul>
+<h3>Tests</h3>
+<ul>
+<li>1196 unit tests. The whole update has been tested against a local web server with a fake program file: a new version
+ is found, downloaded, the checksum is checked, the file is replaced, the old one is cleaned up at the next start, and a
+ damaged file is rejected.
+</li>
+<li><b>Not tested:</b> against GitHub itself (the container cannot reach raw.githubusercontent.com) and on Windows.
+</li>
+</ul>
+</section>
+<section id="v0-9-0"><h2><span class="ver">0.9.0</span> 2026-10-27 — The big wishlist</h2>
+<h3>Added</h3>
+<ul>
+<li><b>Start screen by the campfire:</b> your heroes stand around a campfire at night. Point at a hero, and they step forward into
+ the light with their name, class and level. Click to choose them. Buttons: *Play as ...*, *New hero*,
+ *Multiplayer and more options* (the old start window) and *Quit*. Esc → *Switch hero* also leads here.
+</li>
+<li><b>The Well</b> (only at the highest blood pact): the well in town glows red, and you can jump in. Four floors in a row:
+ *Under the water* (you walk more slowly), *The forgotten crypt*, *The cave without a way* (pitch black, bigger, the exit is only shown
+ when you are close) and *The cult's sanctum*. Here a secret cult has painted a pentagram of blood, and the names of
+ those the town sacrificed are written around it. The boss is <b>The Cult's High Priest</b>, and his pentagram attack is five
+ beams. The rune of return does not work on the first three floors. Reward: the boss's loot, a named item,
+ 1500 gold and the collectible *The cult's blood chalice*. Also works in co-op. New monsters: Blood cultist and Shade of the sacrificed.
+</li>
+<li><b>Chat in multiplayer:</b> press Enter, type, Enter. The messages appear in the bottom left corner and disappear after 12 seconds.
+</li>
+<li><b>Event log for troubleshooting:</b> the game writes events to a text file (scenes, network, combat, chat, messages
+ and jumps in fellow players' positions). Esc → *Event log* shows the last lines and saves a copy that can be
+ sent in for bug fixing.
+</li>
+<li><b>Belt</b> (new gear slot): Rope belt (2 pockets), Leather belt (3) and Studded belt (4). Rare belts have one
+ more pocket. Put drinks and mushrooms in the pockets (right-click or drag them), and use them with <b>Shift+1-5</b>. The pockets
+ are shown above the skill bar. Belts can be forged in the Workshop.
+</li>
+<li><b>Mushrooms:</b> 8 consumable mushrooms with strange effects. The screen's colours spin around, the world waves, the world
+ is mirrored, you run 5× faster or deal 4× damage, you become giant or tiny, the monsters cannot
+ see you, or the lantern does not burn down. Found most often in caves and on Spore shrooms.
+</li>
+<li><b>More space in the chest:</b> buy an extra row at the chest in town (150 gold for the first, rising price, up to 8 rows).
+</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li><b>A harder Deep:</b> monsters warn 15% shorter and use skills more often. <b>The bosses have 3× life</b> and each
+ has a big mechanic of its own that must be avoided, with a name above the boss and a red area on the floor for about 2 seconds first:
+ a circle around the boss, everything outside a green circle, a cross, a beam or a pentagram.
+</li>
+<li><b>The auras are completely different:</b> each has its own sign on the floor and its own things circling the hero.
+ Fire has tongues of flame and sparks. Frost has snowflake signs, ice crystals and snow. Holy has sunbeams, a
+ halo and a pillar of light. Shadow has a black vortex and tendrils of smoke. Death has a crown of thorns and ghost lights.
+ Wind has a spiral and leaves. Gold has coins. Rainbow has prisms in every colour.
+</li>
+<li><b>The Arena:</b> a hero with a higher level than the opponent meets stronger monsters (+5% life and +4% damage per
+ level above, at most 2.5×). The lower-level hero gets more battle gold to trade with.
+</li>
+<li><b>The hunter's skill tree:</b> in the Wilderness branch, Wolf call is now number 2, below the skill that must be learned first.
+</li>
+<li><b>Fellow players who jumped or slid:</b> position packets now have a sequence number, so old packets are thrown away.
+ On big jumps the figure snaps straight into place instead of sliding across the floor. Both are written to
+ the event log.
+</li>
+<li><code>Net.PROTOCOL</code> → <code>hearthdelve-mp-9</code> (chat, Well floors).
+</li>
+</ul>
+<h3>Tests</h3>
+<ul>
+<li>1185 unit tests (new: start screen, the Well all the way down, chat and log, belt, mushrooms, chest rows,
+ boss mechanics, the tree's order, arena handicap). The net test now also runs chat and a delve through all four
+ Well floors with two players (55 + 11 checks). The bot simulation (Barbarian, 8 delves) runs through; in the last delves the bot reaches floor 12 and returns home.
+</li>
+<li>Screenshots checked: auras, start screen (still and with a hero stepping forward), the well in town, the four
+ Well floors, the mushrooms' screen effects and all windows.
+</li>
+<li><b>Not tested by AI:</b> the game on Windows, multiplayer over the internet, whether the event log catches the
+ jump you saw (that requires a real session), and pointing with a real mouse on the start screen (the test sets
+ the "mouse" in code). The bot does not play like a human, so the difficulty needs your playtesting.
+</li>
+</ul>
+</section>
+<section id="v0-8-2"><h2><span class="ver">0.8.2</span> 2026-10-27 — Fullscreen</h2>
+<h3>Added</h3>
+<ul>
+<li><b>Esc → Screen:</b> choose *Window*, *Borderless fullscreen* or *Fullscreen* (real, exclusive fullscreen).
+ <b>F11</b> or <b>Alt+Enter</b> switches between window and fullscreen anywhere in the game. The choice is remembered
+ (<code>user://settings.cfg</code>, [graphics] screen) and used at the next start.
+</li>
+</ul>
+<h3>Tests</h3>
+<ul>
+<li>997 unit tests (switching, order, saving). In the container it has been checked that the game asks for
+ fullscreen (window mode 4 = exclusive fullscreen), but it has no window manager, so the actual
+ picture could not be seen filling the screen. <b>Not tested:</b> on a real Windows screen.
+</li>
+</ul>
+</section>
+<section id="v0-8-1"><h2><span class="ver">0.8.1</span> 2026-10-27 — Bug fixes and new features</h2>
+<h3>Fixed</h3>
+<ul>
+<li><b>Text that stood vertically</b> (one letter per line) in the Collection, on the Notice Board ("Active") and elsewhere:
+ short texts never wrap, and long texts always have a sensible minimum width (<code>UiStyle.label/para</code>).
+</li>
+<li><b>Windows that grew beyond the screen</b> when the text got long (e.g. the skill tree): windows can fill at most
+ 88% of the screen height and scroll otherwise. The detail boxes (skill tree, workshop) have a fixed size and scroll
+ inside, and item tooltips have a fixed width (long lines wrap).
+</li>
+<li>The HUD's right column wraps long lines (e.g. "Gathered: ...") instead of running off the screen.
+</li>
+<li>The text "[E] ..." could get stuck from the dungeon when you came home.
+</li>
+<li>All windows have been reviewed in screenshots (1280×720).
+</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li><b>Treasure chests:</b> hold <b>E</b> for 2 seconds to open them. A ring above the chest fills up, and the lid
+ creaks open meanwhile. Let go of E, and it starts over. (The chest in town still opens with one press.)
+</li>
+<li><b>No exit until the floor is (almost) cleared:</b> the stairs down and the rune of return only work once
+ at least 80% of the floor's monsters have been killed <b>and</b> the boss/treasure guardian is dead. The HUD shows
+ "Slain x/y — the exit opens in z", and the window at the stairs says what is missing.
+</li>
+<li><b>The ear from a duel can no longer be worn.</b> Throw it into <b>the Pit of Doom</b> (a new pit by the Sacrifice Stone):
+ your hero carries the title <b>"Slayer of &lt;name&gt;"</b> for a day. The title floats above the hero (fellow players can see
+ it) and appears in the heading of the gear window. Old ears from saved games automatically become trophies.
+</li>
+<li><b>The bow</b> is now held in the left hand. The right hand draws the string all the way back to the face with an arrow on
+ the string and releases. The string snaps forward after the shot. This also applies to the skeleton archers. Hunters carry
+ the lantern on their belt, because they need both hands.
+</li>
+<li><code>Net.PROTOCOL</code> → <code>hearthdelve-mp-7</code> (title in the player's state).
+</li>
+</ul>
+<h3>Tests</h3>
+<ul>
+<li>991 unit tests (including hold-E on chests, the 80% rule and the boss on stairs and rune, the ear as a trophy,
+ the title and that it expires after a day, the bow and the string). Net test green. The bot simulation runs with
+ the 80% rule (the Barbarian reaches floor 12 from delve 4).
+</li>
+<li><b>Not tested by AI:</b> holding E down on a real keyboard (the test presses the key in code),
+ the Windows build, and that fellow players see the title over the internet.
+</li>
+</ul>
+</section>
+<section id="v0-8-0"><h2><span class="ver">0.8.0</span> 2026-10-27 — Theme monsters and theme bosses</h2>
+<h3>Added</h3>
+<ul>
+<li><b>16 new monsters, tied to the floor's theme:</b>
+</li>
+<li>*The Crypt:* Grave guard (skeleton with sword and shield, armoured), Grave cultist (summons a circle on the floor
+ that explodes), Bone hound (charges forward in a straight line).
+</li>
+<li>*The Troll Cave:* Cave raider (fast, <b>steals gold</b> — kill it, and it drops it again),
+ Spore shroom (poison circle, <b>poison</b> over time), Cave spinner (charge, <b>webs slow you down</b>).
+</li>
+<li>*The Sunken Fortress:* Drowned soldier (cold slows you down), Crossbowman (heavy bolts),
+ Rock crab (armoured shell).
+</li>
+<li>*The Ash Forge:* Ember imp (throws fireballs), Magma blob (<b>splits</b> into two Embers when it dies),
+ Forge golem (armoured stone with glowing cracks).
+</li>
+<li>*The Gold Chamber:* Chest mimic (looks like a treasure chest until you get close), Gilded guard.
+</li>
+<li>*The Rainbow Cave:* Crystal sprite (shoots crystals), Prism beetle (charge, armoured).
+</li>
+<li><b>Bosses by theme</b> (every 5th floor — the boss always matches the floor's theme, and the theme's two bosses take turns):
+ the Crypt: the Bone King / the Lantern Thief · the Troll Cave: the Troll Mother / <b>the Spider Queen</b> ·
+ the Fortress: <b>the Drowned Admiral</b> / <b>the Iron Crab</b> · the Ash Forge: <b>the Ash Smith</b> / <b>the Magma Mother</b>.
+ New boss skills: circles on the floor, web volleys, fireball volleys, splitting on death, their own battle cry.
+</li>
+<li><b>Treasure guardians</b> on the special floors: *The Greedy Chest* (the Gold Chamber) and *The Prism Warden*
+ (the Rainbow Cave) wait by the stairs. The stairs are not sealed, but they almost always drop the theme's
+ named items.
+</li>
+<li><b>New attack types:</b> charge (a red stripe warns of the direction), circles on the floor (grow and explode),
+ armour (absorbs part of the damage), splitting on death, and on-hit effects (slow, poison, gold theft).
+</li>
+<li><b>New figures:</b> spider (and beetle), crab, mushroom, magma blob, chest mimic; theme variants of skeletons
+ (shield, helmet, gold), carrion eaters (goblin, drowned, imp, admiral), trolls (golem, crystal) and shades
+ (crystal). Projectiles per monster: bolts, fireballs, crystals, webs, stones.
+</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>The themes' monster mix has been reworked, so each theme mostly has its own monsters.
+</li>
+<li>The warning at the stairs before a boss floor no longer names a specific boss (it depends on the theme).
+</li>
+<li><code>Net.PROTOCOL</code> → <code>hearthdelve-mp-6</code> (new "zone" attack message).
+</li>
+</ul>
+<h3>Tests</h3>
+<ul>
+<li>956 unit tests (including that each theme has its own monsters and bosses, that all models can be built, armour,
+ charge, circles, poison, cold, gold theft and that the gold comes back, splitting, theme boss, treasure guardian).
+ Net test green. Bot simulation (8 delves): Barbarian and Mage reach floor 12 about as fast as in v0.7; ranged attackers (imp,
+ crossbowman, crystal sprite) were toned down after they were too hard on the Mage. The bot now logs which monsters deal the most damage.
+</li>
+<li><b>Not tested by AI:</b> how the monsters *feel* to fight; dodging circles and charges (the bot
+ does not dodge); the Windows build; co-op over the internet.
+</li>
+</ul>
+</section>
+<section id="v0-7-0"><h2><span class="ver">0.7.0</span> 2026-10-26 — Themes, set items, named items, auras and new graphics</h2>
+<h3>Added</h3>
+<ul>
+<li><b>Random themes per floor:</b> *The Crypt*, *The Troll Cave*, *The Sunken Fortress* and *The Ash Forge* —
+ each with its own stone, light, fog, props (sarcophagi, candles, stalactites, mushrooms, puddles,
+ lava cracks) and its own monsters. Everyone in co-op gets the same theme (it follows the floor's seed).
+</li>
+<li><b>Rare special floors</b> (never floor 1 or boss floors): <b>The Gold Chamber</b> (~4%: gold piles,
+ extra treasure chests, gold from every kill) and <b>The Rainbow Cave</b> (~2.5%: crystals, lots of elixirs,
+ collectibles and rainbow weapons/armour).
+</li>
+<li><b>Consumables</b> (right-click in the backpack): Field flask, Mana drink, Lamp oil, Elixirs of strength, stoneskin and
+ luck, and the rare Rainbow elixir.
+</li>
+<li><b>Collectibles and the Collection:</b> 16 collectibles (2–4 per theme). Each new one gives all your heroes slightly better
+ loot and more gold; duplicates turn into gold. See Esc → *The Collection* or the button in the backpack.
+</li>
+<li><b>Set items — one set per class</b> (4 pieces each): *The Bear King's Legacy* (Barbarian), *The Archmage's
+ Raiment* (Mage), *The Wolf Hunter's Gear* (Hunter), *The Night Raven's Shadows* (Thief) and
+ *The Grave Lord's Regalia* (Necromancer). 2/3/4 pieces give bonuses; the full set gives an <b>aura</b>.
+ The bonuses only work for the set's own class. Green names. Drop rarely from floor 3
+ (bosses 25%, elites 1.5%), and 70% of the time it is from your own class's set.
+</li>
+<li><b>15 named items</b> with fixed properties, special effects and often an aura — each theme has its
+ own (e.g. *The Bone King's Blade*, *The Troll Crusher*, *The Drowned Admiral's Ring*, *The Ember Heart*,
+ *Midas' Ring*, *The Rainbow Bow*, *The Prism Mail*). On the special floors the theme's items are 6× as common.
+ Can be upgraded and reforged, but not enchanted.
+</li>
+<li><b>8 auras you can see:</b> a rotating rune circle on the floor, particles and a coloured light —
+ *Fire* (foes burn), *Frost* (slows), *Light* (heals you), *Shadow* (curses), *Death* (weakens and
+ withers), *Wind* (speed), *Midas* (loot flies to you, more gold), *Rainbow* (a bit of everything,
+ changes colour). Fellow players see your aura online.
+</li>
+<li><b>New graphics on the figures:</b> body, arms and legs are now one soft, "skinned" mesh that bends at the elbows,
+ knees, shoulders and waist (before: stiff parts with ball joints). Eyes with whites, irises and eyelids, brows and a mouth.
+</li>
+<li><b>Real attack animations per weapon:</b> sword (alternating forehand and backhand slashes), axe
+ (two-handed chop from above), daggers (quick stabs with alternating hands), spear (lunge), bow (draw and
+ release), staff (raise and thrust), scythe (big two-handed sweep). Figures flinch when they are hit.
+</li>
+<li><b>Projectiles reworked:</b> arrows with shaft, tip and feathers; fireball with flames, smoke and light; chain lightning
+ as jagged, flickering bolts with branches; bone spear, throwing knife, magic orbs; the meteor
+ visibly falls down; impacts with sparks.
+</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>New monsters in the themes use the existing types (rat, bomb thrower, shaman, shade).
+</li>
+<li><code>Net.PROTOCOL</code> → <code>hearthdelve-mp-5</code> (auras are sent with the player's state). The save format is still v4
+ (new fields: <code>collection</code>, and <code>set_id</code>/<code>unique_id</code> on items).
+</li>
+</ul>
+<h3>Tests</h3>
+<ul>
+<li>817 unit tests (including themes, special floors, consumables, the Collection, set bonuses per class,
+ named items, auras in combat, that the body follows the skeleton, attack poses per weapon).
+ Net test (host + client) green. Bot simulation runs through (found 2 set items in 8 delves).
+</li>
+<li><b>Not tested by AI:</b> how the animations and auras *feel* in play, the Windows build, and that
+ fellow players see auras over the internet (only two processes on the same machine).
+</li>
+</ul>
+</section>
+<section id="v0-6-1"><h2><span class="ver">0.6.1</span> 2026-10-23 — Graphics card selection</h2>
+<h3>Added</h3>
+<ul>
+<li><b>Esc → Graphics card:</b> choose *Automatic*, *Integrated (power saving)* or *Dedicated (high performance)* on
+ computers with two graphics cards. The window shows which card is drawing the game now, and which cards exist.
+ If the computer has only one (or only one kind), it says there is nothing to choose between — the choice is still saved.
+</li>
+<li>Windows: uses Windows' own per-program setting (the same as *Settings → System → Display → Graphics*)
+ for the game's .exe; works from the next start (button: *Restart the game now*).
+ Linux: the game restarts itself with the PRIME variables (<code>DRI_PRIME</code>, and for NVIDIA
+ <code>__NV_PRIME_RENDER_OFFLOAD</code>/<code>__GLX_VENDOR_LIBRARY_NAME</code>).
+</li>
+<li><b>Safety net:</b> if the chosen card cannot start the game, the next start automatically goes back to
+ *Automatic*. Can also be set from the command line: <code>--gpu=auto|integrated|dedicated</code>.
+</li>
+</ul>
+<h3>Tests</h3>
+<ul>
+<li>571 unit tests (recognising graphics cards from lspci/Windows lists, Intel/AMD/NVIDIA/Arc, Linux variables).
+</li>
+<li>Linux, exported game: the restart with the chosen card, that the old copy closes, and that the safety net
+ kicks in, have been tried out. <b>Not tried out:</b> Windows (the registry) and a real computer with two
+ graphics cards.
+</li>
+</ul>
+</section>
+<section id="v0-6-0"><h2><span class="ver">0.6.0</span> 2026-10-23 — Classes, mana and a HUD with orbs</h2>
+<h3>Added</h3>
+<ul>
+<li><b>5 classes:</b> Barbarian, Mage, Hunter, Thief and Necromancer. Each has <b>its own skill tree</b> (3 branches)
+ with <b>4 active skills</b> on keys 1–4 (20 in total), passive bonuses and keystone skills. The classes each have their own
+ life/mana and preferred weapons (+20% damage, +10% attack speed — everyone can use every weapon).
+</li>
+<li><b>The skills:</b> Cleaving blow, War cry, Leap, Whirlwind · Fireball, Frost nova, Chain lightning, Meteor ·
+ Arrow volley, Blast trap, Piercing arrow, Wolf call · Shadow leap, Poison blade, Smoke bomb, Dagger rain ·
+ Bone spear, Raise skeleton, Weaken, Corpse explosion.
+</li>
+<li><b>New weapons:</b> Bow and Staff (shoot instead of strike) and Scythe. Basic recipes for all the classes' weapons.
+</li>
+<li><b>Mana</b> (new resource): pays for skills, regenerates over time; healing drinks also give 30% mana.
+ New properties on items: +mana and +mana per second.
+</li>
+<li><b>Status effects</b> on foes (slowed, blinded, cursed, poisoned) and <b>minions</b> (skeletons, wolf),
+ which the foes also attack.
+</li>
+<li><b>HUD like in the reference picture:</b> a red life orb and a blue mana orb with rippling liquid and bubbles, a small
+ amber light orb (lantern oil), and in the middle a level diamond, a golden XP bar and 6 slots
+ (attack, dodge, skills 1–4) with cooldown and mana warning.
+</li>
+<li><b>Several heroes, one town:</b> create up to 8 heroes; the town, the chest, the materials and the recipes are shared. The hero list
+ and the class choice are in the start menu (and Esc → Switch hero). Each class has its own look (colours, hood,
+ robe, weapon).
+</li>
+<li>Co-op: skills hit the host's foes, status effects are sent to the host, and the others see the skills' effects
+ and your class. <code>Net.PROTOCOL</code> → <code>hearthdelve-mp-4</code>.
+</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>The shared 6-branch skill tree has been replaced by the classes' trees. <b>Old heroes</b> keep their level, gear and
+ town, choose a class next time, and get their skill points back. Savegame version 4.
+</li>
+<li>A little more life per level (+1). The "+life" property on items grows half as fast with item level (8 slots
+ made life far too big). The starting weapons are worn (60% of a normal weapon), so the Workshop is still the way forward.
+</li>
+</ul>
+<h3>Tests</h3>
+<ul>
+<li>558 unit tests green — including all 20 skills used against foes on a real floor for each class,
+ ranged attacks, the hero list (create/switch/delete/save), old savegames, the class trees. Net test 42 + 11 green.
+</li>
+<li>Balance bot, careful, 8 delves per class (before the weaker starting weapons): Barbarian and Thief reached floor 12 in the 4th delve,
+ Hunter in the 6th, Mage and Necromancer in the 7th. For comparison, the bot without classes (v0.5) reached floor 11 in the 12th delve.
+ With the worn starting weapons (final version) the Barbarian only reaches floor 12 in the 8th delve (without deaths) — closer
+ to the pace from before. The other classes have not been run again with the weaker starting weapons.
+</li>
+<li><b>Not tested:</b> how the skills feel to play, Windows, the internet. Minions are not seen by the others online.
+</li>
+</ul>
+</section>
+<section id="v0-5-0"><h2><span class="ver">0.5.0</span> 2026-10-23 — Gear and UI inspired by Diablo II</h2>
+<h3>Added</h3>
+<ul>
+<li><b>8 gear slots:</b> weapon, helmet, armour, gloves, boots, amulet and 2 rings. New base types:
+ Leather cap/Iron helm/Storm helm, Leather gloves/Iron gloves, Leather boots/Iron boots, Amulet/Talisman, Ring.
+ The properties are spread across the new slots (e.g. attack speed on gloves, speed on boots).
+</li>
+<li><b>Gear window (I):</b> a figure with the slots, a <b>grid backpack</b> (10 × 4) where items take up space by shape
+ (ring 1×1 … armour 2×3), <b>drag and drop</b>, <b>right-click</b> for a quick action, *Tidy up*, gold with a coin.
+ Drag an item out of the window in the Deep to drop it on the ground.
+</li>
+<li><b>The chest</b> and <b>the Peddler</b> use the same grid + figure; buy/sell with right-click or by dragging.
+</li>
+<li><b>Icons</b> for all items, drawn in code (no image files). <b>Tooltips</b> in Diablo style with colours and
+ comparison with what you are wearing.
+</li>
+<li><b>Names on the ground:</b> items and recipes always have a coloured name; hold <b>Alt</b> for names on everything in dark
+ boxes that do not overlap.
+</li>
+<li><b>Quest log (J / L)</b> with progress bars; the HUD only shows "Quests: N active [J]".
+</li>
+<li><b>Waypoints:</b> defeat the boss on floor 10, 20 … → start a delve on floor 11, 21 … for 15 gold × the floor.
+ Works in co-op (the host chooses and pays, the whole team starts there).
+</li>
+<li><b>The helmet is visible on the hero</b> in 3D, also on the other players.
+</li>
+<li>6 recipes from the start (one per type), 4 new boss recipes (Iron helm, Iron gloves, Iron boots, Storm helm).
+</li>
+</ul>
+<h3>Changed (balance)</h3>
+<ul>
+<li>The gold prices in the Workshop have been lowered (8 slots to forge for): basic recipes cost <b>only materials</b>,
+ boss recipes 1.5 gold per item level (before 4), upgrade 2 (before 4), enchant 3 (before 6), reforge 1.5 (before 3).
+ Reason: in the bot test the bot had plenty of materials but no gold, and never got back on its feet after a death.
+</li>
+<li>The chest is now rows: 4 from the start, +3 with a Warehouse, +2 with *Blessing of the chest*. The Peddler has 4 wares.
+</li>
+<li>Savegame version 3. Old savegames are loaded: the "trinket" becomes an amulet or ring, and whatever cannot fit
+ in the grid backpack is moved to the chest. Nothing is lost. <code>Net.PROTOCOL</code> → <code>hearthdelve-mp-3</code>.
+</li>
+</ul>
+<h3>Tests</h3>
+<ul>
+<li>360 unit tests green (including grid logic, ring slots, loot, save/load with positions, waypoints,
+ drag-and-drop rules, all windows are drawn). Net test 42 + 11 green (incl. a waypoint delve in co-op).
+</li>
+<li>Balance bot (careful, 12 delves): died 6 times early, then recovered and reached floor 11 (waypoint opened)
+ in the 12th delve with a sword +5 at level 32. A single run varies a lot from time to time. The materials pile
+ up (about 200 of each after 12 delves) — there is still something missing to spend them on late in the game (ROADMAP M3).
+</li>
+<li><b>Not tested:</b> dragging items with a real mouse (only the rules behind it are tested), Windows, the internet.
+</li>
+</ul>
+</section>
+<section id="v0-4-0"><h2><span class="ver">0.4.0</span> 2026-10-23 — Crafting, bosses and the town's people</h2>
+<h3>Changed (balance)</h3>
+<ul>
+<li><b>Less gold:</b> fewer piles (22% vs 35% per kill), less per pile (1–4 vs 2–6), and the piles grow
+ more slowly with depth (+60% per floor vs +100%). On floor 5 a kill gives about 73% less gold than before.
+ Quest rewards: 15 vs 25 gold base amount.
+</li>
+<li><b>Fewer finished items:</b> 4% per ordinary monster (before 14%), 10% trolls (before 35%), 25% elites.
+ Rare and legendary items are now about 2% of the items that drop (before about 12%).
+</li>
+<li>The Forge no longer sells gear — instead it gives *master smithing* in the Workshop.
+</li>
+</ul>
+<h3>Added</h3>
+<ul>
+<li><b>Materials</b> from monsters: Scrap iron, Hide, Bones, Troll sinew and the rare Embers (elites, bosses,
+ treasure chests). They are kept in a store in town; what you have gathered on a delve is lost on death.
+</li>
+<li><b>The Workshop</b> in the town square: *Forge new* from recipes, *Upgrade* (+10% per step, max +3 / +5 with a Forge),
+ *Enchant* (a new property for Embers), *Reforge* (lift an old item to your smithing level) and *Take apart*.
+ The smithing level follows your deepest floor.
+</li>
+<li><b>14 recipes</b>: 3 known from the start, the rest are dropped by bosses — incl. 4 legendary ones (Dawnbreaker, Raven's Beak,
+ Giant's Hide, Wolf Fang).
+</li>
+<li><b>Bosses on every 5th floor</b> with their own skills and health bar; the stairs down are sealed until the boss is dead:
+ the Bone King (raises skeleton archers), the Troll Mother (stone fan), the Lantern Thief (steals lantern oil, summons
+ carrion eaters). Also works in co-op (the host controls the boss).
+</li>
+<li><b>The Sacrifice Stone</b>: ask a villager to leave (the building stands empty until a new one with the same trade is put in), or
+ *sacrifice* them. Each sacrifice = one level of <b>blood pact</b> (max 10): foes +12% life / +7% damage per level,
+ in return for +15% materials, +20% chance of better loot, +8% XP and more Embers. Can be broken at the stone.
+ *Assumption:* the pact is permanent until you break it yourself.
+</li>
+<li>Old savegames are loaded (villagers get IDs, known recipes are added). <code>Net.PROTOCOL</code> → <code>hearthdelve-mp-2</code>.
+</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>The Workshop and the Sacrifice Stone did not open their own windows (missing in <code>UiManager</code>); a new test covers all the town's windows.
+</li>
+<li>The materials line in the Workshop was shown vertically.
+</li>
+</ul>
+<h3>Tests</h3>
+<ul>
+<li>305 unit tests green, net test 41 + 11 green.
+</li>
+<li>Balance bot, careful (returns home when it is weak): in one run of 12 delves it beat floor 5's boss from
+ the 3rd delve and floor 10's boss in the 12th delve; in another of 10 delves it reached floor 5 three times and died against the boss twice.
+ Gold and materials pile up after about 10 delves — see ROADMAP M3.
+</li>
+<li>Balance bot, greedy (always goes deeper): dies every time on floors 3–4, never gets home with materials and
+ therefore never gets started with forging. The game now clearly rewards returning home in time.
+</li>
+<li>Not tested: how crafting *feels* for a real player, and the bosses over the internet.
+</li>
+</ul>
+</section>
+<section id="v0-3-0"><h2><span class="ver">0.3.0</span> 2026-10-22 — Graphics: more realistic models and atmosphere</h2>
+<p>Inspired by a reference picture (dark medieval, warm lantern light, brickwork, red banners, cages).</p>
+<h3>Added</h3>
+<ul>
+<li><b>Procedural textures</b> (<code>scripts/art/texture_factory.gd</code>): brick, tiles, cobblestones, wood, plaster, roof tiles,
+ cloth, leather, metal, skin, sand, grass, bark, stone — with normal maps and triplanar mapping. Generated the first time
+ (~3 s) and then saved in <code>user://texcache</code> (loaded in ~50 ms).
+</li>
+<li><b>Animated figures</b> (<code>scripts/art/character_model.gd</code>) on a small bone skeleton (hips, spine, head, arms, legs):
+ a hero with a cloak, a lantern in hand and the weapon equipped (sword/axe/daggers/spear); carrion eater, skeleton archer
+ with a bow, troll with a club, rat, bomb brute with a bomb, shaman with a staff, dark spirit; settlers and the town's people
+ (smith, alchemist, merchant, carpenter). Walking, attack and falling animations.
+</li>
+<li><b>Props</b> (<code>scripts/art/prop_factory.gd</code>): torches with flickering light and sparks, braziers, red banners,
+ chains, hanging cages with prisoners, pillars, crates, barrels, bones, a stone staircase portal, treasure chests, oil flasks,
+ coins, half-timbered houses with lit windows, lamp posts, a town wall with towers, trees, a well, a market stall, an anvil.
+</li>
+<li>The town in evening light, the dungeon lit by torches, the arena with sand and banners.
+</li>
+<li>Camera: zoom with the mouse wheel (closer zoom also lowers the angle). A vignette at the edge of the screen, glow (bloom), fog.
+</li>
+<li><b>Graphics setting High/Low</b> (the Esc menu) for weak computers: Low turns off normal maps, sparks, extra torches,
+ shadows and glow.
+</li>
+</ul>
+<h3>Performance</h3>
+<ul>
+<li>Many small parts are merged into a few meshes (<code>MeshBuilder</code>), models are cached per type, and the town's fixed scenery
+ is combined into one mesh. Measured: dungeon ~110–300 draw calls, town ~210–430. Floors are built in 0.1–0.3 s.
+</li>
+</ul>
+</section>
+<section id="v0-2-0"><h2><span class="ver">0.2.0</span> 2026-10-22 — Milestone 2: multiplayer</h2>
+<h3>Added</h3>
+<ul>
+<li><b>Multiplayer</b> (2–4 players): host/join via IP address (ENet, port 24565/UDP), version check.
+</li>
+<li>A start menu with name, *Play alone*, *Host*, *Join*. Esc → *Multiplayer*.
+</li>
+<li>The host's town as the meeting place; other players are shown with name, level and colour; a team list in the HUD.
+</li>
+<li><b>Co-op delves</b>: host-controlled foes (+60% life per extra player), personal loot, XP for everyone,
+ "knocked down" + revival, spectating after death, shared prisoners for the host's town, stairs choice for the whole team,
+ team wipe.
+</li>
+<li><b>Duel arena</b>: a challenge with stakes, each player's own arena with identical waves, a monster shop with a timer,
+ 8 monsters to send, an income system, battle gold, sudden death from round 7, the winner gets both stakes
+ + the loser's ear (a trophy trinket).
+</li>
+<li>New monsters: Rat, Bomb brute (explodes), Shaman (heals), Dark spirit (puts out the light).
+</li>
+<li>Tests: 53 new unit tests + a network test with two real game processes (<code>tests/run_net_test.sh</code>).
+</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>Foes choose the nearest valid player as their target; attacks are calculated per player.
+</li>
+<li>Windows do not pause the game when you play online.
+</li>
+<li>Decorative stones in the Deep use their own randomness (does not affect the game).
+</li>
+</ul>
+</section>
+<section id="v0-1-1"><h2><span class="ver">0.1.1</span> 2026-10-22</h2>
+<h3>Added</h3>
+<ul>
+<li>Linux build (x86_64, Ubuntu 22.04+). Export preset "Linux" in the project.
+</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>The <code>.godot/</code> cache was accidentally included in git; it has now been removed from the repo (it is in .gitignore).
+</li>
+</ul>
+</section>
+<section id="v0-1-0"><h2><span class="ver">0.1.0</span> 2026-10-22 — Milestone 1: core prototype</h2>
+<h3>Added</h3>
+<ul>
+<li>Godot 4.7 project (GL Compatibility) with a town scene and procedurally generated dungeon floors.
+</li>
+<li>Combat: arc swings, dodge with invulnerability, healing drinks, critical hits, life drain, damage numbers, camera shake.
+</li>
+<li>Foes: Carrion eater (melee), Bone archer (ranged), Troll (telegraphed area slam), elites. A* navigation.
+</li>
+<li>Loot: 4 weapon types, 3 armours, 3 trinkets, 4 rarities, 14 properties, 4 legendary effects.
+</li>
+<li>Lantern oil as survival pressure (darkness makes foes stronger).
+</li>
+<li>The stairs choice: go deeper or use the rune of return.
+</li>
+<li>Prisoners in cages, who follow you and move to the town if you make it home.
+</li>
+<li>Town: chest, peddler (buy/sell), notice board with 4 quest types, 6 plots, 4 buildings.
+</li>
+<li>Skill tree: 6 branches, 36 nodes (~180 ranks), 12 keystone skills, levels 1–100.
+</li>
+<li>Death: lose gold, backpack, equipped gear and escort; keep level/skills/town/chest. Anti-cheat protection for closing during a delve.
+</li>
+<li>Save/load (JSON), HUD, 11 windows, help screen.
+</li>
+<li>163 automated tests, bot balance simulation, screenshot script, Windows export preset.
+</li>
+</ul>
+<h3>Balance (from bot simulation)</h3>
+<ul>
+<li>Weapon damage per item level 12% → 9%, foe life per floor 20% → 25%, foe damage 12% → 14%.
+</li>
+<li>Prisoner chance 55% → 40%. Carrion eater damage 9 → 7.
+</li>
+<li>The Peddler always sells simple gear, so you can get back on your feet after a death.
+</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Foes and the bot got stuck on door frames (the navigation grid is now inflated 1 m).
+</li>
+<li>"Nearest free tile" could jump through a wall (now uses physical geometry).
+</li>
+<li>Loot could end up inside walls/crates (now moved to the nearest free tile).
+</li>
+</ul>
+</section><footer>Made automatically (version 1.6.4).</footer></main><script>
+const q=document.getElementById('q');
+q&&q.addEventListener('input',()=>{const t=q.value.trim().toLowerCase();
+document.querySelectorAll('main section').forEach(s=>{let any=false;
+s.querySelectorAll('tbody tr, li, p').forEach(r=>{const m=!t||r.textContent.toLowerCase().includes(t);r.classList.toggle('hide',!m);if(m)any=true});
+s.classList.toggle('hide',!!t&&!any&&!s.textContent.toLowerCase().includes(t));});});
+</script></body></html>

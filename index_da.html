@@ -1,0 +1,3205 @@
+<!doctype html>
+<html lang="da"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hearthdelve — Wiki</title><style>
+:root{--bg:#14110e;--panel:#1d1915;--panel2:#252019;--line:#3a3127;--text:#ece4d3;--muted:#a89c86;--gold:#e8bf55;--accent:#c96a3a;--link:#f0c66a}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:12px}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.55 Georgia,'Iowan Old Style','Palatino Linotype',serif;display:flex;min-height:100vh}
+nav#toc{position:sticky;top:0;align-self:flex-start;height:100vh;overflow:auto;width:250px;flex:none;background:var(--panel);border-right:1px solid var(--line);padding:18px 14px}
+.brand{font:700 22px/1.1 Georgia,serif;color:var(--gold);letter-spacing:.5px;margin-bottom:14px}.brand span{display:block;font:400 12px/1.6 system-ui,sans-serif;color:var(--muted);letter-spacing:0}
+nav#toc a{display:block;color:var(--text);text-decoration:none;padding:5px 8px;border-radius:6px;font:14px/1.3 system-ui,sans-serif}
+nav#toc a:hover{background:var(--panel2);color:var(--gold)}nav#toc a.cl{margin-top:12px;color:var(--link);border:1px solid var(--line)}nav#toc a.lng{display:inline-block;margin:0 0 10px;font-size:12px;color:var(--muted);border:1px solid var(--line);padding:2px 8px}
+#q{width:100%;margin:0 0 12px;padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:#0f0d0b;color:var(--text);font:14px system-ui,sans-serif}
+main{flex:1;min-width:0;padding:24px 34px 60px;max-width:1200px}
+section{margin-bottom:34px}h2{font:700 26px/1.2 Georgia,serif;color:var(--gold);border-bottom:1px solid var(--line);padding-bottom:6px;margin:0 0 12px}
+h3{font:700 18px/1.3 Georgia,serif;color:#e9d7a9;margin:22px 0 8px}p{margin:8px 0}.intro{color:var(--muted)}
+a{color:var(--link)}code{background:#0f0d0b;border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
+.tw{overflow-x:auto;margin:8px 0 14px;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;font:14px/1.45 system-ui,sans-serif}table.small{width:auto;min-width:340px}
+th{position:sticky;top:0;background:var(--panel2);color:var(--gold);text-align:left;font-weight:600;padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:7px 10px;border-bottom:1px solid #2a241d;vertical-align:top}tr:nth-child(even) td{background:#191510}tr:hover td{background:#211c16}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:7px;vertical-align:middle;border:1px solid #0006}
+.leg{font-size:11px;color:#ff9a3c;border:1px solid #ff9a3c66;border-radius:4px;padding:0 4px;margin-left:4px}
+.ver{display:inline-block;background:var(--accent);color:#fff;border-radius:6px;padding:0 8px;margin-right:6px;font:600 16px/1.5 system-ui,sans-serif;vertical-align:middle}
+ul{padding-left:22px}.nw{white-space:nowrap}.muted{color:var(--muted);font-size:12px}li{margin:5px 0}footer{color:var(--muted);font:12px system-ui,sans-serif;margin-top:40px;border-top:1px solid var(--line);padding-top:10px}
+.hide{display:none!important}mark{background:#e8bf5555;color:inherit;border-radius:3px}
+@media (max-width:820px){body{display:block}nav#toc{position:static;width:auto;height:auto;border-right:0;border-bottom:1px solid var(--line)}nav#toc a{display:inline-block}main{padding:16px}}
+</style></head><body><nav id="toc"><div class="brand">Hearthdelve<span>Wiki · version 1.6.4</span></div><a class="lng" href="index.html">English</a><input id="q" type="search" placeholder="Søg i wikien ..." autocomplete="off"><a href="#start">Velkommen til Hearthdelve</a><a href="#klasser">Klasser og evner</a><a href="#monstre">Monstre</a><a href="#etager">Etager, temaer og verdener</a><a href="#bytte">Bytte og dropchancer</a><a href="#udstyr">Udstyr</a><a href="#saet">Sætting</a><a href="#navngivne">Navngivne ting</a><a href="#relikvier">Relikvier</a><a href="#opskrifter">Opskrifter</a><a href="#materialer">Materialer</a><a href="#forbrug">Drikke, svampe og samlerting</a><a href="#byen">Byen</a><a href="#regler">Gode at vide</a><a class="cl" href="changelog_da.html">Ændringslog &rarr;</a></nav><main><section id="start"><h2>Velkommen til Hearthdelve</h2>
+<p>Byg din by over Dybet, dyk ned efter guld, materialer og udstyr, og kom levende hjem. Dør du dernede, mister du alt, du bærer — kun kisten i byen er sikker. Her kan du slå alt op: monstre, dropchancer, hvor tingene findes, opskrifter og byens bygninger.</p>
+<p>Spillet er på version <b>1.6.4</b>. Se hvad der er nyt i <a href="changelog_da.html">ændringsloggen</a>.</p>
+</section>
+<section id="klasser"><h2>Klasser og evner</h2>
+<p class="intro">Hver helt har en klasse med tre grene i evnetræet. Klassens foretrukne våben giver +20 % skade og +10 % angrebshastighed.</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Klasse</th>
+<th>Beskrivelse</th>
+<th>Foretrukne våben</th>
+<th>Starter med</th>
+</tr></thead><tbody>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#d94d38"></span><b>Barbar</b></span></td>
+<td>Nærkæmper med økse og råstyrke. Meget liv, lidt mana. Kløver, brøler og springer ind i flokken.</td>
+<td>Økse, Sværd</td>
+<td>Økse</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#598cff"></span><b>Magiker</b></span></td>
+<td>Kaster ild, frost og lyn på afstand med sin stav. Lidt liv, masser af mana.</td>
+<td>Stav</td>
+<td>Stav</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#59bf4d"></span><b>Jæger</b></span></td>
+<td>Skytte med bue (eller spyd). Pilesalver, fælder og en kæmperotte ved sin side.</td>
+<td>Bue, Spyd</td>
+<td>Bue</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#9e73d9"></span><b>Tyv</b></span></td>
+<td>Hurtig og dødbringende med dolke. Skyggespring, gift og røgbomber.</td>
+<td>Dolke</td>
+<td>Dolke</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#8cd98c"></span><b>Nekromantiker</b></span></td>
+<td>Hersker over de døde med sin le. Rejser skeletter, kaster knoglespyd og forbander fjender.</td>
+<td>Le</td>
+<td>Le</td>
+</tr>
+</tbody></table></div>
+<h3>Barbar — evner</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Tast</th>
+<th>Evne</th>
+<th>Hvad den gør</th>
+<th>Mana</th>
+<th>Nedkøling</th>
+<th>Rang 1</th>
+</tr></thead><tbody>
+<tr>
+<td><span class="nw">Tast 1</span></td>
+<td><b>Kløvende hug</b></td>
+<td>Et vældigt hug i en bred bue foran dig.</td>
+<td>8</td>
+<td>—</td>
+<td>130% skade · Mana: 8</td>
+</tr>
+<tr>
+<td><span class="nw">Tast 2</span></td>
+<td><b>Krigsråb</b></td>
+<td>Mere skade og rustning i en tid. Nære fjender vakler (sænkes).</td>
+<td>14</td>
+<td>12 s</td>
+<td>+25% skade, +20 rustning i 8 s · Mana: 14   Nedkøling: 12 s</td>
+</tr>
+<tr>
+<td><span class="nw">Tast 3</span></td>
+<td><b>Spring</b></td>
+<td>Spring hen mod musen og knus alt, hvor du lander.</td>
+<td>10</td>
+<td>4 s</td>
+<td>140% skade · Mana: 10   Nedkøling: 4 s</td>
+</tr>
+<tr>
+<td><span class="nw">Tast 4</span></td>
+<td><b>Hvirvelvind</b></td>
+<td>Hvirvl rundt i et par sekunder og ram alt omkring dig igen og igen.</td>
+<td>28</td>
+<td>10 s</td>
+<td>40% skade · Mana: 28   Nedkøling: 10 s</td>
+</tr>
+</tbody></table></div>
+<div class="tw"><table class=""><thead><tr>
+<th>Gren</th>
+<th>Om grenen</th>
+<th>Færdigheder</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Krigsførelse</b></td>
+<td>Våbnet. Rå skade og brede sving.</td>
+<td>Kløvende hug, Skarpe ægge, Hurtige hug, Bredt sving, Hvirvelvind, Henrettelse, Våbenmester</td>
+</tr>
+<tr>
+<td><b>Raseri</b></td>
+<td>Lev af kampen.</td>
+<td>Krigsråb, Livsdræn, Seje sener, Raseri, Blodtørst, Kampgejst, Bersærk</td>
+</tr>
+<tr>
+<td><b>Urkraft</b></td>
+<td>Liv, rustning og udholdenhed.</td>
+<td>Spring, Robust, Hærdet hud, Ekstra feltflaske, Ubrydelig, Tornehud, Bjerget</td>
+</tr>
+</tbody></table></div>
+<h3>Magiker — evner</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Tast</th>
+<th>Evne</th>
+<th>Hvad den gør</th>
+<th>Mana</th>
+<th>Nedkøling</th>
+<th>Rang 1</th>
+</tr></thead><tbody>
+<tr>
+<td><span class="nw">Tast 1</span></td>
+<td><b>Ildkugle</b></td>
+<td>En kugle af ild, der eksploderer ved det første, den rammer.</td>
+<td>9</td>
+<td>—</td>
+<td>150% skade · Mana: 9</td>
+</tr>
+<tr>
+<td><span class="nw">Tast 2</span></td>
+<td><b>Frostnova</b></td>
+<td>En ring af is omkring dig: skade, og fjenderne sænkes kraftigt.</td>
+<td>14</td>
+<td>3 s</td>
+<td>100% skade, sænker i 3.0 s · Mana: 14   Nedkøling: 3 s</td>
+</tr>
+<tr>
+<td><span class="nw">Tast 3</span></td>
+<td><b>Lynkæde</b></td>
+<td>Et lyn springer fra fjende til fjende.</td>
+<td>12</td>
+<td>—</td>
+<td>120% skade, 3 spring · Mana: 12</td>
+</tr>
+<tr>
+<td><span class="nw">Tast 4</span></td>
+<td><b>Meteor</b></td>
+<td>Kald en meteor ned ved musen. Den slår ned efter et øjeblik.</td>
+<td>30</td>
+<td>10 s</td>
+<td>400% skade · Mana: 30   Nedkøling: 10 s</td>
+</tr>
+</tbody></table></div>
+<div class="tw"><table class=""><thead><tr>
+<th>Gren</th>
+<th>Om grenen</th>
+<th>Færdigheder</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Ild</b></td>
+<td>Eksplosioner og ødelæggelse.</td>
+<td>Ildkugle, Brændende vilje, Gnistregn, Indre glød, Meteor, Ærkemagiker</td>
+</tr>
+<tr>
+<td><b>Frost</b></td>
+<td>Beskyttelse og kontrol.</td>
+<td>Frostnova, Isrustning, Kold puls, Dyb brønd, Isblok, Isskjold</td>
+</tr>
+<tr>
+<td><b>Storm</b></td>
+<td>Fart, mana og lys.</td>
+<td>Lynkæde, Strømmen, Hurtige hænder, Lysbærer, Blink, Medvind, Natøje</td>
+</tr>
+</tbody></table></div>
+<h3>Jæger — evner</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Tast</th>
+<th>Evne</th>
+<th>Hvad den gør</th>
+<th>Mana</th>
+<th>Nedkøling</th>
+<th>Rang 1</th>
+</tr></thead><tbody>
+<tr>
+<td><span class="nw">Tast 1</span></td>
+<td><b>Pilesalve</b></td>
+<td>Skyd en vifte af pile på én gang.</td>
+<td>9</td>
+<td>—</td>
+<td>80% skade, 5 projektiler · Mana: 9</td>
+</tr>
+<tr>
+<td><span class="nw">Tast 2</span></td>
+<td><b>Sprængfælde</b></td>
+<td>Læg en fælde ved musen. Den sprænger, når en fjende kommer nær (højst 3 ad gangen).</td>
+<td>12</td>
+<td>1 s</td>
+<td>240% skade · Mana: 12   Nedkøling: 1 s</td>
+</tr>
+<tr>
+<td><span class="nw">Tast 3</span></td>
+<td><b>Gennemborende pil</b></td>
+<td>En pil, der flyver gennem alle fjender på sin vej.</td>
+<td>7</td>
+<td>—</td>
+<td>170% skade · Mana: 7</td>
+</tr>
+<tr>
+<td><span class="nw">Tast 4</span></td>
+<td><b>Rottekald</b></td>
+<td>Kald en kæmperotte, der kæmper ved din side i en tid.</td>
+<td>25</td>
+<td>14 s</td>
+<td>80% skade, 120 liv · Mana: 25   Nedkøling: 14 s</td>
+</tr>
+</tbody></table></div>
+<div class="tw"><table class=""><thead><tr>
+<th>Gren</th>
+<th>Om grenen</th>
+<th>Færdigheder</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Skytte</b></td>
+<td>Præcision og kritiske skud.</td>
+<td>Pilesalve, Spændt streng, Falkeblik, Gennemborende pil, Dybe sår, Dødsmærke</td>
+</tr>
+<tr>
+<td><b>Fælder</b></td>
+<td>Fælder og bytte.</td>
+<td>Sprængfælde, Sporfinder, Skattejæger, Hurtig hånd, Befrier</td>
+</tr>
+<tr>
+<td><b>Vildmark</b></td>
+<td>Overleveren og hans kæmperotte.</td>
+<td>Større lanterne, Rottekald, Sparsom flamme, Ekstra feltflaske, Let på tå, Overlever, Ådselgrib</td>
+</tr>
+</tbody></table></div>
+<h3>Tyv — evner</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Tast</th>
+<th>Evne</th>
+<th>Hvad den gør</th>
+<th>Mana</th>
+<th>Nedkøling</th>
+<th>Rang 1</th>
+</tr></thead><tbody>
+<tr>
+<td><span class="nw">Tast 1</span></td>
+<td><b>Skyggespring</b></td>
+<td>Spring op bag fjenden nærmest musen og stik til — altid et kritisk slag.</td>
+<td>9</td>
+<td>2 s</td>
+<td>160% skade · Mana: 9   Nedkøling: 2 s</td>
+</tr>
+<tr>
+<td><span class="nw">Tast 2</span></td>
+<td><b>Giftklinge</b></td>
+<td>Dine hug forgifter fjender i en tid (skade over 4 sekunder).</td>
+<td>12</td>
+<td>10 s</td>
+<td>gift: 50% skade pr. hug i 10 s · Mana: 12   Nedkøling: 10 s</td>
+</tr>
+<tr>
+<td><span class="nw">Tast 3</span></td>
+<td><b>Røgbombe</b></td>
+<td>Kast røg ved musen. Fjender i røgen kan ikke angribe i et par sekunder.</td>
+<td>14</td>
+<td>10 s</td>
+<td>blinder i 3.0 s · Mana: 14   Nedkøling: 10 s</td>
+</tr>
+<tr>
+<td><span class="nw">Tast 4</span></td>
+<td><b>Dolkeregn</b></td>
+<td>Kast dolke i alle retninger.</td>
+<td>20</td>
+<td>6 s</td>
+<td>90% skade, 12 projektiler · Mana: 20   Nedkøling: 6 s</td>
+</tr>
+</tbody></table></div>
+<div class="tw"><table class=""><thead><tr>
+<th>Gren</th>
+<th>Om grenen</th>
+<th>Færdigheder</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Skygge</b></td>
+<td>Kritiske slag og baghold.</td>
+<td>Skyggespring, Skarpt øje, Dybe sår, Baghold, Skyggetrin, Dødsmærke</td>
+</tr>
+<tr>
+<td><b>Gift</b></td>
+<td>Langsom død og hurtige klinger.</td>
+<td>Giftklinge, Hurtige hænder, Blodigler, Snigmorder, Dolkeregn, Blodtørst</td>
+</tr>
+<tr>
+<td><b>Kneb</b></td>
+<td>Røg, list og guld.</td>
+<td>Røgbombe, Let på tå, Lange fingre, Købmandsblod, Kistens velsignelse, Skattejæger, Guldfeber</td>
+</tr>
+</tbody></table></div>
+<h3>Nekromantiker — evner</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Tast</th>
+<th>Evne</th>
+<th>Hvad den gør</th>
+<th>Mana</th>
+<th>Nedkøling</th>
+<th>Rang 1</th>
+</tr></thead><tbody>
+<tr>
+<td><span class="nw">Tast 1</span></td>
+<td><b>Knoglespyd</b></td>
+<td>Et spyd af knogle, der borer sig gennem fjenderne.</td>
+<td>8</td>
+<td>—</td>
+<td>160% skade · Mana: 8</td>
+</tr>
+<tr>
+<td><span class="nw">Tast 2</span></td>
+<td><b>Rejs skelet</b></td>
+<td>Rejs en skeletkriger. Du kan have flere ad gangen med højere rang. De bliver på etagen.</td>
+<td>15</td>
+<td>1 s</td>
+<td>60% skade, 80 liv, højst 2 ad gangen · Mana: 15   Nedkøling: 1 s</td>
+</tr>
+<tr>
+<td><span class="nw">Tast 3</span></td>
+<td><b>Svækkelse</b></td>
+<td>Forband fjender ved musen: de tager mere skade og gør 20% mindre.</td>
+<td>12</td>
+<td>4 s</td>
+<td>+25% skade på dem i 8 s · Mana: 12   Nedkøling: 4 s</td>
+</tr>
+<tr>
+<td><span class="nw">Tast 4</span></td>
+<td><b>Ligeksplosion</b></td>
+<td>Sprænger det nyligt døde lig nærmest musen. Skaden følger ligets maks. liv.</td>
+<td>18</td>
+<td>2 s</td>
+<td>35% skade · Mana: 18   Nedkøling: 2 s</td>
+</tr>
+</tbody></table></div>
+<div class="tw"><table class=""><thead><tr>
+<th>Gren</th>
+<th>Om grenen</th>
+<th>Færdigheder</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Knogler</b></td>
+<td>Knoglespyd og lig, der sprænger.</td>
+<td>Knoglespyd, Marvens kraft, Splinter, Knoglerustning, Ligeksplosion, Høstens herre</td>
+</tr>
+<tr>
+<td><b>Hæren</b></td>
+<td>De døde kæmper for dig.</td>
+<td>Rejs skelet, Gravens styrke, Ubegravet, Sjæledræn, Dødens nægtelse, Mørkets tjenere</td>
+</tr>
+<tr>
+<td><b>Forbandelser</b></td>
+<td>Svækkelse, blod og mørke.</td>
+<td>Svækkelse, Livsdræn, Mørk brønd, Gravlys, Blodtørst, Sparsom flamme, Natøje</td>
+</tr>
+</tbody></table></div>
+<h3>Underklasser (genfødsel / prestige)</h3>
+<p>Når du har besejret Helvede (hellig underklasse) eller Himmeltrappen (vanhellig), kan helten genfødes: niveau 1, alt i Arvekisten, intet guld, blodpagten brydes — men med en underklasse, en ny gren, en evne på tast 5 og +5 % skade og +5 % liv for hver genfødsel. Herefter kan helten kun bruge udstyr fra sit eget prestigeniveau (&quot;Prestige N&quot;-ting).</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Underklasse</th>
+<th>Klasse</th>
+<th>Side</th>
+<th>Beskrivelse</th>
+<th>Evne (tast 5)</th>
+</tr></thead><tbody>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#ffd966"></span><b>Paladin</b></span></td>
+<td>Barbar</td>
+<td>Hellig</td>
+<td>Lysets kriger. Hellig vrede helbreder dig, mens den knuser alt omkring dig.</td>
+<td>Hellig vrede</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#73a6ff"></span><b>Dødsridder</b></span></td>
+<td>Barbar</td>
+<td>Vanhellig</td>
+<td>En kriger, der har bøjet sig for mørket. Dødsgreb river liv ud af fjenderne.</td>
+<td>Dødsgreb</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#fff299"></span><b>Lysvæver</b></span></td>
+<td>Magiker</td>
+<td>Hellig</td>
+<td>Magikeren, der væver selve lyset. Kalder en søjle af himmelsk lys ned.</td>
+<td>Lyssøjle</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#b359ff"></span><b>Tomrumsmagiker</b></span></td>
+<td>Magiker</td>
+<td>Vanhellig</td>
+<td>Magikeren, der har set ind i tomrummet. Lyn af intet springer fra fjende til fjende.</td>
+<td>Tomrumslyn</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#d9f2ff"></span><b>Himmelskytte</b></span></td>
+<td>Jæger</td>
+<td>Hellig</td>
+<td>En skytte velsignet af himlen. Skyder en regn af lysende pile.</td>
+<td>Himlens salve</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#ff6626"></span><b>Skyggejæger</b></span></td>
+<td>Jæger</td>
+<td>Vanhellig</td>
+<td>Jægeren, der jager med Helvedes rotter. Kalder to helvedesrotter.</td>
+<td>Helvedesrotter</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#ffbf4d"></span><b>Inkvisitor</b></span></td>
+<td>Tyv</td>
+<td>Hellig</td>
+<td>Tyven, der blev dommer. Dommen rammer som et lyn bag fjenden — altid kritisk.</td>
+<td>Dom</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#8c4dbf"></span><b>Natteskygge</b></span></td>
+<td>Tyv</td>
+<td>Vanhellig</td>
+<td>En snigmorder af natten. Et slør af mørke blinder og forgifter alt i det.</td>
+<td>Natteslør</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#e6ffcc"></span><b>Gravpræst</b></span></td>
+<td>Nekromantiker</td>
+<td>Hellig</td>
+<td>Nekromantikeren, der giver de døde fred. Helligt lys sårer fjender og heler dig.</td>
+<td>Helligt lys</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#66ff99"></span><b>Lich</b></span></td>
+<td>Nekromantiker</td>
+<td>Vanhellig</td>
+<td>Nekromantikeren, der selv blev udød. En storm af sjæle flyver ud fra dig.</td>
+<td>Sjælestorm</td>
+</tr>
+</tbody></table></div>
+<h3>Prestigemærker</h3>
+<div class="tw"><table class="small"><thead><tr>
+<th>Prestige</th>
+<th>Mærke</th>
+</tr></thead><tbody>
+<tr>
+<td>1</td>
+<td><span class="dot" style="background:#cc8042"></span>Bronze</td>
+</tr>
+<tr>
+<td>2</td>
+<td><span class="dot" style="background:#ccd4e0"></span>Sølv</td>
+</tr>
+<tr>
+<td>3</td>
+<td><span class="dot" style="background:#ffcc40"></span>Guld</td>
+</tr>
+<tr>
+<td>4</td>
+<td><span class="dot" style="background:#8cf2e0"></span>Platin</td>
+</tr>
+<tr>
+<td>5</td>
+<td><span class="dot" style="background:#73b8ff"></span>Diamant</td>
+</tr>
+<tr>
+<td>6</td>
+<td><span class="dot" style="background:#f23852"></span>Mester</td>
+</tr>
+<tr>
+<td>7+</td>
+<td><span class="dot" style="background:#c76bff"></span>Legende</td>
+</tr>
+</tbody></table></div>
+</section>
+<section id="monstre"><h2>Monstre</h2>
+<p class="intro">Monstrene er lige så stærke som din helt + 10 % (liv, skade pr. hug og rustning) — på etage 1 halvdelen af det, og fuld styrke fra etage 10. Hver slags har sin egen styrke i forhold til de andre (kolonnen &quot;Styrke&quot;: 1 = et gennemsnitligt monster). Elitemonstre har 2,6x liv og 1,4x skade. De angriber 20 % hurtigere for hver etage (højst 4 gange så hurtigt).</p>
+<h3>Krypten</h3>
+<p>Vogtere (hver 5. etage, på skift): Knoglekongen, Lygtetyven.</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Andel af monstrene</th>
+<th>Optræder</th>
+<th>Styrke (liv / skade)</th>
+<th>Slags</th>
+<th>Materialer (chance pr. drab)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Knokkelskytte</b></td>
+<td>25 %</td>
+<td>alle</td>
+<td>0,45 / 0,54</td>
+<td>skytte</td>
+<td>Knogler 45 %, Jernskrot 50 %</td>
+</tr>
+<tr>
+<td><b>Ådselæder</b></td>
+<td>16 %</td>
+<td>alle</td>
+<td>0,62 / 0,62</td>
+<td>nærkamp</td>
+<td>Skind 35 %, Knogler 20 %, Jernskrot 20 %</td>
+</tr>
+<tr>
+<td><b>Gravvagt</b></td>
+<td>25 %</td>
+<td>alle</td>
+<td>0,82 / 0,71</td>
+<td>nærkamp</td>
+<td>Knogler 45 %, Jernskrot 35 %</td>
+</tr>
+<tr>
+<td><b>Knoglehund</b></td>
+<td>15 %</td>
+<td><span class="nw">fra etage 2</span></td>
+<td>0,49 / 0,71</td>
+<td>stormer</td>
+<td>Knogler 50 %</td>
+</tr>
+<tr>
+<td><b>Gravkultist</b></td>
+<td>11 %</td>
+<td><span class="nw">fra etage 3</span></td>
+<td>0,54 / 0,98</td>
+<td>zoner</td>
+<td>Knogler 30 %, Skind 30 %</td>
+</tr>
+<tr>
+<td><b>Mørkeånd</b></td>
+<td>8,2 %</td>
+<td><span class="nw">fra etage 4</span></td>
+<td>0,93 / 0,8</td>
+<td>nærkamp</td>
+<td>Knogler 45 %</td>
+</tr>
+</tbody></table></div>
+<h3>Troldegrotten</h3>
+<p>Vogtere (hver 5. etage, på skift): Troldemoderen, Spindeldronningen.</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Andel af monstrene</th>
+<th>Optræder</th>
+<th>Styrke (liv / skade)</th>
+<th>Slags</th>
+<th>Materialer (chance pr. drab)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Huleplyndrer</b></td>
+<td>25 %</td>
+<td>alle</td>
+<td>0,37 / 0,45</td>
+<td>nærkamp</td>
+<td>Skind 35 %, Jernskrot 15 %</td>
+</tr>
+<tr>
+<td><b>Rotte</b></td>
+<td>21 %</td>
+<td>alle</td>
+<td>0,25 / 0,36</td>
+<td>nærkamp</td>
+<td>Skind 30 %</td>
+</tr>
+<tr>
+<td><b>Hulespinder</b></td>
+<td>21 %</td>
+<td><span class="nw">fra etage 2</span></td>
+<td>0,54 / 0,71</td>
+<td>stormer</td>
+<td>Troldesener 35 %, Skind 20 %</td>
+</tr>
+<tr>
+<td><b>Sporesvamp</b></td>
+<td>13 %</td>
+<td><span class="nw">fra etage 2</span></td>
+<td>0,7 / 0,62</td>
+<td>zoner</td>
+<td>Skind 25 %, Troldesener 15 %</td>
+</tr>
+<tr>
+<td><b>Trold</b></td>
+<td>13 %</td>
+<td><span class="nw">fra etage 3</span></td>
+<td>2,47 / 1,78</td>
+<td>knuser</td>
+<td>Troldesener 70 %, Jernskrot 60 %, Skind 30 %</td>
+</tr>
+<tr>
+<td><b>Shaman</b></td>
+<td>5,9 %</td>
+<td><span class="nw">fra etage 4</span></td>
+<td>0,78 / 0</td>
+<td>helbreder</td>
+<td>Knogler 35 %, Skind 35 %</td>
+</tr>
+</tbody></table></div>
+<h3>Den Sunkne Fæstning</h3>
+<p>Vogtere (hver 5. etage, på skift): Den Druknede Admiral, Jernkrabben.</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Andel af monstrene</th>
+<th>Optræder</th>
+<th>Styrke (liv / skade)</th>
+<th>Slags</th>
+<th>Materialer (chance pr. drab)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Druknet soldat</b></td>
+<td>38 %</td>
+<td>alle</td>
+<td>0,66 / 0,71</td>
+<td>nærkamp</td>
+<td>Jernskrot 35 %, Knogler 25 %</td>
+</tr>
+<tr>
+<td><b>Armbrøstskytte</b></td>
+<td>22 %</td>
+<td>alle</td>
+<td>0,62 / 0,71</td>
+<td>skytte</td>
+<td>Jernskrot 45 %, Knogler 30 %</td>
+</tr>
+<tr>
+<td><b>Klippekrabbe</b></td>
+<td>15 %</td>
+<td><span class="nw">fra etage 3</span></td>
+<td>1,44 / 1,43</td>
+<td>knuser</td>
+<td>Jernskrot 50 %, Troldesener 40 %</td>
+</tr>
+<tr>
+<td><b>Bombebasse</b></td>
+<td>13 %</td>
+<td><span class="nw">fra etage 3</span></td>
+<td>0,54 / 2,68</td>
+<td>eksploderer</td>
+<td>Jernskrot 45 %, Skind 20 %</td>
+</tr>
+<tr>
+<td><b>Ådselæder</b></td>
+<td>11 %</td>
+<td>alle</td>
+<td>0,62 / 0,62</td>
+<td>nærkamp</td>
+<td>Skind 35 %, Knogler 20 %, Jernskrot 20 %</td>
+</tr>
+</tbody></table></div>
+<h3>Askesmedjen</h3>
+<p>Vogtere (hver 5. etage, på skift): Askesmeden, Magmamoderen.</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Andel af monstrene</th>
+<th>Optræder</th>
+<th>Styrke (liv / skade)</th>
+<th>Slags</th>
+<th>Materialer (chance pr. drab)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Glødeimp</b></td>
+<td>26 %</td>
+<td>alle</td>
+<td>0,37 / 0,45</td>
+<td>skytte</td>
+<td>Skind 30 %, Knogler 15 %</td>
+</tr>
+<tr>
+<td><b>Magmaklump</b></td>
+<td>29 %</td>
+<td>alle</td>
+<td>0,62 / 0,8</td>
+<td>nærkamp</td>
+<td>Jernskrot 30 %</td>
+</tr>
+<tr>
+<td><b>Bombebasse</b></td>
+<td>19 %</td>
+<td><span class="nw">fra etage 2</span></td>
+<td>0,54 / 2,68</td>
+<td>eksploderer</td>
+<td>Jernskrot 45 %, Skind 20 %</td>
+</tr>
+<tr>
+<td><b>Smedegolem</b></td>
+<td>14 %</td>
+<td><span class="nw">fra etage 4</span></td>
+<td>2,47 / 1,96</td>
+<td>knuser</td>
+<td>Jernskrot 80 %, Troldesener 30 %</td>
+</tr>
+<tr>
+<td><b>Ådselæder</b></td>
+<td>12 %</td>
+<td>alle</td>
+<td>0,62 / 0,62</td>
+<td>nærkamp</td>
+<td>Skind 35 %, Knogler 20 %, Jernskrot 20 %</td>
+</tr>
+</tbody></table></div>
+<h3>Guldkammeret</h3>
+<p>Skattevogter: Den Grådige Kiste.</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Andel af monstrene</th>
+<th>Optræder</th>
+<th>Styrke (liv / skade)</th>
+<th>Slags</th>
+<th>Materialer (chance pr. drab)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Forgyldt vagt</b></td>
+<td>33 %</td>
+<td>alle</td>
+<td>0,86 / 0,89</td>
+<td>nærkamp</td>
+<td>Jernskrot 40 %, Knogler 35 %</td>
+</tr>
+<tr>
+<td><b>Huleplyndrer</b></td>
+<td>33 %</td>
+<td>alle</td>
+<td>0,37 / 0,45</td>
+<td>nærkamp</td>
+<td>Skind 35 %, Jernskrot 15 %</td>
+</tr>
+<tr>
+<td><b>Kistemimik</b></td>
+<td>17 %</td>
+<td>alle</td>
+<td>1,03 / 1,25</td>
+<td>stormer</td>
+<td>Jernskrot 50 %, Skind 30 %</td>
+</tr>
+<tr>
+<td><b>Rotte</b></td>
+<td>17 %</td>
+<td>alle</td>
+<td>0,25 / 0,36</td>
+<td>nærkamp</td>
+<td>Skind 30 %</td>
+</tr>
+</tbody></table></div>
+<h3>Regnbuehulen</h3>
+<p>Skattevogter: Prismevogteren.</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Andel af monstrene</th>
+<th>Optræder</th>
+<th>Styrke (liv / skade)</th>
+<th>Slags</th>
+<th>Materialer (chance pr. drab)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Krystalånd</b></td>
+<td>33 %</td>
+<td>alle</td>
+<td>0,58 / 0,54</td>
+<td>skytte</td>
+<td>Knogler 35 %</td>
+</tr>
+<tr>
+<td><b>Prismebille</b></td>
+<td>42 %</td>
+<td>alle</td>
+<td>0,74 / 0,8</td>
+<td>stormer</td>
+<td>Troldesener 35 %, Skind 25 %</td>
+</tr>
+<tr>
+<td><b>Mørkeånd</b></td>
+<td>14 %</td>
+<td>alle</td>
+<td>0,93 / 0,8</td>
+<td>nærkamp</td>
+<td>Knogler 45 %</td>
+</tr>
+<tr>
+<td><b>Shaman</b></td>
+<td>11 %</td>
+<td>alle</td>
+<td>0,78 / 0</td>
+<td>helbreder</td>
+<td>Knogler 35 %, Skind 35 %</td>
+</tr>
+</tbody></table></div>
+<h3>Brønden — Under vandet</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Andel af monstrene</th>
+<th>Optræder</th>
+<th>Styrke (liv / skade)</th>
+<th>Slags</th>
+<th>Materialer (chance pr. drab)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Druknet soldat</b></td>
+<td>50 %</td>
+<td>alle</td>
+<td>0,66 / 0,71</td>
+<td>nærkamp</td>
+<td>Jernskrot 35 %, Knogler 25 %</td>
+</tr>
+<tr>
+<td><b>Klippekrabbe</b></td>
+<td>33 %</td>
+<td>alle</td>
+<td>1,44 / 1,43</td>
+<td>knuser</td>
+<td>Jernskrot 50 %, Troldesener 40 %</td>
+</tr>
+<tr>
+<td><b>Ofrets genfærd</b></td>
+<td>17 %</td>
+<td>alle</td>
+<td>1,03 / 0,98</td>
+<td>nærkamp</td>
+<td>Knogler 50 %, Troldesener 15 %</td>
+</tr>
+</tbody></table></div>
+<h3>Brønden — Den glemte krypt</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Andel af monstrene</th>
+<th>Optræder</th>
+<th>Styrke (liv / skade)</th>
+<th>Slags</th>
+<th>Materialer (chance pr. drab)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Gravvagt</b></td>
+<td>32 %</td>
+<td>alle</td>
+<td>0,82 / 0,71</td>
+<td>nærkamp</td>
+<td>Knogler 45 %, Jernskrot 35 %</td>
+</tr>
+<tr>
+<td><b>Knoglehund</b></td>
+<td>26 %</td>
+<td>alle</td>
+<td>0,49 / 0,71</td>
+<td>stormer</td>
+<td>Knogler 50 %</td>
+</tr>
+<tr>
+<td><b>Ofrets genfærd</b></td>
+<td>26 %</td>
+<td>alle</td>
+<td>1,03 / 0,98</td>
+<td>nærkamp</td>
+<td>Knogler 50 %, Troldesener 15 %</td>
+</tr>
+<tr>
+<td><b>Blodkultist</b></td>
+<td>16 %</td>
+<td>alle</td>
+<td>0,7 / 1,16</td>
+<td>zoner</td>
+<td>Knogler 35 %, Skind 35 %, Troldesener 20 %</td>
+</tr>
+</tbody></table></div>
+<h3>Brønden — Grotten uden vej</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Andel af monstrene</th>
+<th>Optræder</th>
+<th>Styrke (liv / skade)</th>
+<th>Slags</th>
+<th>Materialer (chance pr. drab)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Hulespinder</b></td>
+<td>35 %</td>
+<td>alle</td>
+<td>0,54 / 0,71</td>
+<td>stormer</td>
+<td>Troldesener 35 %, Skind 20 %</td>
+</tr>
+<tr>
+<td><b>Trold</b></td>
+<td>23 %</td>
+<td>alle</td>
+<td>2,47 / 1,78</td>
+<td>knuser</td>
+<td>Troldesener 70 %, Jernskrot 60 %, Skind 30 %</td>
+</tr>
+<tr>
+<td><b>Sporesvamp</b></td>
+<td>23 %</td>
+<td>alle</td>
+<td>0,7 / 0,62</td>
+<td>zoner</td>
+<td>Skind 25 %, Troldesener 15 %</td>
+</tr>
+<tr>
+<td><b>Ofrets genfærd</b></td>
+<td>20 %</td>
+<td>alle</td>
+<td>1,03 / 0,98</td>
+<td>nærkamp</td>
+<td>Knogler 50 %, Troldesener 15 %</td>
+</tr>
+</tbody></table></div>
+<h3>Brønden — Kultens helligdom</h3>
+<p>Vogtere (hver 5. etage, på skift): Kultens Ypperstepræst.</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Andel af monstrene</th>
+<th>Optræder</th>
+<th>Styrke (liv / skade)</th>
+<th>Slags</th>
+<th>Materialer (chance pr. drab)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Blodkultist</b></td>
+<td>50 %</td>
+<td>alle</td>
+<td>0,7 / 1,16</td>
+<td>zoner</td>
+<td>Knogler 35 %, Skind 35 %, Troldesener 20 %</td>
+</tr>
+<tr>
+<td><b>Ofrets genfærd</b></td>
+<td>33 %</td>
+<td>alle</td>
+<td>1,03 / 0,98</td>
+<td>nærkamp</td>
+<td>Knogler 50 %, Troldesener 15 %</td>
+</tr>
+<tr>
+<td><b>Gravkultist</b></td>
+<td>17 %</td>
+<td>alle</td>
+<td>0,54 / 0,98</td>
+<td>zoner</td>
+<td>Knogler 30 %, Skind 30 %</td>
+</tr>
+</tbody></table></div>
+<h3>Helvede — Ildens kreds</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Andel af monstrene</th>
+<th>Optræder</th>
+<th>Styrke (liv / skade)</th>
+<th>Slags</th>
+<th>Materialer (chance pr. drab)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Helvedesimp</b></td>
+<td>37 %</td>
+<td>alle</td>
+<td>0,54 / 0,62</td>
+<td>skytte</td>
+<td>Skind 35 %, Knogler 20 %</td>
+</tr>
+<tr>
+<td><b>Helvedeshund</b></td>
+<td>30 %</td>
+<td>alle</td>
+<td>0,82 / 0,89</td>
+<td>stormer</td>
+<td>Skind 50 %, Knogler 30 %</td>
+</tr>
+<tr>
+<td><b>Magmaklump</b></td>
+<td>18 %</td>
+<td>alle</td>
+<td>0,62 / 0,8</td>
+<td>nærkamp</td>
+<td>Jernskrot 30 %</td>
+</tr>
+<tr>
+<td><b>Ildfyrste</b></td>
+<td>15 %</td>
+<td>alle</td>
+<td>2,68 / 2,14</td>
+<td>knuser</td>
+<td>Jernskrot 80 %, Troldesener 30 %</td>
+</tr>
+</tbody></table></div>
+<h3>Helvede — Knoglemarkerne</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Andel af monstrene</th>
+<th>Optræder</th>
+<th>Styrke (liv / skade)</th>
+<th>Slags</th>
+<th>Materialer (chance pr. drab)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Fordømt sjæl</b></td>
+<td>36 %</td>
+<td>alle</td>
+<td>0,95 / 0,89</td>
+<td>nærkamp</td>
+<td>Knogler 50 %, Troldesener 15 %</td>
+</tr>
+<tr>
+<td><b>Knoglelegionær</b></td>
+<td>30 %</td>
+<td>alle</td>
+<td>1,07 / 0,98</td>
+<td>nærkamp</td>
+<td>Knogler 55 %, Jernskrot 30 %</td>
+</tr>
+<tr>
+<td><b>Knoglehund</b></td>
+<td>22 %</td>
+<td>alle</td>
+<td>0,49 / 0,71</td>
+<td>stormer</td>
+<td>Knogler 50 %</td>
+</tr>
+<tr>
+<td><b>Helvedesimp</b></td>
+<td>12 %</td>
+<td>alle</td>
+<td>0,54 / 0,62</td>
+<td>skytte</td>
+<td>Skind 35 %, Knogler 20 %</td>
+</tr>
+</tbody></table></div>
+<h3>Helvede — Den frosne kreds</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Andel af monstrene</th>
+<th>Optræder</th>
+<th>Styrke (liv / skade)</th>
+<th>Slags</th>
+<th>Materialer (chance pr. drab)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Frossen forræder</b></td>
+<td>39 %</td>
+<td>alle</td>
+<td>0,99 / 0,89</td>
+<td>nærkamp</td>
+<td>Skind 35 %, Jernskrot 30 %</td>
+</tr>
+<tr>
+<td><b>Isånd</b></td>
+<td>29 %</td>
+<td>alle</td>
+<td>0,7 / 0,71</td>
+<td>skytte</td>
+<td>Knogler 40 %</td>
+</tr>
+<tr>
+<td><b>Frostdæmon</b></td>
+<td>18 %</td>
+<td>alle</td>
+<td>2,88 / 1,96</td>
+<td>knuser</td>
+<td>Jernskrot 80 %, Troldesener 35 %</td>
+</tr>
+<tr>
+<td><b>Fordømt sjæl</b></td>
+<td>13 %</td>
+<td>alle</td>
+<td>0,95 / 0,89</td>
+<td>nærkamp</td>
+<td>Knogler 50 %, Troldesener 15 %</td>
+</tr>
+</tbody></table></div>
+<h3>Helvede — Pandæmonium</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Andel af monstrene</th>
+<th>Optræder</th>
+<th>Styrke (liv / skade)</th>
+<th>Slags</th>
+<th>Materialer (chance pr. drab)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Afgrundsdjævel</b></td>
+<td>27 %</td>
+<td>alle</td>
+<td>2,47 / 1,78</td>
+<td>nærkamp</td>
+<td>Skind 60 %, Troldesener 45 %, Knogler 30 %</td>
+</tr>
+<tr>
+<td><b>Helvedesridder</b></td>
+<td>32 %</td>
+<td>alle</td>
+<td>1,65 / 1,25</td>
+<td>nærkamp</td>
+<td>Jernskrot 60 %, Skind 30 %</td>
+</tr>
+<tr>
+<td><b>Dæmonmagiker</b></td>
+<td>22 %</td>
+<td>alle</td>
+<td>1,03 / 1,25</td>
+<td>zoner</td>
+<td>Knogler 40 %, Skind 35 %</td>
+</tr>
+<tr>
+<td><b>Helvedesimp</b></td>
+<td>19 %</td>
+<td>alle</td>
+<td>0,54 / 0,62</td>
+<td>skytte</td>
+<td>Skind 35 %, Knogler 20 %</td>
+</tr>
+</tbody></table></div>
+<h3>Helvede — Mørkets trone</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Andel af monstrene</th>
+<th>Optræder</th>
+<th>Styrke (liv / skade)</th>
+<th>Slags</th>
+<th>Materialer (chance pr. drab)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Afgrundsdjævel</b></td>
+<td>36 %</td>
+<td>alle</td>
+<td>2,47 / 1,78</td>
+<td>nærkamp</td>
+<td>Skind 60 %, Troldesener 45 %, Knogler 30 %</td>
+</tr>
+<tr>
+<td><b>Helvedesridder</b></td>
+<td>36 %</td>
+<td>alle</td>
+<td>1,65 / 1,25</td>
+<td>nærkamp</td>
+<td>Jernskrot 60 %, Skind 30 %</td>
+</tr>
+<tr>
+<td><b>Dæmonmagiker</b></td>
+<td>29 %</td>
+<td>alle</td>
+<td>1,03 / 1,25</td>
+<td>zoner</td>
+<td>Knogler 40 %, Skind 35 %</td>
+</tr>
+</tbody></table></div>
+<h3>Himmeltrappen — Skyerne</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Andel af monstrene</th>
+<th>Optræder</th>
+<th>Styrke (liv / skade)</th>
+<th>Slags</th>
+<th>Materialer (chance pr. drab)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Det flammende kors</b></td>
+<td>38 %</td>
+<td>alle</td>
+<td>0,82 / 0,8</td>
+<td>skytte</td>
+<td>Jernskrot 55 %</td>
+</tr>
+<tr>
+<td><b>Hellig due</b></td>
+<td>31 %</td>
+<td>alle</td>
+<td>0,45 / 0,62</td>
+<td>nærkamp</td>
+<td>Troldesener 30 %, Skind 20 %</td>
+</tr>
+<tr>
+<td><b>Ichthys-fisken</b></td>
+<td>31 %</td>
+<td>alle</td>
+<td>0,74 / 0,89</td>
+<td>stormer</td>
+<td>Troldesener 40 %, Knogler 20 %</td>
+</tr>
+</tbody></table></div>
+<h3>Himmeltrappen — Edens have</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Andel af monstrene</th>
+<th>Optræder</th>
+<th>Styrke (liv / skade)</th>
+<th>Slags</th>
+<th>Materialer (chance pr. drab)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Den hellige kalk</b></td>
+<td>29 %</td>
+<td>alle</td>
+<td>0,91 / 1,07</td>
+<td>zoner</td>
+<td>Jernskrot 60 %</td>
+</tr>
+<tr>
+<td><b>Hellig due</b></td>
+<td>29 %</td>
+<td>alle</td>
+<td>0,45 / 0,62</td>
+<td>nærkamp</td>
+<td>Troldesener 30 %, Skind 20 %</td>
+</tr>
+<tr>
+<td><b>Kerub</b></td>
+<td>29 %</td>
+<td>alle</td>
+<td>0,58 / 0,62</td>
+<td>skytte</td>
+<td>Skind 30 %, Knogler 20 %</td>
+</tr>
+<tr>
+<td><b>Ichthys-fisken</b></td>
+<td>14 %</td>
+<td>alle</td>
+<td>0,74 / 0,89</td>
+<td>stormer</td>
+<td>Troldesener 40 %, Knogler 20 %</td>
+</tr>
+</tbody></table></div>
+<h3>Himmeltrappen — Korenes sal</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Andel af monstrene</th>
+<th>Optræder</th>
+<th>Styrke (liv / skade)</th>
+<th>Slags</th>
+<th>Materialer (chance pr. drab)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Ofan — hjulet af øjne</b></td>
+<td>31 %</td>
+<td>alle</td>
+<td>1,23 / 0,8</td>
+<td>skytte</td>
+<td>Jernskrot 60 %, Troldesener 30 %</td>
+</tr>
+<tr>
+<td><b>Lysestagevogter</b></td>
+<td>28 %</td>
+<td>alle</td>
+<td>0,95 / 1,16</td>
+<td>zoner</td>
+<td>Jernskrot 45 %, Skind 20 %</td>
+</tr>
+<tr>
+<td><b>Seraf</b></td>
+<td>26 %</td>
+<td>alle</td>
+<td>1,44 / 1,34</td>
+<td>nærkamp</td>
+<td>Troldesener 45 %, Jernskrot 35 %</td>
+</tr>
+<tr>
+<td><b>Det flammende kors</b></td>
+<td>15 %</td>
+<td>alle</td>
+<td>0,82 / 0,8</td>
+<td>skytte</td>
+<td>Jernskrot 55 %</td>
+</tr>
+</tbody></table></div>
+<h3>Himmeltrappen — Perleportene</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Andel af monstrene</th>
+<th>Optræder</th>
+<th>Styrke (liv / skade)</th>
+<th>Slags</th>
+<th>Materialer (chance pr. drab)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Englevagt</b></td>
+<td>38 %</td>
+<td>alle</td>
+<td>1,85 / 1,25</td>
+<td>nærkamp</td>
+<td>Jernskrot 70 %, Skind 30 %</td>
+</tr>
+<tr>
+<td><b>Seraf</b></td>
+<td>27 %</td>
+<td>alle</td>
+<td>1,44 / 1,34</td>
+<td>nærkamp</td>
+<td>Troldesener 45 %, Jernskrot 35 %</td>
+</tr>
+<tr>
+<td><b>Ofan — hjulet af øjne</b></td>
+<td>22 %</td>
+<td>alle</td>
+<td>1,23 / 0,8</td>
+<td>skytte</td>
+<td>Jernskrot 60 %, Troldesener 30 %</td>
+</tr>
+<tr>
+<td><b>Det flammende kors</b></td>
+<td>14 %</td>
+<td>alle</td>
+<td>0,82 / 0,8</td>
+<td>skytte</td>
+<td>Jernskrot 55 %</td>
+</tr>
+</tbody></table></div>
+<h3>Himmeltrappen — Lysets tinde</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Andel af monstrene</th>
+<th>Optræder</th>
+<th>Styrke (liv / skade)</th>
+<th>Slags</th>
+<th>Materialer (chance pr. drab)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Seraf</b></td>
+<td>36 %</td>
+<td>alle</td>
+<td>1,44 / 1,34</td>
+<td>nærkamp</td>
+<td>Troldesener 45 %, Jernskrot 35 %</td>
+</tr>
+<tr>
+<td><b>Englevagt</b></td>
+<td>36 %</td>
+<td>alle</td>
+<td>1,85 / 1,25</td>
+<td>nærkamp</td>
+<td>Jernskrot 70 %, Skind 30 %</td>
+</tr>
+<tr>
+<td><b>Ofan — hjulet af øjne</b></td>
+<td>27 %</td>
+<td>alle</td>
+<td>1,23 / 0,8</td>
+<td>skytte</td>
+<td>Jernskrot 60 %, Troldesener 30 %</td>
+</tr>
+</tbody></table></div>
+<h3>Dragens Hule — Askehallerne</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Andel af monstrene</th>
+<th>Optræder</th>
+<th>Styrke (liv / skade)</th>
+<th>Slags</th>
+<th>Materialer (chance pr. drab)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Dragekobold</b></td>
+<td>37 %</td>
+<td>alle</td>
+<td>0,62 / 0,71</td>
+<td>nærkamp</td>
+<td>Skind 40 %, Jernskrot 20 %</td>
+</tr>
+<tr>
+<td><b>Drageunge</b></td>
+<td>31 %</td>
+<td>alle</td>
+<td>1,03 / 1,07</td>
+<td>stormer</td>
+<td>Skind 55 %, Knogler 30 %, Troldesener 20 %</td>
+</tr>
+<tr>
+<td><b>Dragekultist</b></td>
+<td>20 %</td>
+<td>alle</td>
+<td>0,82 / 1,16</td>
+<td>zoner</td>
+<td>Knogler 35 %, Skind 35 %</td>
+</tr>
+<tr>
+<td><b>Ormeyngel</b></td>
+<td>12 %</td>
+<td>alle</td>
+<td>1,23 / 1,07</td>
+<td>skytte</td>
+<td>Skind 60 %, Troldesener 35 %, Knogler 30 %</td>
+</tr>
+</tbody></table></div>
+<h3>Dragens Hule — Kultens tempel</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Andel af monstrene</th>
+<th>Optræder</th>
+<th>Styrke (liv / skade)</th>
+<th>Slags</th>
+<th>Materialer (chance pr. drab)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Dragekultist</b></td>
+<td>46 %</td>
+<td>alle</td>
+<td>0,82 / 1,16</td>
+<td>zoner</td>
+<td>Knogler 35 %, Skind 35 %</td>
+</tr>
+<tr>
+<td><b>Dragekobold</b></td>
+<td>31 %</td>
+<td>alle</td>
+<td>0,62 / 0,71</td>
+<td>nærkamp</td>
+<td>Skind 40 %, Jernskrot 20 %</td>
+</tr>
+<tr>
+<td><b>Ormeyngel</b></td>
+<td>23 %</td>
+<td>alle</td>
+<td>1,23 / 1,07</td>
+<td>skytte</td>
+<td>Skind 60 %, Troldesener 35 %, Knogler 30 %</td>
+</tr>
+</tbody></table></div>
+<h3>Dragens Hule — Kirkegården</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Andel af monstrene</th>
+<th>Optræder</th>
+<th>Styrke (liv / skade)</th>
+<th>Slags</th>
+<th>Materialer (chance pr. drab)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Knoglelegionær</b></td>
+<td>40 %</td>
+<td>alle</td>
+<td>1,07 / 0,98</td>
+<td>nærkamp</td>
+<td>Knogler 55 %, Jernskrot 30 %</td>
+</tr>
+<tr>
+<td><b>Knoglehund</b></td>
+<td>27 %</td>
+<td>alle</td>
+<td>0,49 / 0,71</td>
+<td>stormer</td>
+<td>Knogler 50 %</td>
+</tr>
+<tr>
+<td><b>Ormeyngel</b></td>
+<td>13 %</td>
+<td>alle</td>
+<td>1,23 / 1,07</td>
+<td>skytte</td>
+<td>Skind 60 %, Troldesener 35 %, Knogler 30 %</td>
+</tr>
+<tr>
+<td><b>Fordømt sjæl</b></td>
+<td>20 %</td>
+<td>alle</td>
+<td>0,95 / 0,89</td>
+<td>nærkamp</td>
+<td>Knogler 50 %, Troldesener 15 %</td>
+</tr>
+</tbody></table></div>
+<h3>Dragens Hule — Skatkammeret</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Andel af monstrene</th>
+<th>Optræder</th>
+<th>Styrke (liv / skade)</th>
+<th>Slags</th>
+<th>Materialer (chance pr. drab)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Dragekobold</b></td>
+<td>30 %</td>
+<td>alle</td>
+<td>0,62 / 0,71</td>
+<td>nærkamp</td>
+<td>Skind 40 %, Jernskrot 20 %</td>
+</tr>
+<tr>
+<td><b>Drageunge</b></td>
+<td>30 %</td>
+<td>alle</td>
+<td>1,03 / 1,07</td>
+<td>stormer</td>
+<td>Skind 55 %, Knogler 30 %, Troldesener 20 %</td>
+</tr>
+<tr>
+<td><b>Ormeyngel</b></td>
+<td>24 %</td>
+<td>alle</td>
+<td>1,23 / 1,07</td>
+<td>skytte</td>
+<td>Skind 60 %, Troldesener 35 %, Knogler 30 %</td>
+</tr>
+<tr>
+<td><b>Dragekultist</b></td>
+<td>15 %</td>
+<td>alle</td>
+<td>0,82 / 1,16</td>
+<td>zoner</td>
+<td>Knogler 35 %, Skind 35 %</td>
+</tr>
+</tbody></table></div>
+<h3>Lepreconland</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Monster</th>
+<th>Andel af monstrene</th>
+<th>Optræder</th>
+<th>Styrke (liv / skade)</th>
+<th>Slags</th>
+<th>Materialer (chance pr. drab)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Clurichaun</b></td>
+<td>47 %</td>
+<td>alle</td>
+<td>0,58 / 0,62</td>
+<td>nærkamp</td>
+<td>Skind 45 %, Knogler 15 %</td>
+</tr>
+<tr>
+<td><b>Alfe</b></td>
+<td>34 %</td>
+<td>alle</td>
+<td>0,45 / 0,54</td>
+<td>skytte</td>
+<td>Troldesener 35 %, Glødesten 15 %</td>
+</tr>
+<tr>
+<td><b>Guldgolem</b></td>
+<td>19 %</td>
+<td>alle</td>
+<td>2,47 / 1,78</td>
+<td>knuser</td>
+<td>Jernskrot 80 %, Glødesten 35 %</td>
+</tr>
+</tbody></table></div>
+<h3>Bosser og vogtere</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Boss</th>
+<th>Store angreb</th>
+<th>Særligt</th>
+<th>Styrke</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Knoglekongen</b></td>
+<td>ring af skade</td>
+<td></td>
+<td>0,55</td>
+</tr>
+<tr>
+<td><b>Troldemoderen</b></td>
+<td>kors</td>
+<td></td>
+<td>0,81</td>
+</tr>
+<tr>
+<td><b>Lygtetyven</b></td>
+<td>alt undtagen midten</td>
+<td></td>
+<td>0,68</td>
+</tr>
+<tr>
+<td><b>Spindeldronningen</b></td>
+<td>beam</td>
+<td></td>
+<td>0,73</td>
+</tr>
+<tr>
+<td><b>Den Druknede Admiral</b></td>
+<td>beam</td>
+<td></td>
+<td>0,78</td>
+</tr>
+<tr>
+<td><b>Jernkrabben</b></td>
+<td>ring af skade</td>
+<td></td>
+<td>0,85</td>
+</tr>
+<tr>
+<td><b>Askesmeden</b></td>
+<td>kors</td>
+<td></td>
+<td>0,83</td>
+</tr>
+<tr>
+<td><b>Magmamoderen</b></td>
+<td>alt undtagen midten</td>
+<td></td>
+<td>0,78</td>
+</tr>
+<tr>
+<td><b>Kultens Ypperstepræst</b></td>
+<td>pentagram</td>
+<td></td>
+<td>1,07</td>
+</tr>
+<tr>
+<td><b>Den Grådige Kiste</b></td>
+<td>ring af skade</td>
+<td></td>
+<td>0,63</td>
+</tr>
+<tr>
+<td><b>Prismevogteren</b></td>
+<td>kors</td>
+<td></td>
+<td>0,68</td>
+</tr>
+<tr>
+<td><b>Belfegor</b><br><span class="muted">Dovenskabens Fyrste</span></td>
+<td>alt undtagen midten</td>
+<td>ærke</td>
+<td>0,91</td>
+</tr>
+<tr>
+<td><b>Mammon</b><br><span class="muted">Grådighedens Fyrste</span></td>
+<td>ring af skade</td>
+<td>ærke</td>
+<td>0,94</td>
+</tr>
+<tr>
+<td><b>Leviathan</b><br><span class="muted">Misundelsens Slange</span></td>
+<td>beam</td>
+<td>ærke</td>
+<td>0,99</td>
+</tr>
+<tr>
+<td><b>Asmodæus</b><br><span class="muted">Begærets Konge</span></td>
+<td>pentagram</td>
+<td>ærke</td>
+<td>0,91</td>
+</tr>
+<tr>
+<td><b>Belzebub</b><br><span class="muted">Fluernes Herre</span></td>
+<td>regn af angreb, ring af skade</td>
+<td>ærke</td>
+<td>0,94</td>
+</tr>
+<tr>
+<td><b>Belial</b><br><span class="muted">Løgnens Fyrste</span></td>
+<td>kors</td>
+<td>ærke</td>
+<td>0,99</td>
+</tr>
+<tr>
+<td><b>Moloch</b><br><span class="muted">Ildens Sluger</span></td>
+<td>ring af skade</td>
+<td>ærke</td>
+<td>1,07</td>
+</tr>
+<tr>
+<td><b>Astaroth</b><br><span class="muted">Helvedes Storhertug</span></td>
+<td>spiral</td>
+<td>ærke</td>
+<td>0,99</td>
+</tr>
+<tr>
+<td><b>Baal</b><br><span class="muted">Østens Konge</span></td>
+<td>kors</td>
+<td>ærke</td>
+<td>1,1</td>
+</tr>
+<tr>
+<td><b>Paimon</b><br><span class="muted">Vestens Konge</span></td>
+<td>regn af angreb</td>
+<td>ærke</td>
+<td>1,02</td>
+</tr>
+<tr>
+<td><b>Abaddon</b><br><span class="muted">Afgrundens Engel</span></td>
+<td>beam</td>
+<td>ærke</td>
+<td>1,12</td>
+</tr>
+<tr>
+<td><b>Azazel</b><br><span class="muted">Ørkenens Udstødte</span></td>
+<td>pentagram</td>
+<td>ærke</td>
+<td>1,1</td>
+</tr>
+<tr>
+<td><b>Lilith</b><br><span class="muted">Nattens Moder</span></td>
+<td>alt undtagen midten</td>
+<td>ærke</td>
+<td>1,07</td>
+</tr>
+<tr>
+<td><b>Samael</b><br><span class="muted">Dødens Gift</span></td>
+<td>spiral, beam</td>
+<td>ærke</td>
+<td>1,12</td>
+</tr>
+<tr>
+<td><b>Mefistofeles</b><br><span class="muted">Pagtens Mester</span></td>
+<td>pentagram, regn af angreb</td>
+<td>ærke</td>
+<td>1,15</td>
+</tr>
+<tr>
+<td><b>Lucifer</b><br><span class="muted">Den Faldne Morgenstjerne</span></td>
+<td>kors, ring af skade, beam</td>
+<td>ærke</td>
+<td>1,25</td>
+</tr>
+<tr>
+<td><b>Satan</b><br><span class="muted">Djævelen</span></td>
+<td>pentagram, bur med ét hul, regn af angreb, ånde (kegle), alt undtagen midten, kors</td>
+<td>sidste boss, ærke, rejser sig igen</td>
+<td>1,5</td>
+</tr>
+<tr>
+<td><b>Sariel</b><br><span class="muted">Månens Engel</span></td>
+<td>ring af skade</td>
+<td>ærke</td>
+<td>0,91</td>
+</tr>
+<tr>
+<td><b>Remiel</b><br><span class="muted">Håbets Engel</span></td>
+<td>alt undtagen midten</td>
+<td>ærke</td>
+<td>0,94</td>
+</tr>
+<tr>
+<td><b>Raguel</b><br><span class="muted">Retfærdighedens Engel</span></td>
+<td>kors</td>
+<td>ærke</td>
+<td>0,99</td>
+</tr>
+<tr>
+<td><b>Barakiel</b><br><span class="muted">Lynets Engel</span></td>
+<td>regn af angreb</td>
+<td>ærke</td>
+<td>0,97</td>
+</tr>
+<tr>
+<td><b>Jehudiel</b><br><span class="muted">Lovprisningens Engel</span></td>
+<td>beam</td>
+<td>ærke</td>
+<td>1,02</td>
+</tr>
+<tr>
+<td><b>Zadkiel</b><br><span class="muted">Barmhjertighedens Engel</span></td>
+<td>spiral</td>
+<td>ærke</td>
+<td>0,99</td>
+</tr>
+<tr>
+<td><b>Jofiel</b><br><span class="muted">Skønhedens Engel</span></td>
+<td>ring af skade</td>
+<td>ærke</td>
+<td>1,02</td>
+</tr>
+<tr>
+<td><b>Kamuel</b><br><span class="muted">Kærlighedens Engel</span></td>
+<td>alt undtagen midten</td>
+<td>ærke</td>
+<td>1,04</td>
+</tr>
+<tr>
+<td><b>Haniel</b><br><span class="muted">Glædens Engel</span></td>
+<td>regn af angreb</td>
+<td>ærke</td>
+<td>1,04</td>
+</tr>
+<tr>
+<td><b>Azrael</b><br><span class="muted">Dødens Engel</span></td>
+<td>kors</td>
+<td>ærke</td>
+<td>1,12</td>
+</tr>
+<tr>
+<td><b>Sandalfon</b><br><span class="muted">Den Høje</span></td>
+<td>ring af skade</td>
+<td>ærke</td>
+<td>1,17</td>
+</tr>
+<tr>
+<td><b>Metatron</b><br><span class="muted">Himlens Skriver</span></td>
+<td>spiral, regn af angreb</td>
+<td>ærke</td>
+<td>1,15</td>
+</tr>
+<tr>
+<td><b>Rafael</b><br><span class="muted">Helbredelsens Engel</span></td>
+<td>beam</td>
+<td>ærke</td>
+<td>1,17</td>
+</tr>
+<tr>
+<td><b>Uriel</b><br><span class="muted">Guds Ild</span></td>
+<td>kors, ring af skade</td>
+<td>ærke</td>
+<td>1,2</td>
+</tr>
+<tr>
+<td><b>Gabriel</b><br><span class="muted">Guds Budbringer</span></td>
+<td>ring af skade, beam</td>
+<td>ærke</td>
+<td>1,23</td>
+</tr>
+<tr>
+<td><b>Mikael</b><br><span class="muted">Himlens Hærfører</span></td>
+<td>kors, beam, alt undtagen midten</td>
+<td>ærke</td>
+<td>1,3</td>
+</tr>
+<tr>
+<td><b>Jesus af Nazaret</b></td>
+<td>kors, regn af angreb, alt undtagen midten, spiral, beam, ring af skade</td>
+<td>sidste boss, ærke, rejser sig igen</td>
+<td>1,5</td>
+</tr>
+<tr>
+<td><b>Kvartswyrmen</b></td>
+<td>ånde (kegle), regn af angreb, ring af skade</td>
+<td>raid</td>
+<td>0,78</td>
+</tr>
+<tr>
+<td><b>Ignar</b><br><span class="muted">Ildens Drage</span></td>
+<td>ånde (kegle), regn af angreb</td>
+<td>raid</td>
+<td>0,78</td>
+</tr>
+<tr>
+<td><b>Hrim</b><br><span class="muted">Frostens Drage</span></td>
+<td>ånde (kegle), alt undtagen midten</td>
+<td>raid</td>
+<td>0,78</td>
+</tr>
+<tr>
+<td><b>Dragekultens Overpræst</b></td>
+<td>pentagram, spiral, regn af angreb</td>
+<td>raid</td>
+<td>0,78</td>
+</tr>
+<tr>
+<td><b>Knogledragen</b></td>
+<td>ånde (kegle), kors, regn af angreb</td>
+<td>raid</td>
+<td>0,78</td>
+</tr>
+<tr>
+<td><b>Urdragen Vyrmorath</b></td>
+<td>ånde (kegle), regn af angreb, spiral, alt undtagen midten, ring af skade, kors</td>
+<td>raid, sidste boss</td>
+<td>0,78</td>
+</tr>
+<tr>
+<td><b>Leprechaunkongen</b></td>
+<td>regn af angreb, ring af skade</td>
+<td></td>
+<td>0,68</td>
+</tr>
+</tbody></table></div>
+</section>
+<section id="etager"><h2>Etager, temaer og verdener</h2>
+<p>Hver etage har et tema (Krypten, Troldegrotten, Den Sunkne Fæstning, Askesmedjen). Rummene er 20 x 20 felter. Du kan først gå videre, når 80 % af monstrene er dræbt og vogteren (hver 5. etage) er faldet.</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Særlig etage</th>
+<th>Chance pr. etage</th>
+<th>Hvad er der</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Guldkammeret</b></td>
+<td>1,2 %</td>
+<td>Ekstra kister og guldbunker, en skattevogter, 6x chance for navngivne ting.</td>
+</tr>
+<tr>
+<td><b>Regnbuehulen</b></td>
+<td>0,7 %</td>
+<td>Krystalvæsner, flere eliksirer og samlerting, regnbueeliksiren, 6x chance for navngivne ting.</td>
+</tr>
+</tbody></table></div>
+<h3>Tilfældige hændelser</h3>
+<p>Ca. 30 % af de almindelige etager (fra etage 2) har en hændelse:</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Hændelse</th>
+<th>Andel (når der er en)</th>
+<th>Optræder</th>
+<th>Hvad sker der</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Leprechaunen</b></td>
+<td>16 %</td>
+<td><span class="nw">fra etage 3</span></td>
+<td>Fang ham, før han forsvinder gennem væggene — så efterlader han guld og en portal til Lepreconland (Leprechaunkongen og hans guldkrukke: 60 guld x etagen).</td>
+</tr>
+<tr>
+<td><b>Det gamle alter</b></td>
+<td>26 %</td>
+<td><span class="nw">fra etage 2</span></td>
+<td>Velsignelse (skade, fuldt liv/lanterne eller held) eller forbandelse.</td>
+</tr>
+<tr>
+<td><b>Feringen</b></td>
+<td>23 %</td>
+<td><span class="nw">fra etage 2</span></td>
+<td>Træd ind: kæmpestor, lillebitte, hurtig, spejlvendt, regnbuefarvet — eller flyttet.</td>
+</tr>
+<tr>
+<td><b>Goblinfesten</b></td>
+<td>19 %</td>
+<td><span class="nw">fra etage 3</span></td>
+<td>Fem goblins; ølfadet gør dig fuld og fire gange så stærk.</td>
+</tr>
+<tr>
+<td><b>Ønskebrønden</b></td>
+<td>16 %</td>
+<td><span class="nw">fra etage 2</span></td>
+<td>Kast 10 x etagen i guld: 4x guldet, en gave, heling — eller ingenting.</td>
+</tr>
+</tbody></table></div>
+<h3>Etagens udfordring</h3>
+<p>Ca. 40 % af etagerne fra etage 2 har enten en flok elitemonstre (3-5) eller en mester: ét kæmpemonster med 8x liv, 2x skade og 6x erfaring, der efterlader to gode ting og guld.</p>
+<h3>Verdener</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Verden</th>
+<th>Etager</th>
+<th>Sådan kommer du derned</th>
+<th>Bosser</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Brønden</b></td>
+<td>8</td>
+<td>Brønden i byen, ved den højeste blodpagt. Pagten brydes bagefter.</td>
+<td>Kultens Ypperstepræst</td>
+</tr>
+<tr>
+<td><b>Helvede</b></td>
+<td>17</td>
+<td>Ejer helten et helligt relikvie, kommer Natas til byen og åbner rævnen.</td>
+<td>Belfegor, Mammon, Leviathan, Asmodæus, Belzebub, Belial ...</td>
+</tr>
+<tr>
+<td><b>Himmeltrappen</b></td>
+<td>17</td>
+<td>Ejer helten et vanhelligt relikvie, kommer nonnerne og kalder trappen ned.</td>
+<td>Sariel, Remiel, Raguel, Barakiel, Jehudiel, Zadkiel ...</td>
+</tr>
+<tr>
+<td><b>Dragens Hule</b></td>
+<td>5</td>
+<td>Når både Helvede og Himmeltrappen er besejret (1-4 spillere).</td>
+<td>Kvartswyrmen, Ignar, Hrim, Dragekultens Overpræst, Knogledragen, Urdragen Vyrmorath</td>
+</tr>
+<tr>
+<td><b>Lepreconland</b></td>
+<td>1</td>
+<td>Portalen fra en fanget leprechaun</td>
+<td>Leprechaunkongen</td>
+</tr>
+</tbody></table></div>
+</section>
+<section id="bytte"><h2>Bytte og dropchancer</h2>
+<p class="intro">Chancerne pr. drab eller kiste, uden magisk fund. Al bytte er personligt: i co-op får hver spiller sit eget.</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Fra</th>
+<th>Udstyr</th>
+<th>Guld</th>
+<th>Drik/svamp</th>
+<th>Samlerting</th>
+<th>Sætting</th>
+<th>Navngiven ting</th>
+<th>Relikvie</th>
+</tr></thead><tbody>
+<tr>
+<td>Almindeligt monster</td>
+<td>3 %</td>
+<td>22 %</td>
+<td>2 %</td>
+<td>0,4 %</td>
+<td>0,05 %</td>
+<td>0,12 %</td>
+<td>0,01 %</td>
+</tr>
+<tr>
+<td>Trold</td>
+<td>7 %</td>
+<td>22 %</td>
+<td>2 %</td>
+<td>0,4 %</td>
+<td>0,05 %</td>
+<td>0,12 %</td>
+<td>0,01 %</td>
+</tr>
+<tr>
+<td>Elitemonster</td>
+<td>18 %</td>
+<td>altid</td>
+<td>15 %</td>
+<td>5 %</td>
+<td>0,5 %</td>
+<td>1,2 %</td>
+<td>0,1 %</td>
+</tr>
+<tr>
+<td>Boss / vogter</td>
+<td>skat</td>
+<td>altid</td>
+<td>2 %</td>
+<td>25 %</td>
+<td>8 %</td>
+<td>20 %</td>
+<td>1,5 %</td>
+</tr>
+<tr>
+<td>Skattekiste</td>
+<td>22 %</td>
+<td>altid</td>
+<td>35 %</td>
+<td>5 %</td>
+<td>—</td>
+<td>3 %</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<p>Sætting og navngivne ting falder fra etage 3 (eller på særlige etager), relikvier fra etage 6. Der står en skattekiste i et rum med 70 % chance. Sporesvampe og magmaslim taber en drik/svamp i 30 % af drabene. Mestre efterlader altid to gode ting.</p>
+<h3>Vogterens skat</h3>
+<p>En vogter efterlader altid en ny opskrift (hvis der er flere at lære på den dybde — se Opskrifter), 4-7 af hvert almindeligt materiale, 2-4 glødesten, guld og udstyr.</p>
+<h3>Sjældenhed efter etage</h3>
+<p>Hvor sjældent udstyret er, afhænger af etagen (+5 % til alt over almindeligt pr. etage) og dit magiske fund. Tingens niveau er din helts niveau (eller op til 2 under).</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Etage</th>
+<th>Almindelig</th>
+<th>Magisk</th>
+<th>Sjælden</th>
+<th>Legendarisk</th>
+</tr></thead><tbody>
+<tr>
+<td>Etage 1</td>
+<td>82 %</td>
+<td>16 %</td>
+<td>1,6 %</td>
+<td>0,12 %</td>
+</tr>
+<tr>
+<td>Etage 3</td>
+<td>81 %</td>
+<td>17 %</td>
+<td>1,7 %</td>
+<td>0,13 %</td>
+</tr>
+<tr>
+<td>Etage 5</td>
+<td>79 %</td>
+<td>19 %</td>
+<td>1,9 %</td>
+<td>0,14 %</td>
+</tr>
+<tr>
+<td>Etage 10</td>
+<td>76 %</td>
+<td>22 %</td>
+<td>2,2 %</td>
+<td>0,16 %</td>
+</tr>
+<tr>
+<td>Etage 15</td>
+<td>73 %</td>
+<td>24 %</td>
+<td>2,4 %</td>
+<td>0,18 %</td>
+</tr>
+<tr>
+<td>Etage 20</td>
+<td>70 %</td>
+<td>27 %</td>
+<td>2,7 %</td>
+<td>0,2 %</td>
+</tr>
+<tr>
+<td>Etage 30</td>
+<td>65 %</td>
+<td>31 %</td>
+<td>3,1 %</td>
+<td>0,23 %</td>
+</tr>
+<tr>
+<td>Etage 40</td>
+<td>61 %</td>
+<td>35 %</td>
+<td>3,5 %</td>
+<td>0,26 %</td>
+</tr>
+</tbody></table></div>
+<h3>Hvilken slags ting</h3>
+<div class="tw"><table class="small"><thead><tr>
+<th>Plads</th>
+<th>Andel</th>
+</tr></thead><tbody>
+<tr>
+<td>Våben</td>
+<td>23 %</td>
+</tr>
+<tr>
+<td>Rustning</td>
+<td>14 %</td>
+</tr>
+<tr>
+<td>Hjelm</td>
+<td>12 %</td>
+</tr>
+<tr>
+<td>Handsker</td>
+<td>11 %</td>
+</tr>
+<tr>
+<td>Støvler</td>
+<td>11 %</td>
+</tr>
+<tr>
+<td>Amulet</td>
+<td>7,3 %</td>
+</tr>
+<tr>
+<td>Ring</td>
+<td>14 %</td>
+</tr>
+<tr>
+<td>Bælte</td>
+<td>8,3 %</td>
+</tr>
+</tbody></table></div>
+</section>
+<section id="udstyr"><h2>Udstyr</h2>
+<p class="intro">Magiske ting har 1-2 egenskaber, sjældne 3-4, legendariske 4 og en legendarisk evne. Ting over din helts niveau virker kun med heltens niveau / tingens niveau af deres styrke.</p>
+<h3>Våben</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Våben</th>
+<th>Skade (niveau 1)</th>
+<th>Tid pr. hug</th>
+<th>Skade pr. sekund</th>
+<th>Bue</th>
+<th>Rækkevidde</th>
+<th>Kritisk</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Sværd</b></td>
+<td>10</td>
+<td>0,48 s</td>
+<td>20,83</td>
+<td>100°</td>
+<td>2,5 m</td>
+<td>0 %</td>
+</tr>
+<tr>
+<td><b>Økse</b></td>
+<td>17</td>
+<td>0,78 s</td>
+<td>21,79</td>
+<td>140°</td>
+<td>2,7 m</td>
+<td>0 %</td>
+</tr>
+<tr>
+<td><b>Dolke</b></td>
+<td>6</td>
+<td>0,3 s</td>
+<td>20</td>
+<td>70°</td>
+<td>2 m</td>
+<td>8 %</td>
+</tr>
+<tr>
+<td><b>Spyd</b></td>
+<td>12</td>
+<td>0,58 s</td>
+<td>20,69</td>
+<td>40°</td>
+<td>3,8 m</td>
+<td>0 %</td>
+</tr>
+<tr>
+<td><b>Bue</b></td>
+<td>8</td>
+<td>0,55 s</td>
+<td>14,55</td>
+<td>20°</td>
+<td>13 m (skyder)</td>
+<td>3 %</td>
+</tr>
+<tr>
+<td><b>Stav</b></td>
+<td>8,5</td>
+<td>0,62 s</td>
+<td>13,71</td>
+<td>20°</td>
+<td>11 m (skyder)</td>
+<td>0 %</td>
+</tr>
+<tr>
+<td><b>Le</b></td>
+<td>13</td>
+<td>0,72 s</td>
+<td>18,06</td>
+<td>170°</td>
+<td>2,9 m</td>
+<td>2 %</td>
+</tr>
+</tbody></table></div>
+<h3>Rustninger</h3>
+<div class="tw"><table class="small"><thead><tr>
+<th>Grundtype</th>
+<th>Grundværdier (niveau 1)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Læderbrynje</b></td>
+<td>+8 rustning, +10 liv, +3% bevægelseshastighed</td>
+</tr>
+<tr>
+<td><b>Ringbrynje</b></td>
+<td>+18 rustning, +20 liv, +0% bevægelseshastighed</td>
+</tr>
+<tr>
+<td><b>Pladerustning</b></td>
+<td>+32 rustning, +30 liv, -6% bevægelseshastighed</td>
+</tr>
+</tbody></table></div>
+<h3>Hjelme</h3>
+<div class="tw"><table class="small"><thead><tr>
+<th>Grundtype</th>
+<th>Grundværdier (niveau 1)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Læderhue</b></td>
+<td>+3 rustning, +5 liv</td>
+</tr>
+<tr>
+<td><b>Jernhjelm</b></td>
+<td>+6 rustning, +8 liv</td>
+</tr>
+<tr>
+<td><b>Stormhjelm</b></td>
+<td>+10 rustning, +12 liv, -2% bevægelseshastighed</td>
+</tr>
+</tbody></table></div>
+<h3>Handsker</h3>
+<div class="tw"><table class="small"><thead><tr>
+<th>Grundtype</th>
+<th>Grundværdier (niveau 1)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Læderhandsker</b></td>
+<td>+2 rustning, +3% angrebshastighed</td>
+</tr>
+<tr>
+<td><b>Jernhandsker</b></td>
+<td>+5 rustning, +4 liv</td>
+</tr>
+</tbody></table></div>
+<h3>Støvler</h3>
+<div class="tw"><table class="small"><thead><tr>
+<th>Grundtype</th>
+<th>Grundværdier (niveau 1)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Læderstøvler</b></td>
+<td>+2 rustning, +4% bevægelseshastighed</td>
+</tr>
+<tr>
+<td><b>Jernstøvler</b></td>
+<td>+5 rustning, +4 liv</td>
+</tr>
+</tbody></table></div>
+<h3>Bælter</h3>
+<div class="tw"><table class="small"><thead><tr>
+<th>Grundtype</th>
+<th>Grundværdier (niveau 1)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Rebbælte</b></td>
+<td>+1 rustning, +2 lommer til drikke (Shift+1-5)</td>
+</tr>
+<tr>
+<td><b>Læderbælte</b></td>
+<td>+2 rustning, +3 lommer til drikke (Shift+1-5)</td>
+</tr>
+<tr>
+<td><b>Nittebælte</b></td>
+<td>+4 rustning, +4 lommer til drikke (Shift+1-5)</td>
+</tr>
+</tbody></table></div>
+<h3>Amuletter</h3>
+<div class="tw"><table class="small"><thead><tr>
+<th>Grundtype</th>
+<th>Grundværdier (niveau 1)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Amulet</b></td>
+<td>—</td>
+</tr>
+<tr>
+<td><b>Talisman</b></td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<h3>Ringe</h3>
+<div class="tw"><table class="small"><thead><tr>
+<th>Grundtype</th>
+<th>Grundværdier (niveau 1)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Ring</b></td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<h3>Egenskaber</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Egenskab</th>
+<th>Værdi (niveau 1)</th>
+<th>+ pr. tingniveau</th>
+<th>Kan sidde på</th>
+</tr></thead><tbody>
+<tr>
+<td><b>skade</b></td>
+<td>1 - 3</td>
+<td>0,28</td>
+<td>Våben, Amulet, Ring, Handsker</td>
+</tr>
+<tr>
+<td><b>skade (%)</b></td>
+<td>4 % - 10 %</td>
+<td>0,4 %</td>
+<td>Våben, Amulet, Ring</td>
+</tr>
+<tr>
+<td><b>angrebshastighed (%)</b></td>
+<td>3 % - 8 %</td>
+<td>0,3 %</td>
+<td>Våben, Amulet, Ring, Handsker</td>
+</tr>
+<tr>
+<td><b>kritisk chance</b></td>
+<td>1 % - 3 %</td>
+<td>0,1 %</td>
+<td>Våben, Amulet, Ring, Handsker</td>
+</tr>
+<tr>
+<td><b>kritisk skade</b></td>
+<td>8 % - 20 %</td>
+<td>0,6 %</td>
+<td>Våben, Amulet, Ring</td>
+</tr>
+<tr>
+<td><b>livsdræn</b></td>
+<td>0,5 % - 1,5 %</td>
+<td>0,04 %</td>
+<td>Våben, Amulet, Ring</td>
+</tr>
+<tr>
+<td><b>liv</b></td>
+<td>6 - 14</td>
+<td>1</td>
+<td>Rustning, Hjelm, Støvler, Amulet, Ring, Bælte</td>
+</tr>
+<tr>
+<td><b>liv (%)</b></td>
+<td>3 % - 6 %</td>
+<td>0,2 %</td>
+<td>Rustning, Hjelm</td>
+</tr>
+<tr>
+<td><b>rustning</b></td>
+<td>3 - 8</td>
+<td>1,2</td>
+<td>Rustning, Hjelm, Handsker, Støvler, Bælte</td>
+</tr>
+<tr>
+<td><b>liv pr. sekund</b></td>
+<td>0,3 - 0,8</td>
+<td>0,05</td>
+<td>Rustning, Hjelm, Amulet, Ring, Bælte</td>
+</tr>
+<tr>
+<td><b>bevægelseshastighed (%)</b></td>
+<td>2 % - 5 %</td>
+<td>—</td>
+<td>Støvler, Rustning, Amulet</td>
+</tr>
+<tr>
+<td><b>guldfund</b></td>
+<td>5 % - 15 %</td>
+<td>0,4 %</td>
+<td>Rustning, Hjelm, Handsker, Amulet, Ring, Bælte</td>
+</tr>
+<tr>
+<td><b>chance for bedre bytte</b></td>
+<td>4 % - 10 %</td>
+<td>0,3 %</td>
+<td>Amulet, Ring, Hjelm</td>
+</tr>
+<tr>
+<td><b>langsommere olieforbrug (%)</b></td>
+<td>4 % - 8 %</td>
+<td>0,2 %</td>
+<td>Rustning, Hjelm, Amulet, Bælte</td>
+</tr>
+<tr>
+<td><b>mana</b></td>
+<td>5 - 12</td>
+<td>1,2</td>
+<td>Hjelm, Amulet, Ring, Våben</td>
+</tr>
+<tr>
+<td><b>mana pr. sekund</b></td>
+<td>0,3 - 0,8</td>
+<td>0,04</td>
+<td>Amulet, Ring, Hjelm</td>
+</tr>
+</tbody></table></div>
+<h3>Legendariske evner</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Evne</th>
+</tr></thead><tbody>
+<tr>
+<td>Blodtørst: drab heler 4% af dit maks. liv</td>
+</tr>
+<tr>
+<td>Stormskridt: 40% kortere undvigelses-nedkøling</td>
+</tr>
+<tr>
+<td>Tredje Hug: hvert tredje hug gør dobbelt skade</td>
+</tr>
+<tr>
+<td>Guldfeber: +1% skade pr. 100 guld du bærer (maks 30%)</td>
+</tr>
+</tbody></table></div>
+</section>
+<section id="saet"><h2>Sætting</h2>
+<p class="intro">Hver klasse har sit eget sæt. Sætting falder mest fra din egen klasses sæt. Bonusserne gælder, når du bærer flere dele samtidig, og hele sættet giver en aura.</p>
+<h3>Bjørnekongens Arv (Barbar)</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Del</th>
+<th>Plads</th>
+<th>Grundtype</th>
+<th>Egenskaber (stærke)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Bjørnekongens Hjelm</b></td>
+<td>Hjelm</td>
+<td>Stormhjelm</td>
+<td>liv, rustning</td>
+</tr>
+<tr>
+<td><b>Bjørnekongens Pels</b></td>
+<td>Rustning</td>
+<td>Pladerustning</td>
+<td>liv (%), liv pr. sekund</td>
+</tr>
+<tr>
+<td><b>Bjørnekongens Næver</b></td>
+<td>Handsker</td>
+<td>Jernhandsker</td>
+<td>skade, angrebshastighed (%)</td>
+</tr>
+<tr>
+<td><b>Bjørnekongens Økse</b></td>
+<td>Våben</td>
+<td>Økse</td>
+<td>skade (%), livsdræn</td>
+</tr>
+</tbody></table></div>
+<p>2 dele: +15% liv · 3 dele: +20% skade · 4 dele: +40 rustning · Hele sættet: <b>Ildens aura</b> — Fjender tæt på dig brænder (skade hvert sekund).</p>
+<h3>Ærkemagikerens Klædning (Magiker)</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Del</th>
+<th>Plads</th>
+<th>Grundtype</th>
+<th>Egenskaber (stærke)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Stjernestaven</b></td>
+<td>Våben</td>
+<td>Stav</td>
+<td>skade (%), mana</td>
+</tr>
+<tr>
+<td><b>Ærkemagikerens Hætte</b></td>
+<td>Hjelm</td>
+<td>Læderhue</td>
+<td>mana, mana pr. sekund</td>
+</tr>
+<tr>
+<td><b>Stjernekåben</b></td>
+<td>Rustning</td>
+<td>Læderbrynje</td>
+<td>liv, liv pr. sekund</td>
+</tr>
+<tr>
+<td><b>Ærkemagikerens Øje</b></td>
+<td>Amulet</td>
+<td>Amulet</td>
+<td>skade (%), mana pr. sekund</td>
+</tr>
+</tbody></table></div>
+<p>2 dele: +40 mana · 3 dele: +20% skade · 4 dele: +3.0 mana pr. sekund · Hele sættet: <b>Frostens aura</b> — Fjender tæt på dig sænkes.</p>
+<h3>Ulvejægerens Udrustning (Jæger)</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Del</th>
+<th>Plads</th>
+<th>Grundtype</th>
+<th>Egenskaber (stærke)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Ulvebuen</b></td>
+<td>Våben</td>
+<td>Bue</td>
+<td>skade (%), kritisk chance</td>
+</tr>
+<tr>
+<td><b>Ulvepelsen</b></td>
+<td>Rustning</td>
+<td>Læderbrynje</td>
+<td>liv, bevægelseshastighed (%)</td>
+</tr>
+<tr>
+<td><b>Ulvejægerens Støvler</b></td>
+<td>Støvler</td>
+<td>Læderstøvler</td>
+<td>bevægelseshastighed (%), rustning</td>
+</tr>
+<tr>
+<td><b>Ulvejægerens Handsker</b></td>
+<td>Handsker</td>
+<td>Læderhandsker</td>
+<td>angrebshastighed (%), kritisk chance</td>
+</tr>
+</tbody></table></div>
+<p>2 dele: +10% bevægelseshastighed · 3 dele: +8% kritisk chance · 4 dele: +20% skade · Hele sættet: <b>Vindens aura</b> — +15% bevægelse og angrebshastighed.</p>
+<h3>Natravnens Skygger (Tyv)</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Del</th>
+<th>Plads</th>
+<th>Grundtype</th>
+<th>Egenskaber (stærke)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Natravnens Klør</b></td>
+<td>Våben</td>
+<td>Dolke</td>
+<td>kritisk skade, skade (%)</td>
+</tr>
+<tr>
+<td><b>Natravnens Hætte</b></td>
+<td>Hjelm</td>
+<td>Læderhue</td>
+<td>chance for bedre bytte, liv</td>
+</tr>
+<tr>
+<td><b>Natravnens Kappe</b></td>
+<td>Rustning</td>
+<td>Læderbrynje</td>
+<td>bevægelseshastighed (%), liv</td>
+</tr>
+<tr>
+<td><b>Natravnens Trin</b></td>
+<td>Støvler</td>
+<td>Læderstøvler</td>
+<td>bevægelseshastighed (%), guldfund</td>
+</tr>
+</tbody></table></div>
+<p>2 dele: +8% kritisk chance · 3 dele: +30% kritisk skade · 4 dele: +3% livsdræn · Hele sættet: <b>Skyggens aura</b> — Fjender tæt på dig er forbandede: de tager 15% mere skade og gør mindre skade.</p>
+<h3>Gravherrens Regalier (Nekromantiker)</h3>
+<div class="tw"><table class=""><thead><tr>
+<th>Del</th>
+<th>Plads</th>
+<th>Grundtype</th>
+<th>Egenskaber (stærke)</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Gravherrens Le</b></td>
+<td>Våben</td>
+<td>Le</td>
+<td>skade (%), livsdræn</td>
+</tr>
+<tr>
+<td><b>Gravherrens Krone</b></td>
+<td>Hjelm</td>
+<td>Jernhjelm</td>
+<td>mana, liv</td>
+</tr>
+<tr>
+<td><b>Gravherrens Brynje</b></td>
+<td>Rustning</td>
+<td>Ringbrynje</td>
+<td>rustning, liv pr. sekund</td>
+</tr>
+<tr>
+<td><b>Gravherrens Segl</b></td>
+<td>Amulet</td>
+<td>Amulet</td>
+<td>mana pr. sekund, skade (%)</td>
+</tr>
+</tbody></table></div>
+<p>2 dele: +25% styrke til dine tjenere · 3 dele: +20% skade · 4 dele: +15% liv · Hele sættet: <b>Dødens aura</b> — Fjender tæt på dig svækkes (gør mindre skade) og visner langsomt.</p>
+</section>
+<section id="navngivne"><h2>Navngivne ting</h2>
+<p class="intro">Hver navngivne ting hører til et tema og falder kun der (fra etage 3; 6x oftere på særlige etager).</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Ting</th>
+<th>Findes i</th>
+<th>Plads</th>
+<th>Egenskaber</th>
+<th>Særligt</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Benkongens Klinge</b></td>
+<td>Krypten</td>
+<td>Våben</td>
+<td>skade (%), livsdræn</td>
+<td>Blodtørst: drab heler 4% af dit maks. liv</td>
+</tr>
+<tr>
+<td><b>Gravklokken</b></td>
+<td>Krypten</td>
+<td>Amulet</td>
+<td>mana, liv</td>
+<td><b>Dødens aura</b>: Fjender tæt på dig svækkes (gør mindre skade) og visner langsomt.</td>
+</tr>
+<tr>
+<td><b>Troldeknuseren</b></td>
+<td>Troldegrotten</td>
+<td>Våben</td>
+<td>skade (%), skade</td>
+<td>Tredje Hug: hvert tredje hug gør dobbelt skade</td>
+</tr>
+<tr>
+<td><b>De Mosgroede Støvler</b></td>
+<td>Troldegrotten</td>
+<td>Støvler</td>
+<td>bevægelseshastighed (%), liv</td>
+<td><b>Lysets aura</b>: Du heles 1,5% af dit liv hvert sekund.</td>
+</tr>
+<tr>
+<td><b>Den Druknede Admirals Ring</b></td>
+<td>Den Sunkne Fæstning</td>
+<td>Ring</td>
+<td>guldfund, liv</td>
+<td>Ubrydelig: én gang pr. etage overlever du et dødeligt slag med 1 liv</td>
+</tr>
+<tr>
+<td><b>Tidevandets Spyd</b></td>
+<td>Den Sunkne Fæstning</td>
+<td>Våben</td>
+<td>skade (%), angrebshastighed (%)</td>
+<td>Stormskridt: 40% kortere undvigelses-nedkøling<br><b>Frostens aura</b>: Fjender tæt på dig sænkes.</td>
+</tr>
+<tr>
+<td><b>Askesmedens Handsker</b></td>
+<td>Askesmedjen</td>
+<td>Handsker</td>
+<td>angrebshastighed (%), skade</td>
+<td><b>Ildens aura</b>: Fjender tæt på dig brænder (skade hvert sekund).</td>
+</tr>
+<tr>
+<td><b>Glødehjertet</b></td>
+<td>Askesmedjen</td>
+<td>Amulet</td>
+<td>skade (%), kritisk chance</td>
+<td><b>Ildens aura</b>: Fjender tæt på dig brænder (skade hvert sekund).</td>
+</tr>
+<tr>
+<td><b>Midas' Ring</b></td>
+<td>Guldkammeret</td>
+<td>Ring</td>
+<td>guldfund, chance for bedre bytte</td>
+<td>Guldfeber: +1% skade pr. 100 guld du bærer (maks 30%)<br><b>Midas' aura</b>: Guld og ting i nærheden flyver hen til dig, og du finder 25% mere guld.</td>
+</tr>
+<tr>
+<td><b>Kong Guldtands Krone</b></td>
+<td>Guldkammeret</td>
+<td>Hjelm</td>
+<td>chance for bedre bytte, liv</td>
+<td><b>Midas' aura</b>: Guld og ting i nærheden flyver hen til dig, og du finder 25% mere guld.</td>
+</tr>
+<tr>
+<td><b>Regnbuebuen</b></td>
+<td>Regnbuehulen</td>
+<td>Våben</td>
+<td>skade (%), kritisk chance</td>
+<td><b>Regnbuens aura</b>: +10% skade, +10% bevægelse og +10% chance for bedre bytte. Skifter farve.</td>
+</tr>
+<tr>
+<td><b>Prismebrynjen</b></td>
+<td>Regnbuehulen</td>
+<td>Rustning</td>
+<td>liv (%), rustning</td>
+<td><b>Regnbuens aura</b>: +10% skade, +10% bevægelse og +10% chance for bedre bytte. Skifter farve.</td>
+</tr>
+<tr>
+<td><b>Farvespringets Dolke</b></td>
+<td>Regnbuehulen</td>
+<td>Våben</td>
+<td>kritisk skade, angrebshastighed (%)</td>
+<td><b>Regnbuens aura</b>: +10% skade, +10% bevægelse og +10% chance for bedre bytte. Skifter farve.</td>
+</tr>
+<tr>
+<td><b>Enhjørningens Stav</b></td>
+<td>Regnbuehulen</td>
+<td>Våben</td>
+<td>skade (%), mana pr. sekund</td>
+<td><b>Regnbuens aura</b>: +10% skade, +10% bevægelse og +10% chance for bedre bytte. Skifter farve.</td>
+</tr>
+<tr>
+<td><b>Regnbueleen</b></td>
+<td>Regnbuehulen</td>
+<td>Våben</td>
+<td>skade (%), livsdræn</td>
+<td><b>Regnbuens aura</b>: +10% skade, +10% bevægelse og +10% chance for bedre bytte. Skifter farve.</td>
+</tr>
+</tbody></table></div>
+</section>
+<section id="relikvier"><h2>Relikvier</h2>
+<p class="intro">Spillets sjældneste ting (fra etage 6): 0,01 % pr. almindeligt monster, 0,1 % pr. elite og 1,5 % pr. boss. Du kan kun bære ét ad gangen.</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Relikvie</th>
+<th>Ekstra (+1 % pr. tingniveau)</th>
+<th>Udseende</th>
+<th>Åbner</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Helligt</b></td>
+<td>+25% liv, +3.0 liv pr. sekund, +25 rustning</td>
+<td>Glorie og englevinger</td>
+<td>Natas kommer til byen: Helvede</td>
+</tr>
+<tr>
+<td><b>Vanhelligt</b></td>
+<td>+35% skade, +3% livsdræn, +30% kritisk skade</td>
+<td>Horn og dæmonvinger</td>
+<td>Nonnerne kommer: Himmeltrappen</td>
+</tr>
+</tbody></table></div>
+<p>Satan (Helvede), toppen af Himmeltrappen og Urdragen efterlader altid et relikvie.</p>
+</section>
+<section id="opskrifter"><h2>Opskrifter</h2>
+<p class="intro">Værkstedet smeder efter opskrifter til din helts niveau. Startopskrifterne kender du fra begyndelsen; resten taber vogterne (hver 5. etage) — en opskrift, du ikke kender, fra dem, der er låst op på den dybde. Legendariske tegninger er sjældnere (25 %, mens der er almindelige tilbage). Materialeprisen stiger med tingens niveau.</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Opskrift</th>
+<th>Plads</th>
+<th>Materialer (niveau 1)</th>
+<th>Hvor</th>
+<th>Legendarisk evne</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Bue</b></td>
+<td>Våben</td>
+<td>3 Skind, 4 Knogler</td>
+<td><span class="nw">Kendt fra start</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Dolke</b></td>
+<td>Våben</td>
+<td>4 Jernskrot, 2 Skind</td>
+<td><span class="nw">Kendt fra start</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Le</b></td>
+<td>Våben</td>
+<td>5 Jernskrot, 3 Knogler</td>
+<td><span class="nw">Kendt fra start</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Læderbrynje</b></td>
+<td>Rustning</td>
+<td>8 Skind, 2 Knogler</td>
+<td><span class="nw">Kendt fra start</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Læderhandsker</b></td>
+<td>Handsker</td>
+<td>4 Skind</td>
+<td><span class="nw">Kendt fra start</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Læderhue</b></td>
+<td>Hjelm</td>
+<td>4 Skind, 1 Knogler</td>
+<td><span class="nw">Kendt fra start</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Læderstøvler</b></td>
+<td>Støvler</td>
+<td>5 Skind</td>
+<td><span class="nw">Kendt fra start</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Rebbælte</b></td>
+<td>Bælte</td>
+<td>3 Skind, 1 Troldesener</td>
+<td><span class="nw">Kendt fra start</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Ring</b></td>
+<td>Ring</td>
+<td>2 Jernskrot, 6 Knogler</td>
+<td><span class="nw">Kendt fra start</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Stav</b></td>
+<td>Våben</td>
+<td>2 Skind, 5 Knogler</td>
+<td><span class="nw">Kendt fra start</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Sværd</b></td>
+<td>Våben</td>
+<td>5 Jernskrot, 2 Skind</td>
+<td><span class="nw">Kendt fra start</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Økse</b></td>
+<td>Våben</td>
+<td>7 Jernskrot, 1 Skind</td>
+<td><span class="nw">Kendt fra start</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Amulet</b></td>
+<td>Amulet</td>
+<td>6 Knogler, 1 Glødesten</td>
+<td><span class="nw">Vogter fra etage 5</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Jernhandsker</b></td>
+<td>Handsker</td>
+<td>6 Jernskrot, 2 Skind</td>
+<td><span class="nw">Vogter fra etage 5</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Jernhjelm</b></td>
+<td>Hjelm</td>
+<td>7 Jernskrot, 2 Skind</td>
+<td><span class="nw">Vogter fra etage 5</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Jernstøvler</b></td>
+<td>Støvler</td>
+<td>6 Jernskrot, 2 Skind</td>
+<td><span class="nw">Vogter fra etage 5</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Læderbælte</b></td>
+<td>Bælte</td>
+<td>2 Jernskrot, 6 Skind</td>
+<td><span class="nw">Vogter fra etage 5</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Ringbrynje</b></td>
+<td>Rustning</td>
+<td>12 Jernskrot, 3 Skind</td>
+<td><span class="nw">Vogter fra etage 5</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Spyd</b></td>
+<td>Våben</td>
+<td>6 Jernskrot, 4 Knogler</td>
+<td><span class="nw">Vogter fra etage 5</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Morgengry</b> <span class="leg">legendarisk</span></td>
+<td>Våben</td>
+<td>20 Jernskrot, 6 Troldesener, 6 Glødesten</td>
+<td><span class="nw">Vogter fra etage 10</span></td>
+<td>Tredje Hug: hvert tredje hug gør dobbelt skade</td>
+</tr>
+<tr>
+<td><b>Nittebælte</b></td>
+<td>Bælte</td>
+<td>5 Jernskrot, 8 Skind, 2 Troldesener</td>
+<td><span class="nw">Vogter fra etage 10</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Pladerustning</b></td>
+<td>Rustning</td>
+<td>16 Jernskrot, 6 Troldesener</td>
+<td><span class="nw">Vogter fra etage 10</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Ravnens Næb</b> <span class="leg">legendarisk</span></td>
+<td>Våben</td>
+<td>14 Jernskrot, 10 Skind, 6 Glødesten</td>
+<td><span class="nw">Vogter fra etage 10</span></td>
+<td>Blodtørst: drab heler 4% af dit maks. liv</td>
+</tr>
+<tr>
+<td><b>Stormhjelm</b></td>
+<td>Hjelm</td>
+<td>10 Jernskrot, 4 Troldesener</td>
+<td><span class="nw">Vogter fra etage 10</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Talisman</b></td>
+<td>Amulet</td>
+<td>8 Knogler, 2 Troldesener, 1 Glødesten</td>
+<td><span class="nw">Vogter fra etage 10</span></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Jættehud</b> <span class="leg">legendarisk</span></td>
+<td>Rustning</td>
+<td>24 Jernskrot, 10 Troldesener, 7 Glødesten</td>
+<td><span class="nw">Vogter fra etage 15</span></td>
+<td>Stormskridt: 40% kortere undvigelses-nedkøling</td>
+</tr>
+<tr>
+<td><b>Ulvetand</b> <span class="leg">legendarisk</span></td>
+<td>Amulet</td>
+<td>18 Knogler, 6 Troldesener, 6 Glødesten</td>
+<td><span class="nw">Vogter fra etage 15</span></td>
+<td>Guldfeber: +1% skade pr. 100 guld du bærer (maks 30%)</td>
+</tr>
+</tbody></table></div>
+<h3>Værkstedet</h3>
+<p>Forbedr (+kvalitet, op til +3, +5 med en smed i Smedjen), fortryl (flere egenskaber), omsmed (til din helts niveau) og skil ad (materialer tilbage).</p>
+</section>
+<section id="materialer"><h2>Materialer</h2>
+<p class="intro">Materialer bæres hjem fra Dybet (de mistes, hvis du dør) og lægges på lageret i byen. Elitemonstre taber dobbelt, og der kommer én mere for hver 6 etager.</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Materiale</th>
+<th>Hvor</th>
+</tr></thead><tbody>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#9ea3b3"></span><b>Jernskrot</b></span></td>
+<td>Bedst fra: Knokkelskytte (50 %), Trold (60 %), Klippekrabbe (50 %), Smedegolem (80 %), Kistemimik (50 %), Ildfyrste (80 %), Frostdæmon (80 %), Helvedesridder (60 %)</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#9e6638"></span><b>Skind</b></span></td>
+<td>Bedst fra: Helvedeshund (50 %), Afgrundsdjævel (60 %), Drageunge (55 %), Ormeyngel (60 %), Leprechaunen (100 %)</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#ebe0bd"></span><b>Knogler</b></span></td>
+<td>Bedst fra: Ofrets genfærd (50 %), Knoglehund (50 %), Fordømt sjæl (50 %), Knoglelegionær (55 %)</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#b373d9"></span><b>Troldesener</b></span></td>
+<td>Bedst fra: Trold (70 %)</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#ff8c26"></span><b>Glødesten</b></span></td>
+<td>Elitemonstre 35 %, andre 2 %, kister 25 %, vogtere altid. Bedst fra: Leprechaunen (50 %)</td>
+</tr>
+</tbody></table></div>
+</section>
+<section id="forbrug"><h2>Drikke, svampe og samlerting</h2>
+<div class="tw"><table class=""><thead><tr>
+<th>Drik</th>
+<th>Virkning</th>
+<th>Findes</th>
+</tr></thead><tbody>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#e63333"></span><b>Feltflaske</b></span></td>
+<td>Giver én helbredsdrik mere på dette dyk.</td>
+<td>Alle etager</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#4073ff"></span><b>Manadrik</b></span></td>
+<td>Fylder din mana helt op.</td>
+<td>Alle etager</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#ffb340"></span><b>Krukke med lampeolie</b></span></td>
+<td>Fylder lanternen op med 60 olie.</td>
+<td>Alle etager</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#ff5926"></span><b>Styrkeeliksir</b></span></td>
+<td>+30% skade i 60 sekunder.</td>
+<td>Alle etager</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#9999a6"></span><b>Stenhudseliksir</b></span></td>
+<td>+60 rustning i 60 sekunder.</td>
+<td>Alle etager</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#4dff73"></span><b>Lykkeeliksir</b></span></td>
+<td>+50% chance for bedre bytte resten af dette dyk.</td>
+<td>Alle etager</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#e680ff"></span><b>Regnbueeliksir</b></span></td>
+<td>Alt på én gang: fuld mana, en ekstra drik, +30% skade og +60 rustning i 60 sekunder.</td>
+<td>Kun i Regnbuehulen</td>
+</tr>
+</tbody></table></div>
+<h3>Svampe</h3>
+<p>25 % af de fundne forbrugsting er svampe (60 % i Troldegrotten).</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Svamp</th>
+<th>Virkning</th>
+</tr></thead><tbody>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#f266e6"></span><b>Regnbuehat</b></span></td>
+<td>Alle farver drejer rundt i 25 sekunder. +25% chance for bedre bytte imens.</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#80e64d"></span><b>Vridsvamp</b></span></td>
+<td>Verden vrider og bølger sig i 18 sekunder — men du gør 4 gange så meget skade.</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#59ff73"></span><b>Løbepig</b></span></td>
+<td>Du løber 5 gange så hurtigt i 10 sekunder.</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#d95933"></span><b>Kæmpehat</b></span></td>
+<td>Du bliver kæmpestor i 20 sekunder: +50% skade, 30% mindre skade på dig, men lidt langsommere.</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#b3ccff"></span><b>Puslingehat</b></span></td>
+<td>Du skrumper i 20 sekunder: halvdelen af slagene rammer helt ved siden af dig.</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#ccd9f2"></span><b>Spejlhat</b></span></td>
+<td>Hele verden spejles i 15 sekunder — venstre er højre. Du gør dobbelt skade imens.</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#99b3e6"></span><b>Genfærdshat</b></span></td>
+<td>Du bliver et genfærd i 8 sekunder: monstrene kan ikke se dig.</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#ffd966"></span><b>Lysmorkel</b></span></td>
+<td>Du lyser op i 60 sekunder: fuld lanterne, og den brænder ikke ned imens.</td>
+</tr>
+</tbody></table></div>
+<h3>Samlerting</h3>
+<p>Hver samlerting findes én gang (i sit tema). Tilsammen giver de en lille varig bonus til alle dine helte: +1 % magisk fund og +2 % guldfund pr. samlerting.</p>
+<div class="tw"><table class="small"><thead><tr>
+<th>Samlerting</th>
+<th>Findes i</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Gravkongens segl</b></td>
+<td>Krypten</td>
+</tr>
+<tr>
+<td><b>Sølvklokke fra krypten</b></td>
+<td>Krypten</td>
+</tr>
+<tr>
+<td><b>Troldetand</b></td>
+<td>Troldegrotten</td>
+</tr>
+<tr>
+<td><b>Lysende svamp i glas</b></td>
+<td>Troldegrotten</td>
+</tr>
+<tr>
+<td><b>Rusten fæstningsnøgle</b></td>
+<td>Den Sunkne Fæstning</td>
+</tr>
+<tr>
+<td><b>Den druknede kaptajns kompas</b></td>
+<td>Den Sunkne Fæstning</td>
+</tr>
+<tr>
+<td><b>Askesmedens hammer</b></td>
+<td>Askesmedjen</td>
+</tr>
+<tr>
+<td><b>Barre af stjernejern</b></td>
+<td>Askesmedjen</td>
+</tr>
+<tr>
+<td><b>Guldkronen</b></td>
+<td>Guldkammeret</td>
+</tr>
+<tr>
+<td><b>Gyldent bæger</b></td>
+<td>Guldkammeret</td>
+</tr>
+<tr>
+<td><b>Dragemønten</b></td>
+<td>Guldkammeret</td>
+</tr>
+<tr>
+<td><b>Guldsmedens vægt</b></td>
+<td>Guldkammeret</td>
+</tr>
+<tr>
+<td><b>Regnbueskæl</b></td>
+<td>Regnbuehulen</td>
+</tr>
+<tr>
+<td><b>Prismekrystal</b></td>
+<td>Regnbuehulen</td>
+</tr>
+<tr>
+<td><b>Lok af enhjørningehår</b></td>
+<td>Regnbuehulen</td>
+</tr>
+<tr>
+<td><b>Flasken med alle farver</b></td>
+<td>Regnbuehulen</td>
+</tr>
+<tr>
+<td><b>Kultens blodkalk</b></td>
+<td>Brønden — Kultens helligdom</td>
+</tr>
+</tbody></table></div>
+</section>
+<section id="byen"><h2>Byen</h2>
+<p class="intro">Byen og kisten deles af alle dine helte. Befri bosættere i Dybet og byg huse til dem.</p>
+<div class="tw"><table class=""><thead><tr>
+<th>Bygning</th>
+<th>Pris</th>
+<th>Beboer</th>
+<th>Virkning</th>
+</tr></thead><tbody>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#bf5933"></span><b>Smedje</b></span></td>
+<td><span class="nw">80 guld</span></td>
+<td>Smed</td>
+<td>Mestersmedning i værkstedet: forbedr op til +5, fortryl op til 4 egenskaber (sjælden) og brug 20% færre materialer.</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#73bf59"></span><b>Alkymisthytte</b></span></td>
+<td><span class="nw">90 guld</span></td>
+<td>Alkymist</td>
+<td>+1 helbredsdrik pr. dyk og drikke heler 15% mere.</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#f2b333"></span><b>Handelsbod</b></span></td>
+<td><span class="nw">110 guld</span></td>
+<td>Købmand</td>
+<td>Dit bytte sælges for dobbelt pris.</td>
+</tr>
+<tr>
+<td><span class="nw"><span class="dot" style="background:#8c66b3"></span><b>Lagerhus</b></span></td>
+<td><span class="nw">70 guld</span></td>
+<td>Tømrer</td>
+<td>+3 rækker (30 felter) i din kiste.</td>
+</tr>
+</tbody></table></div>
+<h3>Blodpagten</h3>
+<p>Ved Offerstenen kan byen ofre bosættere (op til 10): monstrene bliver stærkere (+12 % liv, +7 % skade pr. niveau), men du finder flere materialer og bedre ting. Ved den højeste pagt vågner Brønden. Pagten brydes efter Brønden og ved genfødsel.</p>
+</section>
+<section id="regler"><h2>Gode at vide</h2>
+<div class="tw"><table class=""><thead><tr>
+<th>Emne</th>
+<th>Regel</th>
+</tr></thead><tbody>
+<tr>
+<td>Døden</td>
+<td>Du mister alt, du bærer (rygsæk, guld og materialer). Kisten i byen er sikker.</td>
+</tr>
+<tr>
+<td>Udstyrets niveau</td>
+<td>Ting over din helts niveau virker kun med heltens niveau / tingens niveau af styrken (fx niveau 5 med en niveau 20-ting: 25 %).</td>
+</tr>
+<tr>
+<td>Prestige-ting</td>
+<td>En genfødt helt kan kun bruge udstyr fra sit eget prestigeniveau. Drikke og samlerting kan alle bruge.</td>
+</tr>
+<tr>
+<td>Kæledyr</td>
+<td>Rotter og skeletter får 15 % af heltens liv, skade og rustning oven i evnens tal.</td>
+</tr>
+<tr>
+<td>Co-op</td>
+<td>2-4 spillere. Monstrene måler sig mod holdets gennemsnit og har mere liv for hver spiller. Bytte er personligt.</td>
+</tr>
+</tbody></table></div>
+</section><footer>Lavet automatisk ud fra spillets egne tal (version 1.6.4). Tallene gælder uden magisk fund, pagt og lignende bonusser.</footer></main><script>
+const q=document.getElementById('q');
+q&&q.addEventListener('input',()=>{const t=q.value.trim().toLowerCase();
+document.querySelectorAll('main section').forEach(s=>{let any=false;
+s.querySelectorAll('tbody tr, li, p').forEach(r=>{const m=!t||r.textContent.toLowerCase().includes(t);r.classList.toggle('hide',!m);if(m)any=true});
+s.classList.toggle('hide',!!t&&!any&&!s.textContent.toLowerCase().includes(t));});});
+</script></body></html>
