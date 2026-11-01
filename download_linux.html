@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hearthdelve — download for Linux</title>
+<style>
+:root { --bg:#14110e; --panel:#1f1a15; --text:#e8e0d0; --muted:#a89c88; --gold:#e8c27a; }
+body { margin:0; background:var(--bg); color:var(--text); font:17px/1.5 Georgia, serif; display:flex; min-height:100vh; align-items:center; justify-content:center; }
+main { max-width:560px; margin:16px; padding:28px; background:var(--panel); border:1px solid #5a4528; border-radius:10px; text-align:center; }
+h1 { color:var(--gold); letter-spacing:.08em; margin:0 0 6px; }
+p { color:var(--muted); }
+a { color:var(--gold); }
+a.btn { display:inline-block; margin:6px; padding:10px 18px; border:1px solid var(--gold); border-radius:6px; text-decoration:none; }
+</style>
+</head>
+<body>
+<main>
+<h1>HEARTHDELVE</h1>
+<p id="msg">Henter den nyeste version til Linux … / Fetching the newest version for Linux …</p>
+<div id="links"></div>
+<p><small>Virker det ikke? / Not working? <a href="https://github.com/Bob-Thunda/Hearthdelve_Linux">github.com/Bob-Thunda/Hearthdelve_Linux</a></small></p>
+</main>
+<script>
+// Always the newest version: reads latest.json (the same file the game's updater reads) and starts the download.
+const RAW = "https://raw.githubusercontent.com/Bob-Thunda/Hearthdelve_Linux/main/";
+const msg = document.getElementById("msg"), links = document.getElementById("links");
+fetch(RAW + "latest.json", {cache: "no-store"}).then(r => r.json()).then(j => {
+  const base = (j.base && j.base.startsWith("https://")) ? j.base : RAW;
+  const files = (j.parts && j.parts.length) ? j.parts.map(p => p.file || p) : [j.file];
+  for (const f of files) {
+    const a = document.createElement("a");
+    a.className = "btn"; a.href = base + f; a.textContent = f;
+    links.appendChild(a);
+  }
+  if (files.length === 1) {
+    msg.textContent = "Version " + j.version + " — downloaden starter nu. / The download starts now.";
+    location.href = base + files[0];
+  } else {
+    msg.textContent = "Version " + j.version + " ligger i " + files.length + " dele: hent dem alle og åbn .zip.001 med 7-Zip. / Comes in " + files.length + " parts: download all and open .zip.001 with 7-Zip.";
+  }
+}).catch(() => { msg.textContent = "Kunne ikke hente versionen. Brug linket herunder. / Could not fetch the version, use the link below."; });
+</script>
+</body>
+</html>
