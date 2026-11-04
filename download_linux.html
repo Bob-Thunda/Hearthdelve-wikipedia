@@ -27,7 +27,7 @@ const RAW = "https://raw.githubusercontent.com/Bob-Thunda/Hearthdelve_Linux/main
 const msg = document.getElementById("msg"), links = document.getElementById("links");
 fetch(RAW + "latest.json", {cache: "no-store"}).then(r => r.json()).then(j => {
   const base = (j.base && j.base.startsWith("https://")) ? j.base : RAW;
-  const files = (j.parts && j.parts.length) ? j.parts.map(p => p.file || p) : [j.file];
+  const files = (j.parts && j.parts.length && !j.whole) ? j.parts.map(p => p.file || p) : [j.file];
   for (const f of files) {
     const a = document.createElement("a");
     a.className = "btn"; a.href = base + f; a.textContent = f;
